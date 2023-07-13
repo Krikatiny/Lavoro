@@ -20,7 +20,7 @@ if ( ! preg_match("/[0-9]/", $_POST["password"])) {
     die("Password must contain at least one number");
 }
 
-if ($_POST["password"] !== $_POST["password_commit"]) {
+if ($_POST["password"] !== $_POST["password_confirmation"]) {
     die("Passwords must match");
 }
 
@@ -30,7 +30,7 @@ $mysqli = require __DIR__ . "/database.php";
 
 $sql = "INSERT INTO user (name, email, password_hash)
         VALUES (?, ?, ?)";
-
+        
 $stmt = $mysqli->stmt_init();
 
 if ( ! $stmt->prepare($sql)) {
@@ -38,17 +38,17 @@ if ( ! $stmt->prepare($sql)) {
 }
 
 $stmt->bind_param("sss",
-    $_POST["name"],
-    $_POST["email"],
-    $password_hash);
-
+                  $_POST["name"],
+                  $_POST["email"],
+                  $password_hash);
+                  
 if ($stmt->execute()) {
 
     header("Location: signup-success.html");
     exit;
-
+    
 } else {
-
+    
     if ($mysqli->errno === 1062) {
         die("email already taken");
     } else {
