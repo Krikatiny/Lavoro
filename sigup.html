@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>SignUp form</title>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script src="js/validation.js" defer></script>
 </head>
 <body>
     <h1>Sign Up</h1>
-    <form action="process-signup.php" method="post" novalidate>
+    <form action="process-signup.php" method="post" id="signup" novalidate>
         <div>
             <label for="name">Name</label>
             <input type ="text" id = "name" name="name">
