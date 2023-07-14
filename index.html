@@ -3,44 +3,310 @@
 <head>
     <meta charset="UTF-8">
     <title>Lavoro - пошук твого майбутнього </title>
+    <!-- Посилання на Google шрифт -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+     <!-- Підключення CSS -->
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+
 </head>
 <body>
-<nav>
-    <img src="#" alt="тут має бути наше лого">
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Find work</a></li>
-        <li><a href="#">Give work</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
-<header>
-    <h1>Додати щось мотиваційне</h1>
-    <button> Let's begin </button>
+<!-- Оформлення навігаційної панелі -->
+<header id="header" class="transparent-nav">
+    <div class="container">
+        <div class="navbar-header">
+            <!-- Кнопка будиночка -->
+            <div class="navbar-home">
+                <a class="home_buttom" href="index.html">
+                    <img src="./img/home.png" alt="home_buttom">
+                </a>
+            </div>
+            <!-- /Кнопка будиночка -->
+        </div>
+
+        <!-- Меню навігації сайту-->
+        <nav id="nav">
+            <ul class="main-menu nav navbar-nav navbar-right">
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="find_work.html">Отримати роботу</a></li>
+                    <li><a href="vacancies.html">Вакансії</a></li>
+                    <li><a href="contact.html">Контакти</a></li>
+            </ul>
+        </nav>
+        <!-- /Меню навігації сайту -->
+    </div>
 </header>
-<p>The hottest vacancies</p>
-<ul>
-    <li>Перша вакансія</li>
-    <li>Дргуа вакансія</li>
-    <li>Третя вакансія</li>
-</ul>
-<button>
-    More Vacancies
-</button>
-<p>Зв'яжіться з нами</p>
-<button>Contact</button>
-<footer>
-    <img src="#" alt="тут має бути наше лого">
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Find work</a></li>
-            <li><a href="#">Give work</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+<!-- /Оформлення навігаційної панелі -->
+
+<!-- Ознайомчий контейнер з вступом до сайту -->
+<div id="home" class="main-area">
+
+    <!-- Головне фонове зоображення домашньої сторінки  -->
+    <div class="bg-image bg-parallax overlay" style="background-image:url(./img/home_3.jpg)"></div>
+    <!-- /Головне фонове зоображення домашньої сторінки  -->
+
+    <!-- Текст контейнера -->
+    <div class="home-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="white-text">Lavoro</h1>
+                    <p class="lead white-text">Ласкаво просимо до сервісу пошуку роботи!</p>
+                    <a class="main-button icon-button" href="#">Почнімо!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Текст контейнера -->
+<!-- /Ознайомчий контейнер з вступом до сайту -->
+
+<!-- Наповнення головної сторінки -->
+
+		<!-- Гарячі вакансії -->
+		<div id="vacancies" class="section">
+			<!-- Контейнер з гарячими вакансіями-->
+			<div class="container">
+				<!-- Рядки з ознайомчим текстом -->
+				<div class="row">
+					<div class="section-header text-center">
+						<h2>Гарячі вакансії</h2>
+						<p class="lead">Перегляньте найпопулярніші пропозиції!</p>
+					</div>
+				</div>
+				<!-- /Рядки з ознайомчим текстом-->
+
+				<!-- Приклади гарячих вакансій  -->
+				<div id="vacancies-wrapper">
+
+					<!-- Перший рядок вакансій -->
+					<div class="row">
+
+						<!-- Перша вакансія -->
+                        <!-- Тут наша команда використала класи з бібліотеки Bootstrap, яку ми підключим в процесі виконання роботи -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="vacancies">
+								<a href="#" class="vacancies-img">
+									<img src="./img/картинка.jpg" alt="">
+									<i class="vacancies-link-icon fa fa-link"></i>
+								</a>
+								<a class="vacancies-title" href="#"> Вакансія </a>
+								<div class="vacancies-details">
+									<span class="vacancies-category"> Категорія роботи </span>
+									<span class="vacancies-price"> Зарплата </span>
+								</div>
+							</div>
+						</div>
+						<!-- /Перша вакансія  -->
+
+						<!-- Друга вакансія -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="vacancies">
+								<a href="#" class="vacancies-img">
+									<img src="./img/картинка.jpg" alt="">
+									<i class="vacancies-link-icon fa fa-link"></i>
+								</a>
+								<a class="vacancies-title" href="#"> Вакансія </a>
+								<div class="vacancies-details">
+									<span class="vacancies-category"> Категорія роботи </span>
+									<span class="vacancies-price"> Зарплата </span>
+								</div>
+							</div>
+						</div>
+						<!-- /Друга вакансія -->
+
+						<!-- Третя вакансія-->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="vacancies">
+								<a href="#" class="vacancies-img">
+									<img src="./img/картинка.jpg" alt="">
+									<i class="vacancies-link-icon fa fa-link"></i>
+								</a>
+								<a class="vacancies-title" href="#"> Вакансія </a>
+								<div class="vacancies-details">
+									<span class="vacancies-category"> Категорія роботи </span>
+									<span class="vacancies-price"> Зарплата </span>
+								</div>
+							</div>
+						</div>
+						<!-- /Третя вакансія-->
+
+                        <!-- Четверта вакансія -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="vacancies">
+								<a href="#" class="vacancies-img">
+									<img src="./img/картинка.jpg" alt="">
+									<i class="vacancies-link-icon fa fa-link"></i>
+								</a>
+								<a class="vacancies-title" href="#"> Вакансія </a>
+								<div class="vacancies-details">
+									<span class="vacancies-category"> Категорія роботи </span>
+									<span class="vacancies-price vacancies-free"> Зарплата </span>
+								</div>
+							</div>
+						</div>
+						<!-- /Четверта вакансія -->
+
+					</div>
+					<!-- /Перший рядок вакансій-->
+
+					<!-- Другий рядок вакансій -->
+					<div class="row">
+
+						<!-- П'ята вакансія -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="vacancies">
+								<a href="#" class="vacancies-img">
+									<img src="./img/картинка.jpg" alt="">
+									<i class="vacancies-link-icon fa fa-link"></i>
+								</a>
+								<a class="vacancies-title" href="#"> Вакансія </a>
+								<div class="vacancies-details">
+									<span class="vacancies-category"> Категорія роботи </span>
+									<span class="vacancies-price"> Зарплата </span>
+								</div>
+							</div>
+						</div>
+						<!-- /П'ята вакансія -->
+
+						<!-- Шоста вакансія -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="vacancies">
+								<a href="#" class="vacancies-img">
+									<img src="./img/картинка.jpg" alt="">
+									<i class="vacancies-link-icon fa fa-link"></i>
+								</a>
+								<a class="vacancies-title" href="#"> Вакансія </a>
+								<div class="vacancies-details">
+									<span class="vacancies-category"> Категорія роботи </span>
+									<span class="vacancies-price"> Зарплата </span>
+								</div>
+							</div>
+						</div>
+						<!-- /Шоста вакансія -->
+
+						<!-- Сьома вакансія -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="vacancies">
+								<a href="#" class="vacancies-img">
+									<img src="./img/картинка.jpg" alt="">
+									<i class="vacancies-link-icon fa fa-link"></i>
+								</a>
+                                <a class="vacancies-title" href="#"> Вакансія </a>
+								<div class="vacancies-details">
+									<span class="vacancies-category"> Категорія роботи </span>
+									<span class="vacancies-price"> Зарплата </span>
+								</div>
+							</div>
+						</div>
+						<!-- /Сьома вакансія -->
+
+
+						<!-- Восьма вакансія -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="vacancies">
+								<a href="#" class="vacancies-img">
+									<img src="./img/картинка.jpg" alt="">
+									<i class="vacancies-link-icon fa fa-link"></i>
+								</a>
+								<a class="vacancies-title" href="#"> Вакансія </a>
+								<div class="vacancies-details">
+									<span class="vacancies-category"> Категорія роботи </span>
+									<span class="vacancies-price"> Зарплата </span>
+								</div>
+							</div>
+						</div>
+						<!-- /Восьма вакансія -->
+
+					</div>
+					<!-- /Другий рядок вакансій -->
+
+				</div>
+				<!-- /Приклади гарячих вакансій -->
+
+				<div class="row">
+					<div class="center-btn">
+						<a class="main-button icon-button" href="#"> Більше вакансій! </a>
+					</div>
+				</div>
+
+			</div>
+			<!-- /Контейнер з гарячими вакансіями -->
+
+		</div>
+		<!-- /Гарячі вакансії -->
+
+<!-- Блок переходу на сторінку з контактними даними -->
+<div id="contact-cta" class="section">
+
+    <!-- Фонове зоображення -->
+    <div class="bg-image bg-parallax overlay" style="background-image:url(./img/cta2-background.jpg)"></div>
+    <!-- /Фонове зоображення -->
+
+    <!-- Контейнер з текстом  -->
+    <div class="container">
+
+        <!-- Рядки тексту -->
+        <div class="row">
+
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h2 class="white-text">Зв'яжіться з нами</h2>
+                <p class="lead white-text">Ми будемо раді отримати ваші коментарі</p>
+                <a class="main-button icon-button" href="#">Напишіть вже зараз!</a>
+            </div>
+
+        </div>
+        <!-- /Рядки тексту -->
+
+    </div>
+    <!-- /Контейнер з текстом  -->
+
+</div>
+<!-- /Блок переходу на сторінку з контактними даними-->
+
+<!-- Нижня менюшка -->
+<footer id="footer" class="section">
+
+    <!-- Контейнер з всіма даними меню -->
+    <div class="container">
+
+        <!-- Рядок для запису всіх даних -->
+        <div class="row">
+
+            <!-- Логотип нашого сервісу -->
+            <div class="col-md-6">
+                <div class="footer-logo">
+                    <a class="logo" href="index.html">
+                        <img src="./img/Lovaro (1).png" alt="logo">
+                    </a>
+                </div>
+            </div>
+            <!-- Логотип нашого сервісу -->
+
+            <!-- Навігація, що знаходиться на нижній менюшці-->
+            <div class="col-md-6">
+                <ul class="footer-nav">
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="find_work.html">Отримати роботу</a></li>
+                    <li><a href="vacancies.html">Вакансії</a></li>
+                    <li><a href="contact.html">Контакти</a></li>
+                </ul>
+            </div>
+            <!-- /Навігація, що знаходиться на нижній менюшці-->
+
+        </div>
+        <!-- /Рядок для запису всіх даних -->
+
+    </div>
+    <!-- /Контейнер з всіма даними меню -->
+
 </footer>
+<!-- /Нижня менюшка -->
+
+<!-- Попередній завантажувач -->
+<div id='preloader'><div class='preloader'></div></div>
+<!-- /Попередній завантажувач -->
+
 </body>
 </html>
