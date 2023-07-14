@@ -34,7 +34,7 @@ validation
             rule: "password"
         }
     ])
-    .addField("#password_confirmation", [
+    .addField("#password_commit", [
         {
             validator: (value, fields) => {
                 return value === fields["#password"].elem.value;
