@@ -9,3 +9,7 @@ Kriaktiny - Конєвєга Захар Сергійович
 kypich-anastas1a - Кипіч Анастасія Сергіївна
 
 TarasykBez - Безушко Тарас Олегович
+
+Кіт, який мурчить
+
+![image](https://github.com/Krikatiny/Lavoro/assets/120288876/dc047492-cc50-4a8e-bc35-c8ebad1b99f4)
