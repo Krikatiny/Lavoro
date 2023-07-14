@@ -1,48 +1,48 @@
 /* --- Налаштування шрифтів та тексту --- */
 body {
     font-family: 'Montserrat', sans-serif;
- font-size: 15px;
+    font-size: 15px;
     font-weight: 400;
     color: #798696;
  overflow-x:hidden;
 }
 /* --- Налаштування заголовків--- */
 h1,h2,h3,h4,h5,h6 {
- margin-top: 12px;
- margin-bottom: 15px;
- font-weight: 600;
- color: #374050;
+    margin-top: 12px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #374050;
 }
 
 h1 {
- font-size:38px;
+    font-size:38px;
 }
 
 h2 {
- font-size:30px;
+    font-size:30px;
 }
 
 h3 {
- font-size:24px;
+    font-size:24px;
 }
 
 h4 {
- font-size:18px;
+    font-size:18px;
 }
 /* --- /Налаштування заголовків--- */
 
 /* --- Налаштування тексту посилань--- */
 a {
- font-family: 'Lato', sans-serif;
- color: #374050;
- font-weight: 700;
+    font-family: 'Lato', sans-serif;
+    color: #374050;
+    font-weight: 700;
 }
 a:hover,
 a:focus{
     text-decoration: none;
     outline: none;
- color: #374050;
- opacity: 0.9;
+    color: #374050;
+    opacity: 0.9;
 }
 
 ul,ol{
@@ -53,7 +53,7 @@ ul,ol{
 /* --- Налаштування тексту посилань--- */
 
 .white-text {
- color: #FFF;
+    color: #FFF;
 }
 /* --- /Налаштування шрифтів та тексту --- */
 
@@ -61,86 +61,86 @@ ul,ol{
 Нижче ви можете побачити оформлення цього блоку даних та елементів, що наявні в ньому --- */
 
 .section {
- position:relative;
- padding-top:80px;
- padding-bottom:80px;
+    position:relative;
+    padding-top:80px;
+    padding-bottom:80px;
 }
 
 .section-hr {
- margin-top:80px;
- margin-bottom:80px;
- border-color: #EBEBEB;
+    margin-top:80px;
+    margin-bottom:80px;
+    border-color: #EBEBEB;
 }
 
 .section-header {
- margin-bottom:40px;
+    margin-bottom:40px;
 }
 /* --- /Офомлення секцій--- */
 
 /* --- Налаштування  фонових зоображень, а також додання певних візуальних ефектів до них --- */
 .bg-image {
- position:absolute;
- left:0;
- right:0;
- top:0;
- bottom:0;
- background-position:center;
- background-size:cover;
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background-position:center;
+    background-size:cover;
 }
 
 .bg-image.bg-parallax {
- background-attachment:fixed;
+    background-attachment:fixed;
 }
 
 .bg-image.overlay:after {
- content:"";
- position:absolute;
- left:0;
- right:0;
- top:0;
- bottom:0;
- background-image: -webkit-gradient(linear, left top, left bottom, from(#374050), to(#798696));
- background-image: linear-gradient(to bottom, #374050 0%, #798696 100%);
- opacity: 0.7;
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#374050), to(#798696));
+    background-image: linear-gradient(to bottom, #374050 0%, #798696 100%);
+    opacity: 0.7;
 }
 /* --- /Налаштування  фонових зоображень --- */
 
 /* --- Стилі для кнопок, що знаходяться на сайті, + додавання анімацій при наведенні на кнопки--- */
 .main-button {
- position:relative;
- display:inline-block;
- padding:10px 30px;
- background-color: #d85c98;
- border: 2px solid transparent;
- border-radius: 40px;
- color: #FFF;
- -webkit-transition:0.2s all;
- transition:0.2s all;
+    position:relative;
+    display:inline-block;
+    padding:10px 30px;
+    background-color: #d85c98;
+    border: 2px solid transparent;
+    border-radius: 40px;
+    color: #FFF;
+    -webkit-transition:0.2s all;
+    transition:0.2s all;
 }
 
 .main-button:hover , .main-button:focus {
- background-color:#fff;
- border: 2px solid #d85c98;
- color:#d85c98;
+    background-color:#fff;
+    border: 2px solid #d85c98;
+    color:#d85c98;
 }
 
 .main-button.icon-button:hover , .main-button.icon-button:focus {
- padding-right: 45px;
+    padding-right: 45px;
 }
 
 .main-button.icon-button:after {
- content:"\f178";
- font-family:FontAwesome;
- position:absolute;
- width: 30px;
- right: 15px;
- text-align:center;
- opacity:0;
- -webkit-transition:0.2s all;
- transition:0.2s all;
+    content:"\f178";
+    font-family:FontAwesome;
+    position:absolute;
+    width: 30px;
+    right: 15px;
+    text-align:center;
+    opacity:0;
+    -webkit-transition:0.2s all;
+    transition:0.2s all;
 }
 
 .main-button.icon-button:hover:after , .main-button.icon-button:focus:after {
- opacity:1;
+    opacity:1;
 }
 /* --- /Стилі для кнопок --- */
