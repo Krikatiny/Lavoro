@@ -60,15 +60,13 @@ if (isset($_SESSION["user_id"])) {
         <label for="vac_email">Email</label>
     </div>
     <div class="vac-email">
-        <input type="email" name="vac_email" id="vac_email"
-            value="<?= htmlspecialchars($user["email"]) ?>">
+        <input type="email" name="vac_email" id="vac_email">
     </div>
     <div class="phone_number-label">
         <label for="phone_number">Phone number</label>
     </div>
     <div class="phone_number">
-        <input type="tel" name="phone_number" id="phone_number"
-               value="<?= htmlspecialchars($user["phone_number"]) ?>">
+        <input type="tel" name="phone_number" id="phone_number"">
     </div>
 
     <div class="vac_description-label">
@@ -78,7 +76,7 @@ if (isset($_SESSION["user_id"])) {
         <textarea name="vac_description" id="vac_description" cols="30" rows="10"></textarea>
     </div>
 
-    <button type="submit">Submit</button>
+    <button type="submit" name="vac-create">Submit</button>
 </form>
 </body>
 </html>

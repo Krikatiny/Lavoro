@@ -24,19 +24,19 @@ if (isset($_SESSION["user_id"])) {
 </head>
 <body>
 
-<h1>Home</h1>
+    <h1>Home</h1>
 
-<?php if (isset($user)): ?>
+    <?php if (isset($user)): ?>
 
-    <p>Hello <?= htmlspecialchars($user["name"]) ?></p>
+        <p>Hello <?= htmlspecialchars($user["name"]) ?></p>
 
-    <p><a href="../php/logout.php">Log out</a> or <a href="../html/vacant_create.html">Create Vacant</a></p>
+        <p><a href="../php/logout.php">Log out</a> or <a href="../html/vacant_create.html">Create Vacant</a> </p>
 
-<?php else: ?>
+    <?php else: ?>
 
-    <p><a href="../php/login.php">Log in</a> or <a href="../html/signup.html">sign up</a></p>
+        <p><a href="../php/login.php">Log in</a> or <a href="../html/signup.html">sign up</a></p>
 
-<?php endif; ?>
+    <?php endif; ?>
 
 </body>
 </html>
