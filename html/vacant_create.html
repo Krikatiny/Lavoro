@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create vacant</title>
+</head>
+<body>
+<form action="../php/vac-creating.php" id="vac-create" method="post" novalidate>
+    <div class="vac_name-labal">
+        <label for="vac_name">Enter vacant name</label>
+    </div>
+    <div class="vac_name">
+        <input id="vac_name" name="vac_name" type="text">
+    </div>
+    <div class="tags">
+        <input id="IT" name="tags" type="checkbox">
+        <label for="IT">IT</label>
+        <input id="finance" name="tags" type="checkbox">
+        <label for="finance">Finance</label>
+        <input id="medicine" name="tags" type="checkbox">
+        <label for="medicine">Medicine</label>
+    </div>
+    <div class="regin-label">
+
+        <label for="region">Choose region</label>
+    </div>
+    <div class="region">
+        <input id="region" list="regions" name="region">
+        <datalist id="regions">
+            <option value="Kyiv">Kyiv</option>
+            <option value="Odessa">Odessa</option>
+            <option value="Berezan'">Berezan'</option>
+        </datalist>
+    </div>
+    <div class="salary-label">
+        <label for="salary">Enter Salary</label>
+    </div>
+    <div class="salary">
+        <input id="salary" name="salary" type="number">
+    </div>
+    <div class="vac_email-label">
+        <label for="vac_email">Email</label>
+    </div>
+    <div class="vac-email">
+        <input id="vac_email" name="vac_email" type="email">
+    </div>
+    <div class="phone_number-label">
+        <label for="phone_number">Phone number</label>
+    </div>
+    <div class="phone_number">
+        <input id="phone_number" name="phone_number" type="tel">
+    </div>
+    <div class="vac_description-label">
+        <label for="vac_description">Description</label>
+    </div>
+    <div class="description">
+        <textarea cols="30" id="vac_description" name="vac_description" rows="10"></textarea>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
