@@ -1,15 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Реєстрація</title>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Стан реєстрація</title>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script defer src="../js/validation.js"></script>
+    <!-- Посилання на Google шрифт -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+    <!-- Підключення головного CSS файлу -->
+    <link href="../css/style.css" rel="stylesheet" type="text/css"/>
+    <!-- Бібліотека Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <!-- Підключення бібліотеки, яка містить в собі гарні векторні значки, які ми використаєм в нашій роботі  -->
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
 </head>
-<body>
-
-<h1>Реєстрація</h1>
-
-<p>Реєстрація успішна!.
-    А зараз ви можете увійти у свій акаунт: <a href="../php/login.php">log in</a>.</p>
+<body class="signup">
+        <div class="box"> 
+            <!-- Кнопка будиночка -->
+            <div class="navbar-home">
+                <a class="home_buttom" href="../index.html">
+                    <img src="../img/free-icon-home-88282.png" alt="home_buttom">
+                </a>
+            </div>          
+                  <div class="reg_accept_box"></div>
+                    <h1 class="reg_form_title">Реєстрація</h1>
+                    <p class="reg_form_text">Реєстрація успішна!</p>
+                    <p class="reg_form_text">Тепер увійдіть в свій акаунт</p>
+                        <div class="reg_button">
+                            <button class="reg2_button" href="./php/login.php"">Перейти до авторизації</button>
+                         </div>
+                    </div>
+                         
+                    
+               </div>
+       </div>
+       
 
 </body>
 </html>
