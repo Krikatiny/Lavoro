@@ -420,15 +420,21 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     z-index: -1;
 }
 .reg_form_title{
-    margin-bottom: 2rem;
+    
+    margin-bottom: 3rem;
     text-align: center;
     font: 500 2.7rem 'Montserrat', sans-serif;
+}
+.reg_form_text{
+    margin-bottom: 5px;
+    text-align: center;
+    font: 500 1rem 'Montserrat', sans-serif;
 }
 .box {
     width: 400px;
     max-width: 400px;
     margin: 1rem;
-    padding: 2rem;
+    padding: 3rem;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
     border-radius: 10px;;
     background: #ffffff;
@@ -446,9 +452,25 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     transition: 0.2s all;
     
 }
-
+.reg2_button {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #d85c98;
+    border: 2px solid transparent;
+    border-radius: 40px;
+    color: #FFF;
+    transition: 0.1s all;
+}
 .reg_form_input{
   font: 500 1.2rem 'Montserrat', sans-serif;
   margin-top: 10px;
 }
-
+.reg_accept_box{
+    position: absolute;
+    top: 70%;
+    left: 50%;   
+}
