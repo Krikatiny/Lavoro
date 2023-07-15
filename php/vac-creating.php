@@ -27,40 +27,39 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     die("Valid email is required");
 }
 
-    $mysqli->autocommit(false); // Вимикаємо автокоміт
-    echo "work1";
+$mysqli->autocommit(false); // Вимикаємо автокоміт
+echo "work1";
 
-    // Виконуємо запит INSERT INTO для збереження основних даних в таблиці vacanties
-    $sql = "INSERT INTO vacanties (name, region, salary, email, phone, description) VALUES (?, ?, ?, ?, ?, ?)";
-    $stmt = $mysqli->prepare($sql);
+// Виконуємо окремий запит для кожного тегу, використовуючи підготовлений запит
+$tagSql = "INSERT INTO vacanties (tag_name) VALUES (?)";
+$tagStmt = $mysqli->prepare($tagSql);
 
-    if (!$stmt) {
-        die("SQL error: " . $mysqli->error);
-    }
+if (!$tagStmt) {
+    die("SQL error: " . $mysqli->error);
+}
+$tagNames = implode(',', $tags); // Об'єднуємо теги через кому
 
-    $stmt->bind_param('ssisss', $name, $region, $salary, $email, $phone, $description);
 
-    if ($stmt->execute()) {
-        // Виконуємо окремий запит для кожного тегу, використовуючи підготовлений запит
-        $tagSql = "INSERT INTO vacanties (tag_name) VALUES (?)";
-        $tagStmt = $mysqli->prepare($tagSql);
+// Виконуємо запит INSERT INTO для збереження основних даних в таблиці vacanties
+$sql = "INSERT INTO vacanties (name, region, salary, tag_name, email, phone, description) VALUES (?, ?, ?, ?, ?, ?, ?)";
+$stmt = $mysqli->prepare($sql);
 
-        if (!$tagStmt) {
-            die("SQL error: " . $mysqli->error);
-        }
+if (!$stmt) {
+    die("SQL error: " . $mysqli->error);
+}
 
-        foreach ($tags as $item) {
-            $tagStmt->bind_param('s', $item);
-            $tagStmt->execute();
-        }
+$stmt->bind_param('ssissss', $name, $region, $salary, $tagNames, $email, $phone, $description);
 
-        $mysqli->commit(); // Зберігаємо всі зміни у базі даних
-        $_SESSION['status'] = "Inserted Successfully";
-        header("Location: index.php");
-        exit;
-    } else {
-        $mysqli->rollback(); // Скасовуємо зміни у випадку помилки
-        $_SESSION['status'] = "Data Not Inserted";
-        header("Location: index.php");
-        exit;
+if ($stmt->execute()) {
+
+
+    $mysqli->commit(); // Зберігаємо всі зміни у базі даних
+    $_SESSION['status'] = "Inserted Successfully";
+    header("Location: index.php");
+    exit;
+} else {
+    $mysqli->rollback(); // Скасовуємо зміни у випадку помилки
+    $_SESSION['status'] = "Data Not Inserted";
+    header("Location: index.php");
+    exit;
 }
