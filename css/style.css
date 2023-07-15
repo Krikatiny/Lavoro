@@ -153,6 +153,32 @@ ul,ol{
 } 
 /*---/Кнопочка будинку--- */
 
+/*---Кнопочка профілю--- */
+
+.profile-home {
+    padding: 0;
+}
+
+.profile-home .profile_buttom {
+	display: inline-block;
+	margin-top: 60px;
+	transform: scale(4);
+}
+.profile_buttom{
+	transform: scale(10);
+}
+
+.profile-home .profile_buttom > img {
+	max-height:10px;
+}
+
+@media only screen and (max-width: 767px) {
+	.profile-home {
+		margin-left:15px;
+	}
+} 
+/*---/Кнопочка профілю--- */
+
 /*---Оформлення навігації--- */
 #header {
 	position:relative;
