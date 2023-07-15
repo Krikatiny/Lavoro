@@ -14,7 +14,7 @@ h1,h2,h3,h4,h5,h6 {
     color: #374050;
 }
 h1 {
-    font-size:38px;
+	font-size:38px;
 }
 h2 {
     font-size:30px;
@@ -159,13 +159,11 @@ ul,ol{
     padding: 0;
 }
 
-.profile-home .profile_buttom {
+.profile_buttom {
 	display: inline-block;
-	margin-top: 60px;
-	transform: scale(4);
-}
-.profile_buttom{
-	transform: scale(10);
+	margin-top: 10px;
+	margin-left: 7px;
+	transform: scale(1.2);
 }
 
 .profile-home .profile_buttom > img {
