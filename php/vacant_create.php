@@ -22,7 +22,7 @@ if (isset($_SESSION["user_id"])) {
 <body>
 <form action="../php/vac-creating.php" method="post" id="vac-create" novalidate>
 
-    <div class="vac_name-labal">
+    <div class="vac_name-label">
         <label for="vac_name">Enter vacant name</label>
     </div>
     <div class="vac_name">
@@ -30,14 +30,11 @@ if (isset($_SESSION["user_id"])) {
     </div>
 
     <div class="tags">
-        <input type="checkbox" name="tags" id="IT">
-        <label for="IT">IT</label>
-
-        <input type="checkbox" name="tags" id="finance">
-        <label for="finance">Finance</label>
-
-        <input type="checkbox" name="tags" id="medicine">
-        <label for="medicine">Medicine</label>
+        <input type="checkbox" name="tags[]" value="Red MI"> Red MI <br>
+        <input type="checkbox" name="tags[]" value="Samsung"> Samsung <br>
+        <input type="checkbox" name="tags[]" value="Nokia"> Nokia <br>
+        <input type="checkbox" name="tags[]" value="Vivo"> Vivo <br>
+        <input type="checkbox" name="tags[]" value="Karbon"> Karbon <br>
     </div>
     <div class="regin-label">
         <label for="region">Choose region</label>
@@ -47,7 +44,7 @@ if (isset($_SESSION["user_id"])) {
         <input list="regions" name="region" id="region">
         <datalist id="regions">
             <option value="Kyiv">Kyiv</option>
-            <option value="Odessa">Odessa</option>
+            <option value="Odesa">Odessa</option>
             <option value="Berezan'">Berezan'</option>
         </datalist>
     </div>

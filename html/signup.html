@@ -6,89 +6,90 @@
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script defer src="../js/validation.js"></script>
     <!-- Посилання на Google шрифт -->
-	<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
     <!-- Підключення головного CSS файлу -->
-   <link type="text/css" rel="stylesheet" href="../css/style.css"/>
-   <!-- Бібліотека Bootstrap -->
-   <link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css"/>
-   <!-- Підключення бібліотеки, яка містить в собі гарні векторні значки, які ми використаєм в нашій роботі  -->
-   <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link href="../css/style.css" rel="stylesheet" type="text/css"/>
+    <!-- Бібліотека Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <!-- Підключення бібліотеки, яка містить в собі гарні векторні значки, які ми використаєм в нашій роботі  -->
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
 <!-- Фонове зоображення -->
-			<div class="bg-image bg-parallax overlay" style="background-image:url(../img/page-background.jpg)"></div>
-			<!-- /Фонове зоображення -->
-        <!-- Оформлення навігаційної панелі -->
-        <header id="header" class="transparent-nav">
-            <div class="container">
-                <div class="navbar-header">
-                    <!-- Кнопка будиночка -->
-                    <div class="navbar-home">
-                        <a class="home_buttom" href="index.html">
-                            <img src="../img/home.png" alt="home_buttom">
-                        </a>
-                    </div>
-                    <!-- /Кнопка будиночка -->
-                </div>
-        
-                <!-- Меню навігації сайту-->
-                <nav id="nav">
-                    <ul class="main-menu nav navbar-nav navbar-right">
-                            <li><a href="../index.html">Головна</a></li>
-                            <li><a href="#">Отримати роботу</a></li>
-                            <li><a href="#">Вакансії</a></li>
-                            <li><a href="../html/contact.html">Контакти</a></li>
-                            <a class="profile_buttom" href="../html/signup.html">
-                                <img src="../img/profile (1).png" alt="profile_buttom">
-                            </a>
-                    </ul>
-                </nav>
-                
-        
-                <!-- /Меню навігації сайту -->
+<div class="bg-image bg-parallax overlay" style="background-image:url(../img/page-background.jpg)"></div>
+<!-- /Фонове зоображення -->
+<!-- Оформлення навігаційної панелі -->
+<header class="transparent-nav" id="header">
+    <div class="container">
+        <div class="navbar-header">
+            <!-- Кнопка будиночка -->
+            <div class="navbar-home">
+                <a class="home_button" href="index.html">
+                    <img alt="home_button" src="../img/home.png">
+                </a>
             </div>
-        </header>
-        <!-- /Оформлення навігаційної панелі -->
-        <div id="vacancies" class="section">
-			<!-- Контейнер з гарячими вакансіями-->
-			   <div class="container">
-				    <!-- Рядки з ознайомчим текстом -->
-				       <div class="row">
-					       <div class="section-header text-center">
-						       <h2>Зареєструйтеся</h2>
-						       <p class="lead">Перші кроки до вашої успішної кар'єри!</p>
-					       </div>
-				       </div>
-                   <form action="../php/process-signup.php" id="signup" method="post" novalidate>
-                      <div>
-                         <label for="name">Ваше ім'я</label>
-                         <input id="name" name="name" type="text">
-                      </div>
+            <!-- /Кнопка будиночка -->
+        </div>
 
-                      <div>
-                         <label for="email">Ваша пошта</label>
-                         <input id="email" name="email" type="email">
-                      </div>
+        <!-- Меню навігації сайту-->
+        <nav id="nav">
+            <ul class="main-menu nav navbar-nav navbar-right">
+                <li><a href="../index.html">Головна</a></li>
+                <li><a href="#">Отримати роботу</a></li>
+                <li><a href="#">Вакансії</a></li>
+                <li><a href="../html/contact.html">Контакти</a></li>
+                <a class="profile_button" href="../html/signup.html">
+                    <img alt="profile_button" src="../img/profile (1).png">
+                </a>
+            </ul>
+        </nav>
 
-    <div>
-        <label for="phone_number">Phone with code</label>
-        <input id="phone_number" name="phone_number" type="tel">
+
+        <!-- /Меню навігації сайту -->
     </div>
+</header>
+<!-- /Оформлення навігаційної панелі -->
+<div class="section" id="vacancies">
+    <!-- Контейнер з гарячими вакансіями-->
+    <div class="container">
+        <!-- Рядки з ознайомчим текстом -->
+        <div class="row">
+            <div class="section-header text-center">
+                <h2>Зареєструйтеся</h2>
+                <p class="lead">Перші кроки до вашої успішної кар'єри!</p>
+            </div>
+        </div>
+        <form action="../php/process-signup.php" id="signup" method="post" novalidate>
+            <div>
+                <label for="name">Ваше ім'я</label>
+                <input id="name" name="name" type="text">
+            </div>
 
-                      <div>
-                         <label for="password">Пароль</label>
-                         <input id="password" name="password" type="password">
-                      </div>
+            <div>
+                <label for="email">Ваша пошта</label>
+                <input id="email" name="email" type="email">
+            </div>
 
-                          <div>
-                             <label for="password_commit">Підтвердження пароля</label>
-                             <input type="password" name="password_commit" id="password_commit">
-                          </div>
-                          <div class="reg_button">
-                             <button class="main-button icon-button pull-right">Відправити</button>
-                          </div>
-                      </form>
-               </div>
-       </div>
+            <div>
+                <label for="phone_number">Phone with code</label>
+                <input id="phone_number" name="phone_number" type="tel">
+            </div>
+
+            <div>
+                <label for="password">Пароль</label>
+                <input id="password" name="password" type="password">
+            </div>
+
+            <div>
+                <label for="password_commit">Підтвердження пароля</label>
+                <input id="password_commit" name="password_commit" type="password">
+            </div>
+            <div class="reg_button">
+                <button class="main-button icon-button pull-right">Відправити</button>
+            </div>
+        </form>
+        <button type="button" class="main-button icon-button"><a href="../php/login.php">Log in</a></button>
+    </div>
+</div>
 </body>
 </html>
