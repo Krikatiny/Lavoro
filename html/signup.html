@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Форма реєстрації</title>
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
-    <script src="../js/validation.js" defer></script>
+    <script defer src="../js/validation.js"></script>
     <!-- Посилання на Google шрифт -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
     <!-- Підключення головного CSS файлу -->
@@ -15,7 +15,7 @@
    <link rel="stylesheet" href="../css/font-awesome.min.css">
 </head>
 <body>
-    <!-- Фонове зоображення -->
+<!-- Фонове зоображення -->
 			<div class="bg-image bg-parallax overlay" style="background-image:url(../img/page-background.jpg)"></div>
 			<!-- /Фонове зоображення -->
         <!-- Оформлення навігаційної панелі -->
@@ -59,21 +59,26 @@
 						       <p class="lead">Перші кроки до вашої успішної кар'єри!</p>
 					       </div>
 				       </div>
-                       <form action="../php/process-signup.php" method="post" id="signup" novalidate>
-                          <div>
-                             <label for="name">Ваше ім'я</label>
-                             <input type ="text" id = "name" name="name">
-                          </div>
-        
-                          <div>
-                             <label for="email">Ваша пошта</label>
-                             <input type="email" name="email" id="email">
-                          </div>
+                   <form action="../php/process-signup.php" id="signup" method="post" novalidate>
+                      <div>
+                         <label for="name">Ваше ім'я</label>
+                         <input id="name" name="name" type="text">
+                      </div>
 
-                          <div>
-                             <label for="password">Пароль</label>
-                             <input type="password" name="password" id="password">
-                          </div>
+                      <div>
+                         <label for="email">Ваша пошта</label>
+                         <input id="email" name="email" type="email">
+                      </div>
+
+    <div>
+        <label for="phone_number">Phone with code</label>
+        <input id="phone_number" name="phone_number" type="tel">
+    </div>
+
+                      <div>
+                         <label for="password">Пароль</label>
+                         <input id="password" name="password" type="password">
+                      </div>
 
                           <div>
                              <label for="password_commit">Підтвердження пароля</label>
