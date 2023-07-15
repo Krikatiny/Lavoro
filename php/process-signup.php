@@ -4,6 +4,10 @@ if (empty($_POST["name"])) {
     die("Name is required");
 }
 
+if (strlen($_POST["phone_number"]) < 10 || strlen($_POST["phone_number"]) > 14 ) {
+    die("Phone number is required");
+}
+
 if ( ! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
     die("Valid email is required");
 }
@@ -28,8 +32,8 @@ $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
 $mysqli = require __DIR__ . "/database.php";
 
-$sql = "INSERT INTO user (name, email, password_hash)
-        VALUES (?, ?, ?)";
+$sql = "INSERT INTO user (name, email, password_hash, phone_number)
+        VALUES (?, ?, ?, ?)";
         
 $stmt = $mysqli->stmt_init();
 
@@ -37,10 +41,11 @@ if ( ! $stmt->prepare($sql)) {
     die("SQL error: " . $mysqli->error);
 }
 
-$stmt->bind_param("sss",
+$stmt->bind_param("ssss",
                   $_POST["name"],
                   $_POST["email"],
-                  $password_hash);
+                  $password_hash,
+                  $_POST["phone_number"]);
                   
 if ($stmt->execute()) {
 

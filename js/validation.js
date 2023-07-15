@@ -16,12 +16,12 @@ validation
         {
             validator: (value) => () => {
                 return fetch("../php/validate-email.php?email=" + encodeURIComponent(value))
-                       .then(function(response) {
-                           return response.json();
-                       })
-                       .then(function(json) {
-                           return json.available;
-                       });
+                    .then(function (response) {
+                        return response.json();
+                    })
+                    .then(function (json) {
+                        return json.available;
+                    });
             },
             errorMessage: "email already taken"
         }
@@ -40,6 +40,19 @@ validation
                 return value === fields["#password"].elem.value;
             },
             errorMessage: "Passwords should match"
+        }
+    ])
+    .addField("#phone_number", [
+        {
+            rule: "required"
+        },
+        {
+            rule: "minLength",
+            value: 10
+        },
+        {
+            rule: "maxLength",
+            value: 14
         }
     ])
     .onSuccess((event) => {

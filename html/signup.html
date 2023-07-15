@@ -4,31 +4,37 @@
     <meta charset="UTF-8">
     <title>SignUp form</title>
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
-    <script src="../js/validation.js" defer></script>
+    <script defer src="../js/validation.js"></script>
 </head>
 <body>
-    <h1>Sign Up</h1>
-    <form action="../php/process-signup.php" method="post" id="signup" novalidate>
-        <div>
-            <label for="name">Name</label>
-            <input type ="text" id = "name" name="name">
-        </div>
-        
-        <div>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email">
-        </div>
+<h1>Sign Up</h1>
+<form action="../php/process-signup.php" id="signup" method="post" novalidate>
+    <div>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text">
+    </div>
 
-        <div>
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password">
-        </div>
+    <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email">
+    </div>
 
-        <div>
-            <label for="password_commit">Password commit</label>
-            <input type="password" name="password_commit" id="password_commit">
-        </div>
-        <button type="submit">Submit</button>
-    </form>
+    <div>
+        <label for="phone_number">Phone with code</label>
+        <input id="phone_number" name="phone_number" type="tel">
+    </div>
+
+    <div>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password">
+    </div>
+
+    <div>
+        <label for="password_commit">Password commit</label>
+        <input id="password_commit" name="password_commit" type="password">
+    </div>
+    <button type="submit">Submit</button>
+</form>
+<p><a href="../php/login.php">Login</a></p>
 </body>
 </html>
