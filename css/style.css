@@ -330,5 +330,31 @@ ul,ol{
 	opacity:1;
 }
 
+/* --  Оформлення форм  -- */
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="date"], input[type="url"], input[type="tel"], textarea {
+    height: 40px;
+    width: 100%;
+    border: 1px solid #EBEBEB;
+	border-radius:4px;
+	background: transparent;
+    padding-left: 15px;
+	padding-right: 15px;
+	-webkit-transition:0.2s border-color;
+	transition:0.2s border-color;
+}
+
+textarea {
+    padding: 10px 15px;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="number"]:focus, input[type="date"]:focus, input[type="url"]:focus, input[type="tel"]:focus, textarea:focus {
+	border-color:#d85c98;
+}
+/* --  /Оформлення форм  -- */
+/* --  Кнопка на сторінці реєстрації  -- */
+.reg_button{
+	margin-top: 40px;
+}
+/* --  /Кнопка на сторінці реєстрації  -- */
 
 
