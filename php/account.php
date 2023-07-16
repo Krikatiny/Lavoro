@@ -33,7 +33,7 @@ if (isset($_SESSION["user_id"])) {
         <a href="../index.html">Home</a>
     </div>
     <div>
-        <p><a href="../php/logout.php">Log out</a> <a href="vacant_create.php">Create Vacant</a></p>
+        <p><a href="../php/logout.php">Log out</a> <a href="../vacant_create.html">Create Vacant</a></p>
     </div>
 
 <?php else: ?>
