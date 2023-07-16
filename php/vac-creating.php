@@ -37,7 +37,7 @@ $tagStmt = $mysqli->prepare($tagSql);
 if (!$tagStmt) {
     die("SQL error: " . $mysqli->error);
 }
-$tagNames = implode(',', $tags); // Об'єднуємо теги через кому
+$tagNames = implode(', ', $tags); // Об'єднуємо теги через кому
 
 
 // Виконуємо запит INSERT INTO для збереження основних даних в таблиці vacanties
@@ -55,11 +55,9 @@ if ($stmt->execute()) {
 
     $mysqli->commit(); // Зберігаємо всі зміни у базі даних
     $_SESSION['status'] = "Inserted Successfully";
-    header("Location: index.php");
-    exit;
 } else {
     $mysqli->rollback(); // Скасовуємо зміни у випадку помилки
     $_SESSION['status'] = "Data Not Inserted";
-    header("Location: index.php");
-    exit;
 }
+header("Location: account.php");
+exit;

@@ -1,34 +1,62 @@
 <?php
-$mysqli = require __DIR__ . "/database.php";
 
+$mysqli = require __DIR__ . "/database_vacanties.php";
 $query = "SELECT * FROM vacanties";
-$result = $mysqli->query($query);
+$result = mysqli_query($mysqli,$query);
 
-if ($result) {
-    $counter = 0;
-    while ($row = $result->fetch_assoc()) {
-        $name = $row['name'];
-        $salary = $row['salary'];
-        $description = $row['description'];
+$queryForTags = "SELECT tag_name FROM vacanties";
+$resultTag = mysqli_query($mysqli, $queryForTags);
 
-        // Генеруємо HTML-код для кожного запису
-        echo "<div>";
-        echo "<h2>Name $name</h2>";
-        echo "<h3>Salary: $salary</h3>";
-        echo "<p>Description: $description</p>";
-        echo "</div>";
-        $counter++;
-        if ($counter == 3){
-            break;
-        }
-    }
-
-    // Звільнюємо пам'ять від результату запиту
-    $result->free();
-} else {
-    echo "Error executing query: " . $mysqli->error;
-}
-
-// Закриваємо з'єднання з базою даних
-$mysqli->close();
 ?>
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+    <!-- Підключення головного CSS файлу -->
+    <link type="text/css" rel="stylesheet" href="../css/style.css"/>
+    <!-- Бібліотека Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <!-- Підключення бібліотеки, яка містить в собі гарні векторні значки, які ми використаєм в нашій роботі  -->
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<table>
+    <p>Таблиця вакансій</p>
+    
+        <?php
+
+        while($row = mysqli_fetch_assoc($result))
+        {
+            $tags = mysqli_fetch_assoc($resultTag);
+            $tags_implode = implode("",$tags);
+            ?>
+    <tr>
+        <td><?php echo $row['name']; ?></td>
+        <td>
+            <?php
+            $arr = explode(",", $tags_implode);
+                foreach ($arr as $item){
+                    echo $item;
+                    echo " ";
+                }
+            ?>
+        </td>
+        <td><?php echo $row['region']; ?></td>
+        <td><?php echo $row['salary']; ?></td>
+        <td><?php echo $row['description']; ?></td>
+    </tr>    
+        <?php
+        }
+
+        ?>
+</table>
+
+</body>
+</html>
