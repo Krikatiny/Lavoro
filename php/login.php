@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             $_SESSION["user_id"] = $user["id"];
 
-            header("Location: index.php");
+            header("Location: account.php");
             exit;
         }
     }
@@ -38,6 +38,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <title>Login</title>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+    <!-- Підключення головного CSS файлу -->
+    <link type="text/css" rel="stylesheet" href="../css/style.css"/>
+    <!-- Бібліотека Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <!-- Підключення бібліотеки, яка містить в собі гарні векторні значки, які ми використаєм в нашій роботі  -->
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
 </head>
 <body>
 

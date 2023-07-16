@@ -30,7 +30,7 @@ if (isset($_SESSION["user_id"])) {
 
         <p>Hello <?= htmlspecialchars($user["name"]) ?></p>
 
-        <p><a href="../php/logout.php">Log out</a> or <a href="vacant_create.php">Create Vacant</a> </p>
+        <p><a href="../php/logout.php">Log out</a> <a href="vacant_create.php">Create Vacant</a> <a href="../index.html">Home</a> </p>
 
     <?php else: ?>
 
