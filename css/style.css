@@ -136,7 +136,7 @@ ul, ol {
 
 .main-button.icon-button:after {
     content: "\f178";
-    font-family: FontAwesome;
+    font-family: "Font Awesome";
     position: absolute;
     width: 30px;
     right: 15px;
@@ -263,7 +263,7 @@ ul, ol {
 }
 
 #home.main-area {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 40px);
     padding-top: 0px;
     padding-bottom: 0px;
 }
@@ -474,3 +474,39 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     top: 70%;
     left: 50%;   
 }
+/* --  Форма коментарів  -- */
+.contact-form:after {
+	content:"";
+	display:block;
+	clear:both;
+}
+
+.contact-form .input {
+	margin-bottom:20px;
+}
+
+.contact-form textarea.input {
+	height:200px;
+}
+/* --  /Форма коментарів  -- */
+
+/* -- Контактна інфа команди -- */
+.contact-details li  {
+	margin-bottom:20px;
+}
+
+.contact-details li i {
+	color: #d85c98;
+	margin-right: 15px;
+	border: 1px solid #EBEBEB;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+/* --/Контактна інфа команди -- */
+
+.empty_place {
+    opacity: 0;
+  }
