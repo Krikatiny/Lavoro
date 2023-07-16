@@ -25,6 +25,7 @@ h2 {
 
 h3 {
     font-size: 24px;
+
 }
 
 h4 {
@@ -254,6 +255,8 @@ ul, ol {
     transform: translateY(0px);
     opacity: 1;
 }
+/*
+/* Пошукове поле */
 .searchbar {
     position: relative;
     display: flex;
@@ -280,15 +283,63 @@ ul, ol {
 .search-button::before {
     content: "";
     display: block;
-    width: 24px;
-    height: 24px;
+    width: 12px;
+    height: 12px;
     background-image: url(../img/loupe.png);
     background-repeat: no-repeat;
     background-size: cover;
     margin: 6px;
-    transform: scale(0.9);
     background-position: center;
+    scale: 1.8;
 }
+
+/*Стилізація чекбоксів*/
+.checkboxes{
+    margin-top: -70px;
+}
+.checkbox-column {
+    display: block;
+    width: 50%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.checkbox-column label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.name-colum{
+
+    display: block;
+    width: 50%;
+    margin-left: 30px;
+
+}
+
+/* Стилізація повзунка та виводу значення */
+.slider {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    margin-left: 18px;
+}
+
+input[type="range"] {
+    flex-grow: 1;
+    width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: black;
+}
+
+output {
+
+    margin-left: auto;
+    font-weight: bold;
+    color: deepskyblue;
+}
+
     /* Задаємо відступ зображення в межах кнопки */
 
 
@@ -582,7 +633,7 @@ input[type="tel"]:focus, input[type="regions"]focus, input[type="tel"]focus, tex
 .tags {
     display: flex;
     flex-wrap: wrap;
-    position: center;   
+    position: сenter;
 }
 .roow {
     flex-basis: 50%;
