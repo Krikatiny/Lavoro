@@ -1,19 +1,5 @@
 <?php
-
-session_start();
-
-if (isset($_SESSION["user_id"])) {
-
-    $mysqli = require __DIR__ . "/database.php";
-
-    $sql = "SELECT * FROM user
-            WHERE id = {$_SESSION["user_id"]}";
-
-    $result = $mysqli->query($sql);
-
-    $user = $result->fetch_assoc();
-}
-
+require __DIR__ . "/connectionCheck.php";
 ?>
 
 <!DOCTYPE html>
@@ -34,14 +20,14 @@ if (isset($_SESSION["user_id"])) {
             <a href="../index.html"> Home </a>
         </p>
         <p>
-            <a href="vacant_create.php"> Create Vacant </a>
+            <a href="../html/vacant_create.html"> Create Vacant </a>
         </p>
         <p>
             <a href="vacancy-page.php"> Vacant page</a>
         </p>
     </div>
     <div>
-        <p><a href="../php/logout.php">Log out</a> <a href="../vacant_create.html">Create Vacant</a></p>
+        <p><a href="../php/logout.php">Log out</a> <a href="../html/vacant_create.html">Create Vacant</a></p>
     </div>
 
 <?php else: ?>
