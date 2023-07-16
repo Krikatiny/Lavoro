@@ -1,16 +1,22 @@
-const addToFavoritesButtons = document.querySelectorAll(".add-to-favorites");
+const addToFavoritesButtons = document.querySelectorAll(".add-to-favorite");
 
 addToFavoritesButtons.forEach(button => {
     button.addEventListener("click", function() {
-        const vacancyId = button.getAttribute("id");
+        const vacancyId = button.getAttribute("data-id");
 
-        fetch(`../php/vacancy-page.php=${vacancyId}`)
+        const formData = new FormData();
+        formData.append("vac_id", vacancyId);
+
+        fetch("../php/addToFav.php", {
+            method: "POST",
+            body: formData
+        })
             .then(response => response.json())
             .then(data => {
-                alert("Added!");
+                alert(data.message);
             })
             .catch(error => {
-                alert("Not Added((");
+                alert("Error: " + error);
             });
     });
 });
