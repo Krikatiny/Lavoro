@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <div class="vac_name-label">
     <h1 class="reg_form_title">Увійти</h1>
     </div>
-    <input class="log_input" type="email" name="email" id="email" autofocus placeholder="Пошта">
+    <input class="log_input" type="email" name="email" id="email" autofocus placeholder="Пошта"
            value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
 
     <input class="log_input" type="password" name="password" id="password" autofocus placeholder="Пароль">

@@ -1,9 +1,17 @@
 <?php
-
-$mysqli = require __DIR__ . "/database_vacanties.php";
-$query = "SELECT * FROM vacanties";
+session_start();
+$mysqli = require __DIR__ . "/database.php";
+$query = "SELECT * FROM user_favourite";
 $result = mysqli_query($mysqli,$query);
-$queryForTags = "SELECT tag_name FROM vacanties";
+$userID = $_SESSION['user_id'];
+$queryForTags = "SELECT vac_id FROM user_favourite WHERE user_id = $userID";
+$stmt = $mysqli->prepare($queryForTags);
+if(!$stmt){
+    die("Error1");
+}
+
+
+
 $resultTag = mysqli_query($mysqli, $queryForTags);
 
 $tags = mysqli_fetch_assoc($resultTag);
