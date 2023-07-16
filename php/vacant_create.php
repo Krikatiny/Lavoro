@@ -30,11 +30,11 @@ if (isset($_SESSION["user_id"])) {
     </div>
 
     <div class="tags">
-        <input type="checkbox" name="tags[]" value="Red MI"> Red MI <br>
-        <input type="checkbox" name="tags[]" value="Samsung"> Samsung <br>
-        <input type="checkbox" name="tags[]" value="Nokia"> Nokia <br>
-        <input type="checkbox" name="tags[]" value="Vivo"> Vivo <br>
-        <input type="checkbox" name="tags[]" value="Karbon"> Karbon <br>
+        <input type="checkbox" name="tags[]" value="Робота з дітьми"> Робота з дітьми <br>
+        <input type="checkbox" name="tags[]" value="Гнучкий графік"> Гнучкий графік <br>
+        <input type="checkbox" name="tags[]" value="Робота для студента"> Робота для студента <br>
+        <input type="checkbox" name="tags[]" value="Зелена компанія"> Зелена компанія <br>
+        <input type="checkbox" name="tags[]" value="Премії та надбавки"> Премії та надбавки <br>
     </div>
     <div class="regin-label">
         <label for="region">Choose region</label>
