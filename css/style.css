@@ -215,7 +215,6 @@ ul, ol {
     -webkit-transition: 0.2s all;
     transition: 0.2s all;
 }
-
 #header.transparent-nav {
     position: absolute;
     background-color: transparent;
@@ -255,6 +254,43 @@ ul, ol {
     transform: translateY(0px);
     opacity: 1;
 }
+.searchbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.searchbar input[type="text"] {
+    padding-right: 35px; /* Задаємо простір для кнопки справа */
+}
+
+.search-button {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-button::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/loupe.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 6px;
+    transform: scale(0.9);
+    background-position: center;
+}
+    /* Задаємо відступ зображення в межах кнопки */
+
 
 /*---/Оформлення навігації--- */
 
@@ -267,8 +303,8 @@ ul, ol {
 
 #home.main-area {
     height: calc(100vh - 40px);
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .home-wrapper {
@@ -302,7 +338,7 @@ ul, ol {
 .main-area-tree li + li:before {
     content: "/";
     display: inline-block;
-    margin: 0px 5px;
+    margin: 0 5px;
     color: rgba(235, 235, 235, 0.25);
 }
 
@@ -330,7 +366,7 @@ ul, ol {
 /* -- Footer Nav -- */
 .footer-nav {
     text-align: right;
-    padding: 20px 0px;
+    padding: 20px 0;
 }
 
 .footer-nav li {
