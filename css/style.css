@@ -371,7 +371,8 @@ ul, ol {
 }
 
 /* --  Оформлення форм  -- */
-input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="date"], input[type="url"], input[type="tel"], textarea {
+input[type="text"], input[type="email"], input[type="password"], input[type="number"],
+input[type="date"], input[type="url"], input[type="tel"], input[type="regions"], textarea {
     height: 40px;
     width: 100%;
     border: 1px solid #EBEBEB;
@@ -387,13 +388,16 @@ textarea {
     padding: 10px 15px;
 }
 
-input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="number"]:focus, input[type="date"]:focus, input[type="url"]:focus, input[type="tel"]:focus, textarea:focus {
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus,
+input[type="number"]:focus, input[type="date"]:focus, input[type="url"]:focus,
+input[type="tel"]:focus, input[type="regions"]focus, input[type="tel"]focus, textarea:focus {
 	border-color:#d85c98;
 }
 /* --  /Оформлення форм  -- */
 /* --  Кнопка на сторінці реєстрації  -- */
 .reg_button{
     margin: 20px 20px 20px 20px;
+    display: inline-block;
 }
 /* --  /Кнопка на сторінці реєстрації  -- */
 
@@ -453,6 +457,18 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     transition: 0.2s all;
     
 }
+.log__button{
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #d85c98;
+    border: 2px solid transparent;
+    border-radius: 40px;
+    color: #FFF;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;  
+    margin: 20px 20px 20px 20px;
+}
 .reg2_button {
     position: static;
     /*top: 60%;*/
@@ -505,9 +521,54 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 	height: 40px;
 	line-height: 40px;
 	text-align: center;
+    
 }
 /* --/Контактна інфа команди -- */
 
 .empty_place {
     opacity: 0;
-  }
+}
+.vac_form_title{
+    text-align: center;
+    font: 500 1.7rem 'Montserrat', sans-serif;
+}
+.regions{
+    height: 40px;
+    width: 100%;
+    border: 1px solid #EBEBEB;
+	border-radius:4px;
+	background: transparent;
+    padding-left: 15px;
+	padding-right: 15px;
+	-webkit-transition:0.2s border-color;
+	transition:0.2s border-color;
+}
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    position: center;   
+}
+.roow {
+    flex-basis: 50%;
+    box-sizing: border-box;
+} 
+input[type="checkbox"] {
+    margin: 5px;
+}
+.tags{
+    display: flex;
+    position: center;  
+    margin-left: 25px;
+    margin-bottom: 25px;  
+}
+.vac_form_text{
+    text-align: center;
+    font: 500 1.3rem 'Montserrat', sans-serif;
+    margin-left: 25px;
+}
+.log_input{
+    margin-top: 20px;
+}
+.vacantion_button{
+    margin: 20px 20px 20px 20px;
+}
