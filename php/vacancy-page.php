@@ -20,6 +20,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
     <link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css"/>
     <!-- Підключення бібліотеки, яка містить в собі гарні векторні значки, які ми використаєм в нашій роботі  -->
     <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <script defer src="../js/addToFav.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -38,6 +39,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
             $tags_implode = implode("",$tags);
             ?>
     <tr>
+        <td><?php echo $row['id']; ?></td>
         <td><?php echo $row['name']; ?></td>
         <td>
             <?php
@@ -51,6 +53,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
         <td><?php echo $row['region']; ?></td>
         <td><?php echo $row['salary']; ?></td>
         <td><?php echo $row['description']; ?></td>
+        <td><button type="button" id="<?= htmlspecialchars($row['id']) ?>">Add to favourite</button></td>
     </tr>    
         <?php
         }
