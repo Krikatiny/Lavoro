@@ -354,6 +354,7 @@ output {
 /*---/Оформлення навігації--- */
 
 /*---Оформлення зони без фонового зоображення---*/
+
 .main-area {
     position: relative;
     padding-top: 80px;
@@ -676,6 +677,8 @@ input[type="checkbox"] {
 .vacantion_button{
     margin: 20px 20px 20px 20px;
 }
-
+.bg-white{
+    height: 550px; 
+}
 
 
