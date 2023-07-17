@@ -159,11 +159,12 @@ ul, ol {
     padding: 0;
 }
 
-.navbar-home{
+.navbar-home {
     margin: 10px;
     display: inline-block;
 }
-.home_buttom{
+
+.home_buttom {
     margin: -25%;
 }
 
@@ -216,6 +217,7 @@ ul, ol {
     -webkit-transition: 0.2s all;
     transition: 0.2s all;
 }
+
 #header.transparent-nav {
     position: absolute;
     background-color: transparent;
@@ -255,15 +257,18 @@ ul, ol {
     transform: translateY(0px);
     opacity: 1;
 }
+
 /* Таблиця вакансій*/
-.table-vacancies{
+.table-vacancies {
     margin-top: 30px;
     margin-left: 300px;
 }
-.table-name{
+
+.table-name {
     margin-top: -50px;
     margin-left: 800px;
 }
+
 /* Пошукове поле */
 .searchbar {
     position: relative;
@@ -302,9 +307,10 @@ ul, ol {
 }
 
 /*Стилізація чекбоксів*/
-.checkboxes{
+.checkboxes {
     margin-top: -70px;
 }
+
 .checkbox-column {
     display: block;
     width: 50%;
@@ -317,7 +323,8 @@ ul, ol {
     margin-bottom: 5px;
     margin-top: 10px;
 }
-.name-colum{
+
+.name-colum {
 
     display: block;
     width: 50%;
@@ -348,7 +355,7 @@ output {
     color: deepskyblue;
 }
 
-    /* Задаємо відступ зображення в межах кнопки */
+/* Задаємо відступ зображення в межах кнопки */
 
 
 /*---/Оформлення навігації--- */
@@ -430,8 +437,8 @@ output {
 .footer-nav {
     text-align: right;
     padding: 2px 0px;
-    
-   
+
+
 }
 
 .footer-nav li {
@@ -477,12 +484,12 @@ input[type="date"], input[type="url"], input[type="tel"], input[type="regions"],
     height: 40px;
     width: 100%;
     border: 1px solid #EBEBEB;
-	border-radius:4px;
-	background: transparent;
+    border-radius: 4px;
+    background: transparent;
     padding-left: 15px;
-	padding-right: 15px;
-	-webkit-transition:0.2s #cd5d21;
-	transition:0.2s #cd5d21;
+    padding-right: 15px;
+    -webkit-transition: 0.2s #cd5d21;
+    transition: 0.2s #cd5d21;
 }
 
 textarea {
@@ -491,30 +498,33 @@ textarea {
 
 input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus,
 input[type="number"]:focus, input[type="date"]:focus, input[type="url"]:focus,
-input[type="tel"]:focus, input[type="regions"]focus, input[type="tel"]focus, textarea:focus {
-	border-color:#d85c98;
+input[type="tel"]:focus, input[type="regions"] focus, input[type="tel"] focus, textarea:focus {
+    border-color: #d85c98;
 }
+
 /* --  /Оформлення форм  -- */
 /* --  Кнопка на сторінці реєстрації  -- */
-.reg_button{
+.reg_button {
     margin: 20px 20px 20px 20px;
     display: inline-block;
 }
+
 /* --  /Кнопка на сторінці реєстрації  -- */
 
 /* --  Сторінка реєстрації -- */
-.signup{
-        margin: 0;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 18px;
-        background: url(../img/page-background.jpg);
-        background-size: cover;
-        position: relative;
+.signup {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background: url(../img/page-background.jpg);
+    background-size: cover;
+    position: relative;
 
 }
+
 .signup::before {
     content: "";
     position: absolute;
@@ -527,15 +537,18 @@ input[type="tel"]:focus, input[type="regions"]focus, input[type="tel"]focus, tex
     filter: blur(3px) brightness(0.7);
     z-index: -1;
 }
-.reg_form_title{
+
+.reg_form_title {
     text-align: center;
     font: 500 2.7rem 'Montserrat', sans-serif;
 }
-.reg_form_text{
+
+.reg_form_text {
     margin-bottom: 5px;
     text-align: center;
     font: 500 1rem 'Montserrat', sans-serif;
 }
+
 .box {
     width: 400px;
     max-width: 400px;
@@ -546,6 +559,7 @@ input[type="tel"]:focus, input[type="regions"]focus, input[type="tel"]focus, tex
     background: #ffffff;
     font: 500 1.2rem 'Montserrat', sans-serif;
 }
+
 .reg__button {
     position: relative;
     display: inline-block;
@@ -556,9 +570,10 @@ input[type="tel"]:focus, input[type="regions"]focus, input[type="tel"]focus, tex
     color: #FFF;
     -webkit-transition: 0.2s all;
     transition: 0.2s all;
-    
+
 }
-.log__button{
+
+.log__button {
     position: relative;
     display: inline-block;
     padding: 10px 30px;
@@ -567,9 +582,10 @@ input[type="tel"]:focus, input[type="regions"]focus, input[type="tel"]focus, tex
     border-radius: 40px;
     color: #FFF;
     -webkit-transition: 0.2s all;
-    transition: 0.2s all;  
+    transition: 0.2s all;
     margin: 20px 20px 20px 20px;
 }
+
 .reg2_button {
     position: static;
     /*top: 60%;*/
@@ -583,102 +599,119 @@ input[type="tel"]:focus, input[type="regions"]focus, input[type="tel"]focus, tex
     color: #FFF;
     transition: 0.1s all;
 }
-.reg_form_input{
-  font: 500 1.2rem 'Montserrat', sans-serif;
-  margin-top: 10px;
+
+.reg_form_input {
+    font: 500 1.2rem 'Montserrat', sans-serif;
+    margin-top: 10px;
 }
-.reg_accept_box{
+
+.reg_accept_box {
     position: absolute;
     top: 70%;
-    left: 50%;   
+    left: 50%;
 }
+
 /* --  Форма коментарів  -- */
 .contact-form:after {
-	content:"";
-	display:block;
-	clear:both;
+    content: "";
+    display: block;
+    clear: both;
 
 }
-.contact-form-container{
+
+.contact-form-container {
     background: #d9ced1;
 }
+
 .contact-form .input {
-	margin-bottom:20px;
+    margin-bottom: 20px;
     background: #ffff;
 }
 
 .contact-form textarea.input {
-	height:94px;
+    height: 94px;
 }
+
 /* --  /Форма коментарів  -- */
 
 /* -- Контактна інфа команди -- */
-.contact-details li  {
-	margin-bottom:20px;
+.contact-details li {
+    margin-bottom: 20px;
 }
 
 .contact-details li i {
-	color: #d85c98;
-	margin-right: 15px;
-	border: 1px solid #EBEBEB;
-	border-radius: 50%;
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-    
+    color: #d85c98;
+    margin-right: 15px;
+    border: 1px solid #EBEBEB;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+
 }
+
 /* --/Контактна інфа команди -- */
 
 .empty_place {
     opacity: 0;
 }
-.vac_form_title{
+
+.vac_form_title {
     text-align: center;
     font: 500 1.7rem 'Montserrat', sans-serif;
 }
-.regions{
+
+.regions {
     height: 40px;
     width: 100%;
     border: 1px solid #EBEBEB;
-	border-radius:4px;
-	background: transparent;
+    border-radius: 4px;
+    background: transparent;
     padding-left: 15px;
-	padding-right: 15px;
-	-webkit-transition:0.2s border-color;
-	transition:0.2s border-color;
+    padding-right: 15px;
+    -webkit-transition: 0.2s border-color;
+    transition: 0.2s border-color;
 }
+
 .tags {
     display: flex;
     flex-wrap: wrap;
     position: сenter;
 }
+
 .roow {
     flex-basis: 50%;
     box-sizing: border-box;
-} 
+}
+
 input[type="checkbox"] {
     margin: 5px;
 }
-.tags{
+
+.tags {
     display: flex;
-    position: center;  
+    position: center;
     margin-left: 25px;
-    margin-bottom: 25px;  
+    margin-bottom: 25px;
 }
-.vac_form_text{
+
+.vac_form_text {
     text-align: center;
     font: 500 1.3rem 'Montserrat', sans-serif;
     margin-left: 25px;
 }
-.log_input{
+
+.log_input {
     margin-top: 20px;
 }
-.vacantion_button{
+
+.vacantion_button {
     margin: 20px 20px 20px 20px;
 }
-.bg-white{
-    height: 550px; 
+
+.bg-white {
+    height: 600px;
 }
 
 
