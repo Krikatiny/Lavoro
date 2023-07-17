@@ -32,7 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 if (!$stmt) {
                     die("Помилка SQL: " . $mysqli->error);
                 }
-
                 $stmt->bind_param("ii", $userId, $vacancyId);
 
                 if ($stmt->execute()) {
