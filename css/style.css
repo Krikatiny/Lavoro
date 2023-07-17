@@ -25,6 +25,7 @@ h2 {
 
 h3 {
     font-size: 24px;
+
 }
 
 h4 {
@@ -158,9 +159,12 @@ ul, ol {
     padding: 0;
 }
 
-.navbar-home .home_buttom {
-    margin-top: 10px;
+.navbar-home{
+    margin: 10px;
     display: inline-block;
+}
+.home_buttom{
+    margin: -25%;
 }
 
 .navbar-home .home_buttom > img {
@@ -212,7 +216,6 @@ ul, ol {
     -webkit-transition: 0.2s all;
     transition: 0.2s all;
 }
-
 #header.transparent-nav {
     position: absolute;
     background-color: transparent;
@@ -252,10 +255,106 @@ ul, ol {
     transform: translateY(0px);
     opacity: 1;
 }
+/* Таблиця вакансій*/
+.table-vacancies{
+    margin-top: 30px;
+    margin-left: 300px;
+}
+.table-name{
+    margin-top: -50px;
+    margin-left: 800px;
+}
+/* Пошукове поле */
+.searchbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.searchbar input[type="text"] {
+    padding-right: 35px; /* Задаємо простір для кнопки справа */
+}
+
+.search-button {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-button::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-image: url(../img/loupe.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 6px;
+    background-position: center;
+    scale: 1.8;
+}
+
+/*Стилізація чекбоксів*/
+.checkboxes{
+    margin-top: -70px;
+}
+.checkbox-column {
+    display: block;
+    width: 50%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.checkbox-column label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.name-colum{
+
+    display: block;
+    width: 50%;
+    margin-left: 30px;
+
+}
+
+/* Стилізація повзунка та виводу значення */
+.slider {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    margin-left: 18px;
+}
+
+input[type="range"] {
+    flex-grow: 1;
+    width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: black;
+}
+
+output {
+
+    margin-left: auto;
+    font-weight: bold;
+    color: deepskyblue;
+}
+
+    /* Задаємо відступ зображення в межах кнопки */
+
 
 /*---/Оформлення навігації--- */
 
 /*---Оформлення зони без фонового зоображення---*/
+
 .main-area {
     position: relative;
     padding-top: 80px;
@@ -263,9 +362,9 @@ ul, ol {
 }
 
 #home.main-area {
-    height: calc(100vh - 80px);
-    padding-top: 0px;
-    padding-bottom: 0px;
+    height: calc(100vh - 40px);
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .home-wrapper {
@@ -299,24 +398,27 @@ ul, ol {
 .main-area-tree li + li:before {
     content: "/";
     display: inline-block;
-    margin: 0px 5px;
+    margin: 0 5px;
     color: rgba(235, 235, 235, 0.25);
 }
 
 /* -- /Стилі для різних елементів посилань -- */
 
 /* -- Стиль нижньої менюшки -- */
-#bottom-footer {
-    margin-top: 20px;
+.bottom-footer {
+    margin-top: 10px;
     padding-top: 20px;
-    border-top: 1px solid #EBEBEB;
+    border-top: 1px solid #5b3e3e;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #c2b3b3
 }
 
 /* -- Логотип нашого сайту -- */
 .footer-logo .logo {
-    transform: scale(7);
+    transform: scale(2);
     margin-left: 50px;
-    margin-top: 10px;
+    margin-top: 30px;
     display: inline-block;
 }
 
@@ -327,7 +429,9 @@ ul, ol {
 /* -- Footer Nav -- */
 .footer-nav {
     text-align: right;
-    padding: 20px 0px;
+    padding: 2px 0px;
+    
+   
 }
 
 .footer-nav li {
@@ -367,5 +471,214 @@ ul, ol {
     opacity: 1;
 }
 
+/* --  Оформлення форм  -- */
+input[type="text"], input[type="email"], input[type="password"], input[type="number"],
+input[type="date"], input[type="url"], input[type="tel"], input[type="regions"], textarea {
+    height: 40px;
+    width: 100%;
+    border: 1px solid #EBEBEB;
+	border-radius:4px;
+	background: transparent;
+    padding-left: 15px;
+	padding-right: 15px;
+	-webkit-transition:0.2s #cd5d21;
+	transition:0.2s #cd5d21;
+}
+
+textarea {
+    padding: 10px 15px;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus,
+input[type="number"]:focus, input[type="date"]:focus, input[type="url"]:focus,
+input[type="tel"]:focus, input[type="regions"]focus, input[type="tel"]focus, textarea:focus {
+	border-color:#d85c98;
+}
+/* --  /Оформлення форм  -- */
+/* --  Кнопка на сторінці реєстрації  -- */
+.reg_button{
+    margin: 20px 20px 20px 20px;
+    display: inline-block;
+}
+/* --  /Кнопка на сторінці реєстрації  -- */
+
+/* --  Сторінка реєстрації -- */
+.signup{
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        background: url(../img/page-background.jpg);
+        background-size: cover;
+        position: relative;
+
+}
+.signup::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/page-background.jpg);
+    background-size: cover;
+    filter: blur(3px) brightness(0.7);
+    z-index: -1;
+}
+.reg_form_title{
+    text-align: center;
+    font: 500 2.7rem 'Montserrat', sans-serif;
+}
+.reg_form_text{
+    margin-bottom: 5px;
+    text-align: center;
+    font: 500 1rem 'Montserrat', sans-serif;
+}
+.box {
+    width: 400px;
+    max-width: 400px;
+    margin: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;;
+    background: #ffffff;
+    font: 500 1.2rem 'Montserrat', sans-serif;
+}
+.reg__button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #d85c98;
+    border: 2px solid transparent;
+    border-radius: 40px;
+    color: #FFF;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+    
+}
+.log__button{
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #d85c98;
+    border: 2px solid transparent;
+    border-radius: 40px;
+    color: #FFF;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;  
+    margin: 20px 20px 20px 20px;
+}
+.reg2_button {
+    position: static;
+    /*top: 60%;*/
+    /*left: 50%;*/
+    transform: translate(0.5rem, 0.5rem);
+    margin: 0;
+    padding: 15px 30px;
+    background-color: #d85c98;
+    border: 2px solid transparent;
+    border-radius: 40px;
+    color: #FFF;
+    transition: 0.1s all;
+}
+.reg_form_input{
+  font: 500 1.2rem 'Montserrat', sans-serif;
+  margin-top: 10px;
+}
+.reg_accept_box{
+    position: absolute;
+    top: 70%;
+    left: 50%;   
+}
+/* --  Форма коментарів  -- */
+.contact-form:after {
+	content:"";
+	display:block;
+	clear:both;
+
+}
+.contact-form-container{
+    background: #d9ced1;
+}
+.contact-form .input {
+	margin-bottom:20px;
+    background: #ffff;
+}
+
+.contact-form textarea.input {
+	height:94px;
+}
+/* --  /Форма коментарів  -- */
+
+/* -- Контактна інфа команди -- */
+.contact-details li  {
+	margin-bottom:20px;
+}
+
+.contact-details li i {
+	color: #d85c98;
+	margin-right: 15px;
+	border: 1px solid #EBEBEB;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+    
+}
+/* --/Контактна інфа команди -- */
+
+.empty_place {
+    opacity: 0;
+}
+.vac_form_title{
+    text-align: center;
+    font: 500 1.7rem 'Montserrat', sans-serif;
+}
+.regions{
+    height: 40px;
+    width: 100%;
+    border: 1px solid #EBEBEB;
+	border-radius:4px;
+	background: transparent;
+    padding-left: 15px;
+	padding-right: 15px;
+	-webkit-transition:0.2s border-color;
+	transition:0.2s border-color;
+}
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    position: сenter;
+}
+.roow {
+    flex-basis: 50%;
+    box-sizing: border-box;
+} 
+input[type="checkbox"] {
+    margin: 5px;
+}
+.tags{
+    display: flex;
+    position: center;  
+    margin-left: 25px;
+    margin-bottom: 25px;  
+}
+.vac_form_text{
+    text-align: center;
+    font: 500 1.3rem 'Montserrat', sans-serif;
+    margin-left: 25px;
+}
+.log_input{
+    margin-top: 20px;
+}
+.vacantion_button{
+    margin: 20px 20px 20px 20px;
+}
+.bg-white{
+    height: 550px; 
+}
 
 

@@ -2,39 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SignUp form</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Форма реєстрації</title>
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script defer src="../js/validation.js"></script>
+    <!-- Посилання на Google шрифт -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+    <!-- Підключення головного CSS файлу -->
+    <link href="../css/style.css" rel="stylesheet" type="text/css"/>
+    <!-- Бібліотека Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <!-- Підключення бібліотеки, яка містить в собі гарні векторні значки, які ми використаєм в нашій роботі  -->
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
 </head>
-<body>
-<h1>Sign Up</h1>
-<form action="../php/process-signup.php" id="signup" method="post" novalidate>
-    <div>
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text">
-    </div>
+<body class="signup">
+        <div class="box"> 
+            <!-- Кнопка будиночка -->
+            <div class="navbar-home">
+                <a class="home_buttom" href="../index.html">
+                    <img src="../img/free-icon-home-88282.png" alt="home_buttom">
+                </a>
+            </div>          
+                 <form action="../php/process-signup.php" class="reg" id="signup" method="post" novalidate>
+                    <h1 class="reg_form_title">Зареєструватися</h1>
+                      <div class="reg_form_input">
+                         <input id="name" name="name" type="text" autofocus placeholder="Ім'я">
+                      </div>
 
-    <div>
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email">
-    </div>
+                      <div class="reg_form_input">
+                         <input id="email" name="email" type="email" autofocus placeholder="Пошта">
+                      </div>
 
-    <div>
-        <label for="phone_number">Phone with code</label>
-        <input id="phone_number" name="phone_number" type="tel">
-    </div>
+                      <div class="reg_form_input">
+                          <input id="phone_number" name="phone_number" type="tel" autofocus placeholder="Телефон">
+                      </div>
 
-    <div>
-        <label for="password">Password</label>
-        <input id="password" name="password" type="password">
-    </div>
+                      <div class="reg_form_input">
+                         <input id="password" name="password" type="password" autofocus placeholder="Пароль">
+                      </div>
 
-    <div>
-        <label for="password_commit">Password commit</label>
-        <input id="password_commit" name="password_commit" type="password">
-    </div>
-    <button type="submit">Submit</button>
-</form>
-<p><a href="../php/login.php">Login</a></p>
+                          <div class="reg_form_input">
+                             <input type="password" name="password_commit" id="password_commit" autofocus placeholder="Повторення пароля">
+                          </div>
+                          <div>
+                             <div class="reg_button">
+                                <button class="reg__button">Відправити</button>
+                             </div>
+                             <div class="reg_button">
+                                <button class="log__button" href="../php/login.php">Увійти</button>
+                             </div>
+                        </div>
+                      </form>
+               </div>
+       </div>
+
 </body>
 </html>

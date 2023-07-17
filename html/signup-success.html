@@ -1,15 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Signup</title>
     <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Стан реєстрація</title>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script defer src="../js/validation.js"></script>
+    <!-- Посилання на Google шрифт -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+    <!-- Підключення головного CSS файлу -->
+    <link href="../css/style.css" rel="stylesheet" type="text/css"/>
+    <!-- Бібліотека Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <!-- Підключення бібліотеки, яка містить в собі гарні векторні значки, які ми використаєм в нашій роботі  -->
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="signup">
+<div class="box">
+    <!-- Кнопка будиночка -->
+    <div class="navbar-home">
+        <a class="home_buttom" href="../index.html">
+            <img alt="home_buttom" src="../img/free-icon-home-88282.png">
+        </a>
+    </div>
+    <div class="reg_accept_box"></div>
+    <p class="reg_form_title">Реєстрація успішна!</p>
+    <div class="text-center reg_button">
+        <a class="main-button icon-button" href="../php/login.php"> Почнімо!</a>
+    </div>
+</div>
 
-<h1>Signup</h1>
-
-<p>Signup successful.
-    You can now <a href="../php/login.php">log in</a>.</p>
 
 </body>
 </html>

@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Lavoro - пошук твого майбутнього </title>
     <!-- Посилання на Google шрифт -->
     <link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
@@ -15,9 +17,8 @@
 <body>
 
 <!-- Оформлення навігаційної панелі -->
-<header id="header">
+<header class="transparent-nav" id="header">
     <div class="container">
-
         <div class="navbar-header">
             <!-- Кнопка будиночка -->
             <div class="navbar-home">
@@ -27,18 +28,20 @@
             </div>
             <!-- /Кнопка будиночка -->
         </div>
-
-        <!-- Меню навігації сайту -->
+        <!-- Меню навігації сайту-->
         <nav id="nav">
             <ul class="main-menu nav navbar-nav navbar-right">
                 <li><a href="../index.html">Головна</a></li>
-                <li><a href="#">Отримати роботу</a></li>
-                <li><a href="#">Вакансії</a></li>
-                <li><a href="contact.html">Контакти</a></li>
+                <li><a href="../php/vacancies.php">Вакансії</a></li>
+                <li><a href="../html/contact.html">Контакти</a></li>
+                <a class="profile_buttom" href="../php/signup.php">
+                    <img alt="profile_buttom" src="../img/profile (1).png">
+                </a>
             </ul>
         </nav>
-        <!-- /Меню навігації сайту -->
 
+
+        <!-- /Меню навігації сайту -->
     </div>
 </header>
 <!-- /Оформлення навігаційної панелі -->
@@ -47,7 +50,7 @@
 <div class="main-area section">
 
     <!-- Фонове зоображення -->
-    <div class="bg-image bg-parallax overlay" style="background-image:url(../img/page-background.jpg)"></div>
+    <div class="bg-image bg-parallax overlay" style="background-image:url(../img/background2.jpg)"></div>
     <!-- /Фонове зоображення -->
 
     <!-- Наповнення вступної частини -->
@@ -58,8 +61,11 @@
                     <li><a href="../index.html">Головна</a></li>
                     <li>Контакти</li>
                 </ul>
+                <p class="empty_place">.</p>
                 <h1 class="white-text">Залиште свої пропозиції!</h1>
-
+                <p class="empty_place">.</p>
+                <p class="empty_place">.</p>
+                <p class="empty_place">.</p>
             </div>
         </div>
     </div>
@@ -76,13 +82,15 @@
             <div class="col-md-6">
                 <div class="contact-form">
                     <h4>Відправте своє повідомлення</h4>
-                    <form>
-                        <input class="input" name="name" placeholder="Ім'я" type="text">
-                        <input class="input" name="email" placeholder="Пошта" type="email">
-                        <input class="input" name="subject" placeholder="Тема" type="text">
-                        <textarea class="input" name="message" placeholder="Введіть повідомлення"></textarea>
-                        <button class="main-button icon-button pull-right">Надіслати</button>
-                    </form>
+                    <div class="contact-form-container">
+                        <form>
+                            <input class="input" name="name" placeholder="Ім'я" type="text">
+                            <input class="input" name="email" placeholder="Пошта" type="email">
+                            <input class="input" name="subject" placeholder="Тема" type="text">
+                            <textarea class="input" name="message" placeholder="Введіть повідомлення"></textarea>
+                            <button class="main-button icon-button pull-right">Надіслати</button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <!-- /Блок з формою повідомлення  -->
@@ -92,10 +100,15 @@
                 <h4>Контактна інформація</h4>
                 <ul class="contact-details">
                     <li><i class="fa fa-envelope"></i>nastiafastovets01@gmail.com</li>
-                    <li><i class="fa fa-phone"></i>063-456-76-87</li>
+                    <li><i class="fa fa-phone"></i>Тарас: 067-495-21-23</li>
+                    <li><i class="fa fa-phone"></i>Захар: 066-557-73-33</li>
+                    <li><i class="fa fa-phone"></i>Настя: 063-754-12-76</li>
+                    <li><i class="fa fa-phone"></i>Настя: 063-351-64-90</li>
                     <li><i class="fa fa-map-marker"></i>Горіхуватський шлях 7А</li>
                 </ul>
             </div>
+
+
             <!-- /Контактна інформація нашої команди -->
         </div>
     </div>
@@ -103,7 +116,7 @@
 <!-- /Наповнення основної частини сторінки -->
 
 <!-- Нижня менюшка -->
-<footer class="section" id="footer">
+<footer class="section bottom-footer" id="footer">
 
     <div class="container">
 
@@ -123,8 +136,7 @@
             <div class="col-md-6">
                 <ul class="main-menu nav navbar-nav navbar-right">
                     <li><a href="../index.html">Головна</a></li>
-                    <li><a href="#">Отримати роботу</a></li>
-                    <li><a href="#">Вакансії</a></li>
+                    <li><a href="vacancies.html">Вакансії</a></li>
                     <li><a href="contact.html">Контакти</a></li>
                 </ul>
             </div>

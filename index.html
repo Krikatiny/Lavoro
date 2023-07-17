@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Lavoro - пошук твого майбутнього </title>
     <!-- Посилання на Google шрифт -->
-	<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
-     <!-- Підключення головного CSS файлу -->
-    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+    <!-- Підключення головного CSS файлу -->
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
     <!-- Бібліотека Bootstrap -->
-	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
-	<!-- Підключення бібліотеки, яка містить в собі гарні векторні значки, які ми використаєм в нашій роботі  -->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <!-- Підключення бібліотеки, яка містить в собі гарні векторні значки, які ми використаєм в нашій роботі  -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 <body>
 <!-- Оформлення навігаційної панелі -->
-<header id="header" class="transparent-nav">
+<header class="transparent-nav" id="header">
     <div class="container">
         <div class="navbar-header">
             <!-- Кнопка будиночка -->
             <div class="navbar-home">
                 <a class="home_buttom" href="index.html">
-                    <img src="./img/home.png" alt="home_buttom">
+                    <img alt="home_buttom" src="./img/home.png">
                 </a>
             </div>
             <!-- /Кнопка будиночка -->
         </div>
-
         <!-- Меню навігації сайту-->
         <nav id="nav">
             <ul class="main-menu nav navbar-nav navbar-right">
-                    <li><a href="index.html">Головна</a></li>
-                    <li><a href="#">Отримати роботу</a></li>
-                    <li><a href="#">Вакансії</a></li>
-                    <li><a href="html/contact.html">Контакти</a></li>
-					
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="php/vacancies.php">Вакансії</a></li>
+                <li><a href="html/contact.html">Контакти</a></li>
+                <a class="profile_buttom" href="php/signup.php">
+                    <img alt="profile_buttom" src="./img/profile (1).png">
+                </a>
             </ul>
         </nav>
-		<a class="profile_buttom" href="html/signup.html">
-			<img src="./img/user-profile.png" alt="profile_buttom">
-		</a>
+
 
         <!-- /Меню навігації сайту -->
     </div>
@@ -47,7 +48,7 @@
 <!-- /Оформлення навігаційної панелі -->
 
 <!-- Ознайомчий контейнер з вступом до сайту -->
-<div id="home" class="main-area">
+<div class="main-area" id="home">
 
     <!-- Головне фонове зоображення домашньої сторінки  -->
     <div class="bg-image bg-parallax overlay" style="background-image:url(./img/home_3.jpg)"></div>
@@ -60,7 +61,7 @@
                 <div class="col-md-8">
                     <h1 class="white-text">Lavoro</h1>
                     <p class="lead white-text">Ласкаво просимо до сервісу пошуку роботи!</p>
-                    <a class="main-button icon-button" href="#">Почнімо!</a>
+                    <a class="main-button icon-button" href="html/signup.html">Почнімо!</a>
                 </div>
             </div>
         </div>
@@ -71,181 +72,167 @@
 
 <!-- Наповнення головної сторінки -->
 
-		<!-- Гарячі вакансії -->
-		<div id="vacancies" class="section">
-			<!-- Контейнер з гарячими вакансіями-->
-			<div class="container">
-				<!-- Рядки з ознайомчим текстом -->
-				<div class="row">
-					<div class="section-header text-center">
-						<h2>Гарячі вакансії</h2>
-						<p class="lead">Перегляньте найпопулярніші пропозиції!</p>
-					</div>
-				</div>
-				<!-- /Рядки з ознайомчим текстом-->
+<!-- Гарячі вакансії -->
+<div class="section" id="vacancies">
+    <!-- Контейнер з гарячими вакансіями-->
+    <div class="container">
+        <!-- Рядки з ознайомчим текстом -->
+        <div class="row">
+            <div class="section-header text-center">
+                <h2>Гарячі вакансії</h2>
+                <p class="lead">Перегляньте найпопулярніші пропозиції!</p>
+            </div>
+        </div>
+        <!-- /Рядки з ознайомчим текстом-->
 
-				<!-- Приклади гарячих вакансій  -->
-				<div id="vacancies-wrapper">
+        <!-- Приклади гарячих вакансій  -->
+        <div id="vacancies-wrapper">
 
-					<!-- Перший рядок вакансій -->
-					<div class="row">
+            <!-- Перший рядок вакансій -->
+            <div class="row">
 
-						<!-- Перша вакансія -->
-                        <!-- Тут наша команда використала класи з бібліотеки Bootstrap, яку ми підключим в процесі виконання роботи -->
-						<div class="col-md-3 col-sm-6 col-xs-6">
-							<div class="vacancies">
-								<a href="#" class="vacancies-img">
-									<img src="./img/картинка.jpg" alt="">
-									<i class="vacancies-link-icon fa fa-link"></i>
-								</a>
-								<a class="vacancies-title" href="#"> Вакансія </a>
-								<div class="vacancies-details">
-									<span class="vacancies-category"> Категорія роботи </span>
-									<span class="vacancies-price"> Зарплата </span>
-								</div>
-							</div>
-						</div>
-						<!-- /Перша вакансія  -->
+                <!-- Перша вакансія -->
+                <!-- Тут наша команда використала класи з бібліотеки Bootstrap, яку ми підключим в процесі виконання роботи -->
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="vacancies">
+                        <a class="vacancies-title" href="#"> Вакансія </a>
+                        <div class="vacancies-details">
+                            <iframe style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/track/486SOuxGXX6CFNMwFXlGZs?utm_source=generator"
+                                    width="100%" height="352" frameBorder="0" allowfullscreen=""
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            <span class="vacancies-category"> Категорія роботи </span>
+                            <span class="vacancies-price"> Зарплата </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Перша вакансія  -->
 
-						<!-- Друга вакансія -->
-						<div class="col-md-3 col-sm-6 col-xs-6">
-							<div class="vacancies">
-								<a href="#" class="vacancies-img">
-									<img src="./img/картинка.jpg" alt="">
-									<i class="vacancies-link-icon fa fa-link"></i>
-								</a>
-								<a class="vacancies-title" href="#"> Вакансія </a>
-								<div class="vacancies-details">
-									<span class="vacancies-category"> Категорія роботи </span>
-									<span class="vacancies-price"> Зарплата </span>
-								</div>
-							</div>
-						</div>
-						<!-- /Друга вакансія -->
+                <!-- Друга вакансія -->
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="vacancies">
+                        <a class="vacancies-title" href="#"> Вакансія </a>
+                        <div class="vacancies-details">
+                            <iframe style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/track/3VvcKToPY3diGRjERt8NvD?utm_source=generator"
+                                    width="100%" height="352" frameBorder="0" allowfullscreen=""
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            <span class="vacancies-category"> Категорія роботи </span>
+                            <span class="vacancies-price"> Зарплата </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Друга вакансія -->
 
-						<!-- Третя вакансія-->
-						<div class="col-md-3 col-sm-6 col-xs-6">
-							<div class="vacancies">
-								<a href="#" class="vacancies-img">
-									<img src="./img/картинка.jpg" alt="">
-									<i class="vacancies-link-icon fa fa-link"></i>
-								</a>
-								<a class="vacancies-title" href="#"> Вакансія </a>
-								<div class="vacancies-details">
-									<span class="vacancies-category"> Категорія роботи </span>
-									<span class="vacancies-price"> Зарплата </span>
-								</div>
-							</div>
-						</div>
-						<!-- /Третя вакансія-->
+                <!-- Третя вакансія-->
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="vacancies">
+                        <a class="vacancies-title" href="#"> Вакансія </a>
+                        <div class="vacancies-details">
+                            <iframe style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/track/6huNf4dutXRjJyGn7f5BPS?utm_source=generator"
+                                    width="100%" height="352" frameBorder="0" allowfullscreen=""
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            <span class="vacancies-category"> Категорія роботи </span>
+                            <span class="vacancies-price"> Зарплата </span>
+                        </div>
+                    </div>
+                </div>
+                <!--                    Четверта вакансія &ndash;&gt;-->
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="vacancies">
+                        <a class="vacancies-title" href="#"> Вакансія </a>
+                        <div class="vacancies-details">
+                            <iframe style="border-radius:12px"
+                                    src="https://open.spotify.com/embed/track/3n131e7wExc4paKrq5Zyi1?utm_source=generator"
+                                    width="100%" height="352" frameBorder="0" allowfullscreen=""
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    loading="lazy"></iframe>
+                            <span class="vacancies-category"> Категорія роботи </span>
+                            <span class="vacancies-price vacancies-free"> Зарплата </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Четверта вакансія -->
 
-                        <!-- Четверта вакансія -->
-						<div class="col-md-3 col-sm-6 col-xs-6">
-							<div class="vacancies">
-								<a href="#" class="vacancies-img">
-									<img src="./img/картинка.jpg" alt="">
-									<i class="vacancies-link-icon fa fa-link"></i>
-								</a>
-								<a class="vacancies-title" href="#"> Вакансія </a>
-								<div class="vacancies-details">
-									<span class="vacancies-category"> Категорія роботи </span>
-									<span class="vacancies-price vacancies-free"> Зарплата </span>
-								</div>
-							</div>
-						</div>
-						<!-- /Четверта вакансія -->
+            </div>
+            <!-- /Перший рядок вакансій-->
 
-					</div>
-					<!-- /Перший рядок вакансій-->
+            <!-- Другий рядок вакансій -->
+            <div class="row">
 
-					<!-- Другий рядок вакансій -->
-					<div class="row">
+                <!-- П'ята вакансія -->
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="vacancies">
+                        <a class="vacancies-title" href="#"> Вакансія </a>
+                        <div class="vacancies-details">
+                            <span class="vacancies-category"> Категорія роботи </span>
+                            <span class="vacancies-price"> Зарплата </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /П'ята вакансія -->
 
-						<!-- П'ята вакансія -->
-						<div class="col-md-3 col-sm-6 col-xs-6">
-							<div class="vacancies">
-								<a href="#" class="vacancies-img">
-									<img src="./img/картинка.jpg" alt="">
-									<i class="vacancies-link-icon fa fa-link"></i>
-								</a>
-								<a class="vacancies-title" href="#"> Вакансія </a>
-								<div class="vacancies-details">
-									<span class="vacancies-category"> Категорія роботи </span>
-									<span class="vacancies-price"> Зарплата </span>
-								</div>
-							</div>
-						</div>
-						<!-- /П'ята вакансія -->
+                <!-- Шоста вакансія -->
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="vacancies">
+                        <a class="vacancies-title" href="#"> Вакансія </a>
+                        <div class="vacancies-details">
+                            <span class="vacancies-category"> Категорія роботи </span>
+                            <span class="vacancies-price"> Зарплата </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Шоста вакансія -->
 
-						<!-- Шоста вакансія -->
-						<div class="col-md-3 col-sm-6 col-xs-6">
-							<div class="vacancies">
-								<a href="#" class="vacancies-img">
-									<img src="./img/картинка.jpg" alt="">
-									<i class="vacancies-link-icon fa fa-link"></i>
-								</a>
-								<a class="vacancies-title" href="#"> Вакансія </a>
-								<div class="vacancies-details">
-									<span class="vacancies-category"> Категорія роботи </span>
-									<span class="vacancies-price"> Зарплата </span>
-								</div>
-							</div>
-						</div>
-						<!-- /Шоста вакансія -->
-
-						<!-- Сьома вакансія -->
-						<div class="col-md-3 col-sm-6 col-xs-6">
-							<div class="vacancies">
-								<a href="#" class="vacancies-img">
-									<img src="./img/картинка.jpg" alt="">
-									<i class="vacancies-link-icon fa fa-link"></i>
-								</a>
-                                <a class="vacancies-title" href="#"> Вакансія </a>
-								<div class="vacancies-details">
-									<span class="vacancies-category"> Категорія роботи </span>
-									<span class="vacancies-price"> Зарплата </span>
-								</div>
-							</div>
-						</div>
-						<!-- /Сьома вакансія -->
+                <!-- Сьома вакансія -->
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="vacancies">
+                        <a class="vacancies-title" href="#"> Вакансія </a>
+                        <div class="vacancies-details">
+                            <span class="vacancies-category"> Категорія роботи </span>
+                            <span class="vacancies-price"> Зарплата </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Сьома вакансія -->
 
 
-						<!-- Восьма вакансія -->
-						<div class="col-md-3 col-sm-6 col-xs-6">
-							<div class="vacancies">
-								<a href="#" class="vacancies-img">
-									<img src="./img/картинка.jpg" alt="">
-									<i class="vacancies-link-icon fa fa-link"></i>
-								</a>
-								<a class="vacancies-title" href="#"> Вакансія </a>
-								<div class="vacancies-details">
-									<span class="vacancies-category"> Категорія роботи </span>
-									<span class="vacancies-price"> Зарплата </span>
-								</div>
-							</div>
-						</div>
-						<!-- /Восьма вакансія -->
+                <!-- Восьма вакансія -->
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="vacancies">
+                        <a class="vacancies-title" href="#"> Вакансія </a>
+                        <div class="vacancies-details">
+                            <span class="vacancies-category"> Категорія роботи </span>
+                            <span class="vacancies-price"> Зарплата </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Восьма вакансія -->
 
-					</div>
-					<!-- /Другий рядок вакансій -->
+            </div>
+            <!-- /Другий рядок вакансій -->
 
-				</div>
-				<!-- /Приклади гарячих вакансій -->
+        </div>
+        <!-- /Приклади гарячих вакансій -->
 
-				<div class="row">
-					<div class="center-btn">
-						<a class="main-button icon-button" href="#"> Більше вакансій! </a>
-					</div>
-				</div>
+        <div class="row">
+            <div class="center-btn">
+                <a class="main-button icon-button" href="#"> Більше вакансій! </a>
+            </div>
+        </div>
 
-			</div>
-			<!-- /Контейнер з гарячими вакансіями -->
+    </div>
+    <!-- /Контейнер з гарячими вакансіями -->
 
-		</div>
-		<!-- /Гарячі вакансії -->
+</div>
+<!-- /Гарячі вакансії -->
 
 <!-- Блок переходу на сторінку з контактними даними -->
-<div id="contact-cta" class="section">
+<div class="section" id="contact-cta">
 
     <!-- Фонове зоображення -->
     <div class="bg-image bg-parallax overlay" style="background-image:url(./img/cta2-background.jpg)"></div>
@@ -273,10 +260,10 @@
 <!-- /Блок переходу на сторінку з контактними даними-->
 
 <!-- Нижня менюшка -->
-<footer id="footer" class="section">
+<footer class="section " id="footer">
 
     <!-- Контейнер з всіма даними меню -->
-    <div class="container">
+    <div class="container ">
 
         <!-- Рядок для запису всіх даних -->
         <div class="row">
@@ -285,7 +272,7 @@
             <div class="col-md-6">
                 <div class="footer-logo">
                     <a class="logo" href="index.html">
-                        <img src="./img/Lovaro (1).png" alt="logo">
+                        <img alt="logo" src="./img/Lovaro (1).png">
                     </a>
                 </div>
             </div>
@@ -294,11 +281,9 @@
             <!-- Навігація, що знаходиться на нижній менюшці-->
             <div class="col-md-6">
                 <ul class="footer-nav">
-					<li><a href="index.html">Головна</a></li>
-					<li><a href="#">Отримати роботу</a></li>
-					<li><a href="#">Вакансії</a></li>
-					<li><a href="html/contact.html">Контакти</a></li>
-					<li><a href="html/signup.html">Реєстрація користувача</a></li>
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="html/vacancies.html">Вакансії</a></li>
+                    <li><a href="html/contact.html">Контакти</a></li>
                 </ul>
             </div>
             <!-- /Навігація, що знаходиться на нижній менюшці-->
@@ -313,7 +298,9 @@
 <!-- /Нижня менюшка -->
 
 <!-- Попередній завантажувач -->
-<div id='preloader'><div class='preloader'></div></div>
+<div id='preloader'>
+    <div class='preloader'></div>
+</div>
 <!-- /Попередній завантажувач -->
 
 </body>
