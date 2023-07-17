@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 $mysqli = require __DIR__ . "/database_vacanties.php";
 $query = "SELECT * FROM vacanties";
@@ -24,7 +24,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
     <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <!-- Підключення бібліотеки, яка містить в собі гарні векторні значки, які ми використаєм в нашій роботі  -->
     <link href="../css/font-awesome.min.css" rel="stylesheet">
-    <script src="../js/enterButton.js"></script>
+    <script defer src="../js/addToFav.js"></script>
 </head>
 <body>
 
@@ -44,7 +44,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
         <nav id="nav">
             <ul class="main-menu nav navbar-nav navbar-right">
                 <li><a href="../index.html">Головна</a></li>
-                <li><a href="../html/vacancies.html">Вакансії</a></li>
+                <li><a href="../php/vacancies.php">Вакансії</a></li>
                 <li><a href="../html/contact.html">Контакти</a></li>
                 <a class="profile_buttom" href="../php/signup.php">
                     <img alt="profile_buttom" src="../img/profile (1).png">
