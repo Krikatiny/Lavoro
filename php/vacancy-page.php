@@ -31,6 +31,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
 <body>
 <table>
     <p>Таблиця вакансій</p>
+    <a href="account.php">Акаунт</a>
     
         <?php
 

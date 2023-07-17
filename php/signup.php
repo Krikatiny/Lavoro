@@ -60,9 +60,9 @@ require __DIR__ . "/connectionCheck.php";
             <button class="reg__button">Відправити</button>
         </div>
     </form>
+    <a href="../php/login.php" class="col-lg-offset-2" >Зайти</a>
 </div>
 </div>
-<a href="../php/login.php">Зайти</a>
 
 </body>
 </html>

@@ -588,14 +588,18 @@ input[type="tel"]:focus, input[type="regions"]focus, input[type="tel"]focus, tex
 	content:"";
 	display:block;
 	clear:both;
-}
 
+}
+.contact-form-container{
+    background: #d9ced1;
+}
 .contact-form .input {
 	margin-bottom:20px;
+    background: #ffff;
 }
 
 .contact-form textarea.input {
-	height:200px;
+	height:94px;
 }
 /* --  /Форма коментарів  -- */
 

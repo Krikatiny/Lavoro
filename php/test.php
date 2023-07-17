@@ -1,3 +1,4 @@
+<a href="account.php">Акаунт</a><br>
 <?php
 require __DIR__ . "/connectionCheck.php";
 $mysqli = require __DIR__ . "/database.php";
@@ -54,3 +55,4 @@ if ($resultTag->num_rows === 0) {
     }
 }
 ?>
+
