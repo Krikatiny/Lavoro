@@ -42,7 +42,13 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
         </div>
         <!-- Меню навігації сайту-->
         <nav id="nav">
-            <ul class="main-menu nav navbar-nav navbar-right">
+                <ul class="main-menu nav navbar-nav navbar-right searchbar">
+                    <div class="searchbar">
+                        <form action="search.php" method="GET">
+                            <input type="text" name="query" placeholder="Знайдіть свою вакансію" />
+                            <button type="button" class="search-button"></button>
+                        </form>
+                    </div>
                 <li><a href="../index.html">Головна</a></li>
                 <li><a href="../php/vacancies.php">Вакансії</a></li>
                 <li><a href="../html/contact.html">Контакти</a></li>
