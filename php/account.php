@@ -25,9 +25,12 @@ require __DIR__ . "/connectionCheck.php";
         <p>
             <a href="vacancy-page.php"> Vacant page</a>
         </p>
+        <p>
+            <a href="test.php">Test page</a>
+        </p>
     </div>
     <div>
-        <p><a href="../php/logout.php">Log out</a> <a href="../html/vacant_create.html">Create Vacant</a></p>
+        <p><a href="../php/logout.php">Log out</a></p>
     </div>
 
 <?php else: ?>
