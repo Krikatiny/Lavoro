@@ -396,17 +396,20 @@ output {
 /* -- /Стилі для різних елементів посилань -- */
 
 /* -- Стиль нижньої менюшки -- */
-#bottom-footer {
-    margin-top: 20px;
+.bottom-footer {
+    margin-top: 10px;
     padding-top: 20px;
-    border-top: 1px solid #EBEBEB;
+    border-top: 1px solid #5b3e3e;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #c2b3b3
 }
 
 /* -- Логотип нашого сайту -- */
 .footer-logo .logo {
-    transform: scale(3.3);
+    transform: scale(2);
     margin-left: 50px;
-    margin-top: 10px;
+    margin-top: 30px;
     display: inline-block;
 }
 
@@ -417,7 +420,9 @@ output {
 /* -- Footer Nav -- */
 .footer-nav {
     text-align: right;
-    padding: 20px 0;
+    padding: 2px 0px;
+    
+   
 }
 
 .footer-nav li {
@@ -467,8 +472,8 @@ input[type="date"], input[type="url"], input[type="tel"], input[type="regions"],
 	background: transparent;
     padding-left: 15px;
 	padding-right: 15px;
-	-webkit-transition:0.2s border-color;
-	transition:0.2s border-color;
+	-webkit-transition:0.2s #cd5d21;
+	transition:0.2s #cd5d21;
 }
 
 textarea {
@@ -488,7 +493,7 @@ input[type="tel"]:focus, input[type="regions"]focus, input[type="tel"]focus, tex
 }
 /* --  /Кнопка на сторінці реєстрації  -- */
 
-
+/* --  Сторінка реєстрації -- */
 .signup{
         margin: 0;
         height: 100vh;
@@ -659,3 +664,6 @@ input[type="checkbox"] {
 .vacantion_button{
     margin: 20px 20px 20px 20px;
 }
+
+
+
