@@ -24,7 +24,8 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
     <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <!-- Підключення бібліотеки, яка містить в собі гарні векторні значки, які ми використаєм в нашій роботі  -->
     <link href="../css/font-awesome.min.css" rel="stylesheet">
-    <script src="../js/enterButton.js"></script>
+    <script defer src="../js/enterButton.js"></script>
+    <script defer src="../js/addToFav.js"></script>
 </head>
 <body>
 
@@ -88,17 +89,16 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
 <!-- Наповнення основної частини сторінки -->
 <div class="section" id="contact">
 
-<!-- Таблиця Вакансій -->
+    <!-- Таблиця Вакансій -->
     <table class="table-vacancies">
         <h1 class="table-name">Таблиця вакансій</h1>
 
 
         <?php
 
-        while($row = mysqli_fetch_assoc($result))
-        {
+        while ($row = mysqli_fetch_assoc($result)) {
             $tags = mysqli_fetch_assoc($resultTag);
-            $tags_implode = implode("",$tags);
+            $tags_implode = implode("", $tags);
             ?>
             <tr>
                 <td><?php echo $row['id']; ?></td>
@@ -106,7 +106,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
                 <td>
                     <?php
                     $arr = explode(",", $tags_implode);
-                    foreach ($arr as $item){
+                    foreach ($arr as $item) {
                         echo $item;
                         echo " ";
                     }
@@ -115,7 +115,11 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
                 <td><?php echo $row['region']; ?></td>
                 <td><?php echo $row['salary']; ?></td>
                 <td><?php echo $row['description']; ?></td>
-                <td><button type="button" class="add-to-favorite" data-id="<?= htmlspecialchars($row['id']) ?>">Add to favourite</button></td>
+                <td>
+                    <button type="button" class="add-to-favorite" data-id="<?= htmlspecialchars($row['id']) ?>">Add to
+                        favourite
+                    </button>
+                </td>
             </tr>
             <?php
         }
