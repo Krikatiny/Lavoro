@@ -58,9 +58,6 @@ $userId = $_SESSION['user_id'];
             <td><?php echo $row['salary']; ?></td>
             <td><?php echo $row['description']; ?></td>
             <td>
-                <br>
-                TESTING
-                $vac
                 <?php
                 $mysqli = require __DIR__ . "/database.php";
                 $query = "SELECT vac_id user_id FROM user_favourite WHERE vac_id = ? AND user_id = ? ";
@@ -73,15 +70,8 @@ $userId = $_SESSION['user_id'];
 
                 if (isset($vacIdFav)) {
                     $vacIdFav = implode("", $vacIdFav);
-                };
-                echo $vacIdFav;
-
-                echo " <br>  Session:";
-                echo $userId;
-                echo " <br>  row:";
-                echo $row['id']; ?>
-                TESTING
-                <?php if (isset($vacIdFav) && $vacIdFav === $row['id']): ?>
+                }
+                if (isset($vacIdFav) && $vacIdFav === $row['id']): ?>
                     <div class="star-btn" onclick="toggleStar(this)" starred="true"
                          data-id="<?= htmlspecialchars($row['id']) ?>">★
                     </div>

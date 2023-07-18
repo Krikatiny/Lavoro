@@ -86,6 +86,7 @@ ul, ol {
 /* --- Налаштування  фонових зоображень, а також додання певних візуальних ефектів до них --- */
 .bg-image {
     position: absolute;
+    scale: 112%;
     left: 0;
     right: 0;
     top: 0;
@@ -106,7 +107,7 @@ ul, ol {
     top: 0;
     bottom: 0;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#374050), to(#798696));
-    background-image: linear-gradient(to bottom, #374050 0%, #798696 100%);
+    background-image: linear-gradient(to bottom, #374050 0%, #798696 250%);
     opacity: 0.7;
 }
 
@@ -163,11 +164,12 @@ ul, ol {
     margin: 10px;
     display: inline-block;
 }
-.home_buttom{
-    margin: -25%;
+
+.home_button {
+    padding: 15px;
 }
 
-.navbar-home .home_buttom > img {
+.navbar-home .home_button > img {
     max-height: 30px;
 }
 
@@ -185,14 +187,15 @@ ul, ol {
     padding: 0;
 }
 
-.profile_buttom {
+.profile_button {
     display: inline-block;
-    margin-top: 10px;
-    margin-left: 7px;
+    padding: 13px;
+    /*margin-top: 10px;*/
+    /*margin-left: 7px;*/
     transform: scale(1.2);
 }
 
-.profile-home .profile_buttom > img {
+.profile-home .profile_button > img {
     max-height: 10px;
 }
 
@@ -451,8 +454,7 @@ ul, ol {
 /* -- Логотип нашого сайту -- */
 .footer-logo .logo {
     transform: scale(2);
-    margin-left: 50px;
-    margin-top: 30px;
+    margin: 30px;
     display: inline-block;
 }
 
@@ -462,10 +464,9 @@ ul, ol {
 
 /* -- Footer Nav -- */
 .footer-nav {
+    margin-top: 34px;
     text-align: right;
-    padding: 2px 0px;
-
-
+    padding: 2px 0;
 }
 
 .footer-nav li {
@@ -514,9 +515,9 @@ input[type="date"], input[type="url"], input[type="tel"], input[type="regions"],
     border-radius: 4px;
     background: transparent;
     padding-left: 15px;
-	padding-right: 15px;
-	-webkit-transition:0.2s #cd5d21;
-	transition:0.2s #cd5d21;
+    padding-right: 15px;
+    -webkit-transition: 0.2s #cd5d21;
+    transition: 0.2s #cd5d21;
 }
 
 textarea {
@@ -532,7 +533,7 @@ input[type="tel"]:focus, input[type="regions"] focus, input[type="tel"] focus, t
 /* --  /Оформлення форм  -- */
 /* --  Кнопка на сторінці реєстрації  -- */
 .reg_button {
-    margin: 20px 20px 20px 20px;
+    margin: 1rem;
     display: inline-block;
 }
 
@@ -648,7 +649,7 @@ input[type="tel"]:focus, input[type="regions"] focus, input[type="tel"] focus, t
 }
 
 .contact-form .input {
-	margin-bottom:20px;
+    margin-bottom: 20px;
     background: #ffff;
 }
 
@@ -664,14 +665,14 @@ input[type="tel"]:focus, input[type="regions"] focus, input[type="tel"] focus, t
 }
 
 .contact-details li i {
-	color: #d85c98;
-	margin-right: 15px;
-	border: 1px solid #d65b97;
-	border-radius: 50%;
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
+    color: #d85c98;
+    margin-right: 15px;
+    border: 1px solid #d65b97;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
 
 }
 
@@ -739,14 +740,14 @@ input[type="checkbox"] {
 }
 
 .top-marge {
-
+    margin-top: 10px;
 }
 
 .contact-icons-border-color {
     border-color: #d65b97;
 }
 
-.row_contacts{
+.row_contacts {
     display: inline-block;
     background-color: #c0afbb;
     margin-right: -15px;
@@ -754,7 +755,8 @@ input[type="checkbox"] {
     height: 500px;
     border-radius: 20px;
 }
-.container_contact{
+
+.container_contact {
     margin-left: 42px;
 }
 
@@ -766,3 +768,27 @@ input[type="checkbox"] {
     user-select: none;
 }
 
+.login {
+    color: red;
+}
+
+.logIn-button{
+    padding: 3px;
+    color: #d65b97;
+}
+
+.more-vacancies-section{
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 45px;
+}
+
+.top-marge-more-vac-button {
+    margin-top: 20px;
+}
+
+.footer-section {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}

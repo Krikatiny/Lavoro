@@ -35,7 +35,6 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
     <script defer src="../js/filterDataOnThePage.js"></script>
 
 
-
 </head>
 <body>
 
@@ -45,7 +44,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
         <div class="navbar-header">
             <!-- Кнопка будиночка -->
             <div class="navbar-home">
-                <a class="home_buttom" href="../index.html">
+                <a class="home_button" href="../index.html">
                     <img alt="home_buttom" src="../img/home.png">
                 </a>
             </div>
@@ -53,15 +52,15 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
         </div>
         <!-- Меню навігації сайту-->
         <nav id="nav">
-                <ul class="main-menu nav navbar-nav navbar-right searchbar">
-                    <form class="searchbar">
-                        <input type="text" id="searchText" placeholder="Знайдіть свою вакансію" />
-                        <button id="searchButton" class="search-button"></button>
-                    </form>
+            <ul class="main-menu nav navbar-nav navbar-right searchbar">
+                <form class="searchbar">
+                    <input type="text" id="searchText" placeholder="Знайдіть свою вакансію"/>
+                    <button id="searchButton" class="search-button"></button>
+                </form>
                 <li><a href="../index.html">Головна</a></li>
                 <li><a href="../php/vacancies.php">Вакансії</a></li>
                 <li><a href="../html/contact.html">Контакти</a></li>
-                <a class="profile_buttom" href="../php/signup.php">
+                <a class="profile_button" href="../php/signup.php">
                     <img alt="profile_buttom" src="../img/profile (1).png">
                 </a>
             </ul>
@@ -104,7 +103,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
 <!-- Наповнення основної частини сторінки -->
 <div class="section" id="contact">
 
-<!-- Таблиця Вакансій -->
+    <!-- Таблиця Вакансій -->
     <table class="table-vacancies">
         <h1 class="table-name">Таблиця вакансій</h1>
 
@@ -303,10 +302,8 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
     </div>
 
 
-
-
     <!-- Нижня менюшка -->
-    <footer class="section bottom-footer" id="footer">
+    <footer class="bottom-footer" id="footer">
 
         <div class="container">
 
@@ -324,7 +321,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
 
                 <!-- Навігація нижньої менюшки -->
                 <div class="col-md-6">
-                    <ul class="main-menu nav navbar-nav navbar-right">
+                    <ul class="footer-nav-main footer-nav">
                         <li><a href="../index.html">Головна</a></li>
                         <li><a href="vacancies.html">Вакансії</a></li>
                         <li><a href="../html/contact.html">Контакти</a></li>
