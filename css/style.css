@@ -619,13 +619,10 @@ input[type="tel"]:focus, input[type="regions"] focus, input[type="tel"] focus, t
 
 }
 
-.contact-form-container {
-    background: #d9ced1;
-}
-
 .contact-form .input {
     margin-bottom: 20px;
     background: #ffff;
+    border-color: #d65b97;
 }
 
 .contact-form textarea.input {
@@ -642,7 +639,7 @@ input[type="tel"]:focus, input[type="regions"] focus, input[type="tel"] focus, t
 .contact-details li i {
     color: #d85c98;
     margin-right: 15px;
-    border: 1px solid #EBEBEB;
+    border: 1px solid #d65b97;
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -712,6 +709,14 @@ input[type="checkbox"] {
 
 .bg-white {
     height: 600px;
+}
+
+.top-marge {
+
+}
+
+.contact-icons-border-color {
+    border-color: #d65b97;
 }
 
 
