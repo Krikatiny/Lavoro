@@ -599,12 +599,16 @@ input[type="tel"]:focus, input[type="regions"]focus, input[type="tel"]focus, tex
 	clear:both;
 
 }
-.contact-form-container{
-    background: #d9ced1;
-}
+
 .contact-form .input {
 	margin-bottom:20px;
     background: #ffff;
+}
+.contact-form{
+    margin-top: 40px;
+}
+.contact-form-container{
+    margin-top: 30px;
 }
 
 .contact-form textarea.input {
@@ -680,5 +684,11 @@ input[type="checkbox"] {
 .bg-white{
     height: 550px; 
 }
-
+.row_contacts{
+    background-color: #c0afbb;
+    margin-right: -15px;
+    margin-left: -15px;
+    height: 500px;
+    border-radius: 20px;
+}
 

@@ -80,6 +80,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
                     <li>Вакансії</li>
                 </ul>
                 <p class="empty_place">.</p>
+                <p class="empty_place">.</p>
                 <h1 class="white-text">Залиште свої пропозиції!</h1>
                 <p class="empty_place">.</p>
                 <p class="empty_place">.</p>
