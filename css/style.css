@@ -454,7 +454,7 @@ output {
     content: "";
     display: block;
     height: 2px;
-    background-color: #d85c98;
+    background-color: #ffffff;
     width: 100%;
     -webkit-transform: translateY(5px);
     -ms-transform: translateY(5px);
