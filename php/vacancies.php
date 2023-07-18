@@ -26,9 +26,14 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <script defer src="../js/addToFav.js"></script>
     <script defer src="../js/searchText.js"></script>
-   <!-- <script defer src="../js/checkboxesFilterTag.js"></script>
-    <script defer src="../js/checkboxesFilterRegion.js"></script>-->
     <script defer src="../js/checkboxesFilter.js"></script>
+    <!-- Скрипти для фільтрації даних по чекбоксах та слайдеру
+    <script defer src="../js/rangeSlider.js"></script>
+    <script defer src="../js/sliderFilter.js"></script>
+    -->
+    <!-- Спільний скрипт -->
+    <script defer src="../js/filterDataOnThePage.js"></script>
+
 
 
 </head>
@@ -121,7 +126,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
                     ?>
                 </td>
                 <td class="vacancyregion"><?php echo $row['region']; ?></td>
-                <td><?php echo $row['salary']; ?></td>
+                <td class="price"><?php echo $row['salary']; ?></td>
                 <td><?php echo $row['description']; ?></td>
                 <td>
                     <button type="button" class="add-to-favorite" data-id="<?= htmlspecialchars($row['id']) ?>">Add to
@@ -133,6 +138,14 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
         }
         ?>
     </table>
+    <!-- Слайдер -->
+
+    <div class="slidecontainer">
+        <h3>Фільтрація вакансій за зарплатнею</h3>>
+        <input type="range" min="1000" max="100000" value="1000" class="slider" id="myRange">
+        <span id="sliderValue">1000</span>
+    </div>
+
 
     <!-- Чекбокси -->
     <div class="checkboxes">
@@ -289,11 +302,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
         </div>
     </div>
 
-    <!-- Слайдер -->
-    <div class="slider">
-        <input type="range" min="0" max="100000" value="10000" oninput="filter(this)">
-        <output>0</output>
-    </div>
+
 
 
     <!-- Нижня менюшка -->

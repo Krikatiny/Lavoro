@@ -260,12 +260,12 @@ ul, ol {
 /* Таблиця вакансій*/
 .table-vacancies {
     margin-top: 30px;
-    margin-left: 300px;
+    margin-left: 600px;
 }
 
 .table-name {
     margin-top: -50px;
-    margin-left: 800px;
+    margin-left: 1000px;
 }
 
 /* Пошукове поле */
@@ -307,7 +307,7 @@ ul, ol {
 
 /*Стилізація чекбоксів*/
 .checkboxes {
-    margin-top: -70px;
+    margin-top: 50px;
 }
 
 .checkbox-column {
@@ -332,27 +332,55 @@ ul, ol {
 }
 
 /* Стилізація повзунка та виводу значення */
+.slidecontainer {
+    width: 10%;
+    margin-left: 15px;
+    margin-top: -200px;
+    position: relative;
+}
+
 .slider {
-    display: flex;
-    align-items: center;
-    width: 150px;
-    margin-left: 18px;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40%;
+    height: 25px;
+    background: #dcd6d6;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
 }
 
-input[type="range"] {
-    flex-grow: 1;
-    width: 100%;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: black;
+.slider:hover {
+    opacity: 1;
 }
 
-output {
-
-    margin-left: auto;
-    font-weight: bold;
-    color: deepskyblue;
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #000000;
+    cursor: pointer;
 }
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #1abff3;
+    cursor: pointer;
+}
+
+#sliderValue {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: black;
+    margin-left: 15px;
+}
+
 
 /* Задаємо відступ зображення в межах кнопки */
 
