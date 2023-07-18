@@ -2,13 +2,12 @@
 
 $mysqli = require __DIR__ . "/database_vacanties.php";
 $query = "SELECT * FROM vacanties";
-$result = mysqli_query($mysqli,$query);
+$result = mysqli_query($mysqli, $query);
 
 $queryForTags = "SELECT tag_name FROM vacanties";
 $resultTag = mysqli_query($mysqli, $queryForTags);
 
 ?>
-
 
 
 <!doctype html>
@@ -32,35 +31,44 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
 <table>
     <p>Таблиця вакансій</p>
     <a href="account.php">Акаунт</a>
-    
-        <?php
+    <a href="delFromFav.php">Акаунт</a>
 
-        while($row = mysqli_fetch_assoc($result))
-        {
-            $tags = mysqli_fetch_assoc($resultTag);
-            $tags_implode = implode("",$tags);
-            ?>
-    <tr>
-        <td><?php echo $row['id']; ?></td>
-        <td><?php echo $row['name']; ?></td>
-        <td>
-            <?php
-            $arr = explode(",", $tags_implode);
-                foreach ($arr as $item){
+    <?php
+
+    while ($row = mysqli_fetch_assoc($result)) {
+        $tags = mysqli_fetch_assoc($resultTag);
+        $tags_implode = implode("", $tags);
+        ?>
+        <tr>
+            <td><?php echo $row['id']; ?></td>
+            <td><?php echo $row['name']; ?></td>
+            <td>
+                <?php
+                $arr = explode(",", $tags_implode);
+                foreach ($arr as $item) {
                     echo $item;
                     echo " ";
                 }
-            ?>
-        </td>
-        <td><?php echo $row['region']; ?></td>
-        <td><?php echo $row['salary']; ?></td>
-        <td><?php echo $row['description']; ?></td>
-        <td><button type="button" class="add-to-favorite" data-id="<?= htmlspecialchars($row['id']) ?>">Add to favourite</button></td>
-    </tr>    
+                ?>
+            </td>
+            <td><?php echo $row['region']; ?></td>
+            <td><?php echo $row['salary']; ?></td>
+            <td><?php echo $row['description']; ?></td>
+            <td>
+                <button type="button" class="add-to-favorite" data-id="<?= htmlspecialchars($row['id']) ?>">Add to
+                    favourite
+                </button>
+            </td>
+            <td>
+                <button type="button" class="delete-from-favorite" data-id="<?= htmlspecialchars($row['id']) ?>">Delete
+                    from favourite
+                </button>
+            </td>
+        </tr>
         <?php
-        }
+    }
 
-        ?>
+    ?>
 </table>
 
 </body>

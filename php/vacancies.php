@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 
 $mysqli = require __DIR__ . "/database_vacanties.php";
 $query = "SELECT * FROM vacanties";
@@ -24,6 +24,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
     <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <!-- Підключення бібліотеки, яка містить в собі гарні векторні значки, які ми використаєм в нашій роботі  -->
     <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <script defer src="../js/enterButton.js"></script>
     <script defer src="../js/addToFav.js"></script>
 </head>
 <body>
@@ -50,7 +51,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
                         </form>
                     </div>
                 <li><a href="../index.html">Головна</a></li>
-                <li><a href="../php/vacancies.php">Вакансії</a></li>
+                <li><a href="../html/vacancies.html">Вакансії</a></li>
                 <li><a href="../html/contact.html">Контакти</a></li>
                 <a class="profile_buttom" href="../php/signup.php">
                     <img alt="profile_buttom" src="../img/profile (1).png">
@@ -102,10 +103,9 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
 
         <?php
 
-        while($row = mysqli_fetch_assoc($result))
-        {
+        while ($row = mysqli_fetch_assoc($result)) {
             $tags = mysqli_fetch_assoc($resultTag);
-            $tags_implode = implode("",$tags);
+            $tags_implode = implode("", $tags);
             ?>
             <tr>
                 <td><?php echo $row['id']; ?></td>
@@ -113,7 +113,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
                 <td>
                     <?php
                     $arr = explode(",", $tags_implode);
-                    foreach ($arr as $item){
+                    foreach ($arr as $item) {
                         echo $item;
                         echo " ";
                     }
@@ -122,7 +122,11 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
                 <td><?php echo $row['region']; ?></td>
                 <td><?php echo $row['salary']; ?></td>
                 <td><?php echo $row['description']; ?></td>
-                <td><button type="button" class="add-to-favorite" data-id="<?= htmlspecialchars($row['id']) ?>">Add to favourite</button></td>
+                <td>
+                    <button type="button" class="add-to-favorite" data-id="<?= htmlspecialchars($row['id']) ?>">Add to
+                        favourite
+                    </button>
+                </td>
             </tr>
             <?php
         }
