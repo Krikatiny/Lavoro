@@ -163,11 +163,12 @@ ul, ol {
     margin: 10px;
     display: inline-block;
 }
-.home_buttom{
+
+.home_button {
     margin: -25%;
 }
 
-.navbar-home .home_buttom > img {
+.navbar-home .home_button > img {
     max-height: 30px;
 }
 
@@ -203,6 +204,49 @@ ul, ol {
 }
 
 /*---/Кнопочка профілю--- */
+
+/*--- Стилі інформаційної сторіночки нашого сайту --- */
+/* -- Стилі 3-х ознак на головній сторіночці -- */
+.feature {
+    position:relative;
+}
+
+.feature + .feature  {
+    margin-top:40px;
+}
+
+.feature .feature-icon {
+    position:absolute;
+    left:0;
+    top:0;
+    width:80px;
+    height:80px;
+    line-height:80px;
+    text-align:center;
+    border-radius: 50%;
+    font-size:30px;
+    border:1px solid #EBEBEB;
+    color:#d85c98;
+}
+
+.feature-content {
+    padding-left:100px;
+}
+
+/* -- About Img -- */
+.about-img {
+    margin-top:1px;
+}
+
+.about-img > img {
+    width:100%;
+}
+.section-header-about {
+    margin-bottom:40px;
+    text-align: center;;
+}
+
+/*--- /Стилі інформаційної сторіночки нашого сайту --- */
 
 /*---Оформлення навігації--- */
 #header {
@@ -640,9 +684,8 @@ input[type="tel"]:focus, input[type="regions"] focus, input[type="tel"] focus, t
 
 /* --  Форма коментарів  -- */
 .contact-form:after {
-    margin-right: 50px;
     content: "";
-    display: inline-block;
+    display: block;
     clear: both;
 
 }
@@ -726,6 +769,8 @@ input[type="checkbox"] {
     margin-left: 25px;
 }
 
+
+
 .log_input {
     margin-top: 20px;
 }
@@ -737,32 +782,36 @@ input[type="checkbox"] {
 .bg-white {
     height: 600px;
 }
+/*-- Search --*/
+.widget.search-widget {
+    position:relative
+
+}
+
+.widget.search-widget .input {
+    padding-right:60px;
 
 .top-marge {
 
 }
 
-.contact-icons-border-color {
-    border-color: #d65b97;
+.widget.search-widget button {
+
+    position:absolute;
+    right:0;
+    top:0;
+    height:40px;
+    width:40px;
+    background-color:transparent;
+    border:none;
+
 }
 
-.row_contacts{
-    display: inline-block;
-    background-color: #c0afbb;
-    margin-right: -15px;
-    margin-left: -15px;
-    height: 500px;
-    border-radius: 20px;
-}
-.container_contact{
-    margin-left: 42px;
-}
+.widget.search-widget .input:focus + button {
+    color:#FF6700;
 
-.star-btn {
-    display: inline-block;
-    font-size: 50px;
-    color: #d65b97;
-    cursor: pointer;
-    user-select: none;
+}
+.search-icon{
+   color: white;
 }
 

@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <div class="box"> 
          <!-- Кнопка будиночка -->
          <div class="navbar-home">
-            <a class="home_buttom" href="../index.html">
+            <a class="home_button" href="../index.html">
                 <img src="../img/free-icon-home-88282.png" alt="home_buttom">
             </a>
         </div>   

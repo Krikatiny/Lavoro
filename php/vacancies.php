@@ -45,7 +45,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
         <div class="navbar-header">
             <!-- Кнопка будиночка -->
             <div class="navbar-home">
-                <a class="home_buttom" href="../index.html">
+                <a class="home_button" href="../index.html">
                     <img alt="home_buttom" src="../img/home.png">
                 </a>
             </div>
@@ -90,10 +90,19 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
                 </ul>
                 <p class="empty_place">.</p>
                 <p class="empty_place">.</p>
-                <h1 class="white-text">Залиште свої пропозиції!</h1>
+                <h1 class="white-text">Ким ви хочете працювати?</h1>
                 <p class="empty_place">.</p>
                 <p class="empty_place">.</p>
-                <p class="empty_place">.</p>
+                <!-- search widget -->
+                <div class="widget search-widget">
+                    <form>
+                        <input class="input" type="text" name="search"  placeholder="Пошук бажаної посади" style="background-color: rgba(238,176,224,0.47)" >
+                        <button><i class="fa fa-search search-icon"></i></button>
+                    </form>
+                </div>
+                <!-- /search widget -->
+
+
             </div>
         </div>
     </div>
