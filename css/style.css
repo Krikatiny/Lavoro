@@ -600,7 +600,7 @@ input[type="tel"]:focus, input[type="regions"]focus, input[type="tel"]focus, tex
 
 }
 .contact-form-container{
-    background: #d9ced1;
+    background: #fdfdfd;
 }
 .contact-form .input {
 	margin-bottom:20px;
@@ -681,4 +681,6 @@ input[type="checkbox"] {
     height: 550px; 
 }
 
-
+.li_home{
+    color: black;
+}
