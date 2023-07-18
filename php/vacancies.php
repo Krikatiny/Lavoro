@@ -29,8 +29,8 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
     <script defer src="../js/checkboxesFilter.js"></script>
     <!-- Скрипти для фільтрації даних по чекбоксах та слайдеру
     <script defer src="../js/rangeSlider.js"></script>
-    <script defer src="../js/sliderFilter.js"></script>
-    -->
+    <script defer src="../js/sliderFilter.js"></script>-->
+
     <!-- Спільний скрипт -->
     <script defer src="../js/filterDataOnThePage.js"></script>
 

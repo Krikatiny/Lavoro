@@ -31,11 +31,7 @@ slider.oninput = function () {
     filterVacancies();
 };
 
-<<<<<<< HEAD
 // Функція для фільтрації вакансій
-=======
-// Функція для фільтрації вакансій за категоріями та регіонами
->>>>>>> f667aea (Фільтрація вакансій за зарплатнею, з допомогою повзунка (переписав JS коди))
 function filterVacancies() {
     // Отримати всі обрані значення чекбоксів категорій
     var selectedCategoryValues = Array.from(document.querySelectorAll('input[name="tags"]:checked')).map(function (checkbox) {
@@ -77,41 +73,10 @@ function filterVacancies() {
 
         var isPriceVisible = price >= slider.value;
 
-<<<<<<< HEAD
         var isVisible = isCategoryVisible && isRegionVisible && isPriceVisible;
-=======
-        var isVisible = isCategoryVisible && isRegionVisible;
->>>>>>> f667aea (Фільтрація вакансій за зарплатнею, з допомогою повзунка (переписав JS коди))
 
         row.style.display = isVisible ? '' : 'none';
     });
 
-    // Якщо всі чекбокси категорій та регіонів деактивовані, показати всі рядки таблиці
-    if (allCategoryUnchecked && allRegionUnchecked) {
-        rows.forEach(function (row) {
-            row.style.display = '';
-        });
-    }
-<<<<<<< HEAD
-=======
 
-    // Фільтрувати вакансії за зарплатнею
-    filterVacanciesBySalary();
-}
-
-// Функція для фільтрації вакансій за зарплатнею
-function filterVacanciesBySalary() {
-    // Отримати всі рядки таблиці вакансій
-    var rows = document.querySelectorAll('.table-vacancies tr');
-
-    // Перебрати кожен рядок і змінити видимість відповідно до обраної зарплати
-    rows.forEach(function (row) {
-        var priceCell = row.querySelector('.price');
-        var price = parseFloat(priceCell.textContent);
-
-        var isPriceVisible = price >= slider.value;
-
-        row.style.display = isPriceVisible ? '' : 'none';
-    });
->>>>>>> f667aea (Фільтрація вакансій за зарплатнею, з допомогою повзунка (переписав JS коди))
 }
