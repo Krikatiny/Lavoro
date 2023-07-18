@@ -52,11 +52,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
         </div>
         <!-- Меню навігації сайту-->
         <nav id="nav">
-            <ul class="main-menu nav navbar-nav navbar-right searchbar">
-                <form class="searchbar">
-                    <input type="text" id="searchText" placeholder="Знайдіть свою вакансію"/>
-                    <button id="searchButton" class="search-button"></button>
-                </form>
+            <ul class="main-menu nav navbar-nav navbar-right">
                 <li><a href="../index.html">Головна</a></li>
                 <li><a href="../php/vacancies.php">Вакансії</a></li>
                 <li><a href="../html/contact.html">Контакти</a></li>
@@ -65,8 +61,6 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
                 </a>
             </ul>
         </nav>
-
-
         <!-- /Меню навігації сайту -->
     </div>
 </header>
@@ -94,15 +88,13 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
                 <p class="empty_place">.</p>
                 <!-- search widget -->
                 <div class="widget search-widget">
-                    <form>
-                        <input class="input" type="text" name="search" placeholder="Пошук бажаної посади"
-                               style="background-color: rgba(238,176,224,0.47)">
-                        <button><i class="fa fa-search search-icon"></i></button>
+                    <form class="searchbar">
+                        <input type="text" id="searchText" placeholder="Пошук бажаної посади"
+                               style="background-color: rgba(228,224,238,0.43) "/>
+                        <button id="searchButton" class="search-button"></button>
                     </form>
                 </div>
                 <!-- /search widget -->
-
-
             </div>
         </div>
     </div>
@@ -111,7 +103,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
 <!-- /Вступна частина сторінки -->
 
 <!-- Наповнення основної частини сторінки -->
-<div class="section" id="contact">
+<body class="section" id="contact">
 
     <!-- Таблиця Вакансій -->
     <table class="table-vacancies">
@@ -348,7 +340,6 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
         <div class='preloader'></div>
     </div>
     <!-- /Попередній завантажувач -->
-
-
+</body>
 </html>
 
