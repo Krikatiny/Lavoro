@@ -510,7 +510,7 @@ input[type="text"], input[type="email"], input[type="password"], input[type="num
 input[type="date"], input[type="url"], input[type="tel"], input[type="regions"], textarea {
     height: 40px;
     width: 100%;
-    border: 1px solid #EBEBEB;
+    border: 1px solid #d65b97;
     border-radius: 4px;
     background: transparent;
     padding-left: 15px;
@@ -640,8 +640,9 @@ input[type="tel"]:focus, input[type="regions"] focus, input[type="tel"] focus, t
 
 /* --  Форма коментарів  -- */
 .contact-form:after {
+    margin-right: 50px;
     content: "";
-    display: block;
+    display: inline-block;
     clear: both;
 
 }
@@ -665,7 +666,7 @@ input[type="tel"]:focus, input[type="regions"] focus, input[type="tel"] focus, t
 .contact-details li i {
 	color: #d85c98;
 	margin-right: 15px;
-	border: 1px solid #EBEBEB;
+	border: 1px solid #d65b97;
 	border-radius: 50%;
 	width: 40px;
 	height: 40px;
@@ -746,10 +747,22 @@ input[type="checkbox"] {
 }
 
 .row_contacts{
+    display: inline-block;
     background-color: #c0afbb;
     margin-right: -15px;
     margin-left: -15px;
     height: 500px;
     border-radius: 20px;
+}
+.container_contact{
+    margin-left: 42px;
+}
+
+.star-btn {
+    display: inline-block;
+    font-size: 50px;
+    color: #d65b97;
+    cursor: pointer;
+    user-select: none;
 }
 

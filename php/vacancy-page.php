@@ -1,12 +1,14 @@
 <?php
+session_start();
 
-$mysqli = require __DIR__ . "/database_vacanties.php";
-$query = "SELECT * FROM vacanties";
-$result = mysqli_query($mysqli, $query);
+$mysqliVac = require __DIR__ . "/database_vacanties.php";
+$queryVac = "SELECT * FROM vacanties";
+$resultVac = mysqli_query($mysqliVac, $queryVac);
 
 $queryForTags = "SELECT tag_name FROM vacanties";
-$resultTag = mysqli_query($mysqli, $queryForTags);
+$resultTag = mysqli_query($mysqliVac, $queryForTags);
 
+$userId = $_SESSION['user_id'];
 ?>
 
 
@@ -25,6 +27,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script defer src="../js/addToFav.js"></script>
+    <script defer src="../js/toggleFav.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -35,7 +38,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
 
     <?php
 
-    while ($row = mysqli_fetch_assoc($result)) {
+    while ($row = mysqli_fetch_assoc($resultVac)) {
         $tags = mysqli_fetch_assoc($resultTag);
         $tags_implode = implode("", $tags);
         ?>
@@ -55,14 +58,40 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
             <td><?php echo $row['salary']; ?></td>
             <td><?php echo $row['description']; ?></td>
             <td>
-                <button type="button" class="add-to-favorite" data-id="<?= htmlspecialchars($row['id']) ?>">Add to
-                    favourite
-                </button>
+                <br>
+                TESTING
+                $vac
+                <?php
+                $mysqli = require __DIR__ . "/database.php";
+                $query = "SELECT vac_id user_id FROM user_favourite WHERE vac_id = ? AND user_id = ? ";
+                $stmt = $mysqli->prepare($query);
+                $stmt->bind_param("ii", $row['id'], $_SESSION['user_id'],);
+                $stmt->execute();
+                $result = $stmt->get_result();
+                $vacIdFav = mysqli_fetch_assoc($result);
+
+
+                if (isset($vacIdFav)) {
+                    $vacIdFav = implode("", $vacIdFav);
+                };
+                echo $vacIdFav;
+
+                echo " <br>  Session:";
+                echo $userId;
+                echo " <br>  row:";
+                echo $row['id']; ?>
+                TESTING
+                <?php if (isset($vacIdFav) && $vacIdFav === $row['id']): ?>
+                    <div class="star-btn" onclick="toggleStar(this)" starred="true"
+                         data-id="<?= htmlspecialchars($row['id']) ?>">★
+                    </div>
+                <?php else: ?>
+                    <div class="star-btn" onclick="toggleStar(this)" starred="false"
+                         data-id="<?= htmlspecialchars($row['id']) ?>">☆
+                    </div>
+                <?php endif; ?>
             </td>
             <td>
-                <button type="button" class="delete-from-favorite" data-id="<?= htmlspecialchars($row['id']) ?>">Delete
-                    from favourite
-                </button>
             </td>
         </tr>
         <?php
