@@ -104,40 +104,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
 <!-- Наповнення основної частини сторінки -->
 <div class="section" id="contact">
 
-    <!-- Таблиця Вакансій -->
-    <table class="table-vacancies">
-        <h1 class="table-name">Таблиця вакансій</h1>
 
-        <?php
-        while ($row = mysqli_fetch_assoc($result)) {
-            $tags = mysqli_fetch_assoc($resultTag);
-            $tags_implode = implode("", $tags);
-            ?>
-            <tr>
-                <td><?php echo $row['id']; ?></td>
-                <td class="vacancyname"><?php echo $row['name']; ?></td>
-                <td class="vacancytags">
-                    <?php
-                    $arr = explode(",", $tags_implode);
-                    foreach ($arr as $item) {
-                        echo $item;
-                        echo "";
-                    }
-                    ?>
-                </td>
-                <td class="vacancyregion"><?php echo $row['region']; ?></td>
-                <td class="price"><?php echo $row['salary']; ?></td>
-                <td><?php echo $row['description']; ?></td>
-                <td>
-                    <button type="button" class="add-to-favorite" data-id="<?= htmlspecialchars($row['id']) ?>">Add to
-                        favourite
-                    </button>
-                </td>
-            </tr>
-            <?php
-        }
-        ?>
-    </table>
     <!-- Sidebar -->
     <aside class="sidebar">
         <!-- Слайдер -->
@@ -147,10 +114,10 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
             <input type="range" min="1000" max="100000" value="1000" class="slider" id="myRange">
             <span class="filter" id="sliderValue">1000</span>
         </div>
+
 <!-- Чекбокси -->
 <div class="checkboxes">
-    <div class="checkbox-column">
-        <h3 class="name-colum filter-title">Категорії</h3>
+        <h3 class="name-colum filter-title dod-filter">Категорії</h3>
         <label>
             <input type="checkbox" name="tags" id="checkbox1" value="Робота з дітьми">
             Робота з дітьми
@@ -191,9 +158,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
             <input type="checkbox" name="tags" id="checkbox10" value="Гаряча пропозиція">
             Гаряча пропозиція
         </label>
-    </div>
-<div class="checkbox-column">
-    <h3 class="name-colum filter-title">Регіони</h3>
+    <h3 class="name-colum filter-title dod-filter">Регіони</h3>
     <label>
         <input type="checkbox" name="region" id="rcheckbox1" value="АР Крим">
         АР Крим
@@ -299,11 +264,43 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
         Чернігів
     </label>
 </div>
-</div>
-
 
 
 </aside>
+    <!-- Таблиця Вакансій -->
+    <table class="table-vacancies">
+        <?php
+        while ($row = mysqli_fetch_assoc($result)) {
+            $tags = mysqli_fetch_assoc($resultTag);
+            $tags_implode = implode("", $tags);
+            ?>
+            <tr>
+                <td><?php echo $row['id']; ?></td>
+                <td class="vacancyname"><?php echo $row['name']; ?></td>
+                <td class="vacancytags">
+                    <?php
+                    $arr = explode(",", $tags_implode);
+                    foreach ($arr as $item) {
+                        echo $item;
+                        echo "";
+                    }
+                    ?>
+                </td>
+                <td class="vacancyregion"><?php echo $row['region']; ?></td>
+                <td class="price"><?php echo $row['salary']; ?></td>
+                <td><?php echo $row['description']; ?></td>
+                <td>
+                    <button type="button" class="add-to-favorite" data-id="<?= htmlspecialchars($row['id']) ?>">Add to
+                        favourite
+                    </button>
+                </td>
+            </tr>
+            <?php
+        }
+        ?>
+    </table>
+</div>
+
     <!-- Нижня менюшка -->
     <footer class="bottom-footer" id="footer">
         <div class="container">

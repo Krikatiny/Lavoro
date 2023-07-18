@@ -362,26 +362,13 @@ ul, ol {
 /*Стилізація чекбоксів*/
 .checkboxes {
     margin-top: 50px;
+    display: inline-block;
 }
-
-.checkbox-column {
-    display: block;
-    width: 50%;
-    margin-left: 20px;
-    margin-top: 20px;
-}
-
-.checkbox-column label {
-    display: block;
-    margin-bottom: 5px;
-    margin-top: 10px;
-}
-
 
 /* Стилізація повзунка та виводу значення */
 .slidecontainer {
-    width: 70%;
-    margin-left: 15px;
+    width: 90%;
+    margin-left: 18px;
     position: relative;
 }
 
@@ -816,11 +803,11 @@ input[type="checkbox"] {
 /* Sidebar */
 
 .sidebar {
-    margin-left: 70px;
+    margin-left:470px;
     border-radius: 20px;
-    margin-top: -240px;
+    margin-top: -50px;
     margin-bottom: 200px;
-    width: 370px;
+    width: 1000px;
     background: rgba(216, 92, 152, 0.66);
 }
 
@@ -846,7 +833,7 @@ input[type="checkbox"] {
 
 .header-filter {
     padding-top: 30px;
-    margin-left: 80px;
+    margin-left: 400px;
     font: 500 3rem 'Montserrat', sans-serif;
 }
 
@@ -854,4 +841,7 @@ input[type="checkbox"] {
     text-align: center;
     margin-left: 10px;
     color: #ede5ee;
+}
+.dod-filter{
+    margin-right: 63px;
 }
