@@ -66,8 +66,9 @@ ul, ol {
 Нижче ви можете побачити оформлення цього блоку даних та елементів, що наявні в ньому --- */
 
 .section {
-    position: absolute;
-    padding: 100px 100px 100px 100px;
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .section-hr {
@@ -83,10 +84,10 @@ ul, ol {
 /* --- /Офомлення секцій--- */
 
 /* --- Налаштування  фонових зоображень, а також додання певних візуальних ефектів до них --- */
-.main-area section
-{
+.main-area section {
     margin-top: 20px;
 }
+
 .bg-image {
     position: absolute;
     left: 0;
@@ -141,7 +142,7 @@ ul, ol {
 
 .main-button.icon-button:after {
     content: "\f178";
-    font-family: FontAwesome, serif ;
+    font-family: FontAwesome, serif;
     position: absolute;
     width: 30px;
     right: 15px;
@@ -212,41 +213,42 @@ ul, ol {
 /*--- Стилі інформаційної сторіночки нашого сайту --- */
 /* -- Стилі 3-х ознак на головній сторіночці -- */
 .feature {
-    position:relative;
+    position: relative;
 }
 
-.feature + .feature  {
-    margin-top:40px;
+.feature + .feature {
+    margin-top: 40px;
 }
 
 .feature .feature-icon {
-    position:absolute;
-    left:0;
-    top:0;
-    width:80px;
-    height:80px;
-    line-height:80px;
-    text-align:center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
     border-radius: 50%;
-    font-size:30px;
-    border:1px solid #EBEBEB;
-    color:#d85c98;
+    font-size: 30px;
+    border: 1px solid #EBEBEB;
+    color: #d85c98;
 }
 
 .feature-content {
-    padding-left:100px;
+    padding-left: 100px;
 }
 
 /* -- About Img -- */
 .about-img {
-    margin-top:1px;
+    margin-top: 1px;
 }
 
 .about-img > img {
-    width:100%;
+    width: 100%;
 }
+
 .section-header-about {
-    margin-bottom:40px;
+    margin-bottom: 40px;
     text-align: center;;
 }
 
@@ -325,9 +327,11 @@ ul, ol {
 .searchbar input[type="text"] {
     padding-right: 35px; /* Задаємо простір для кнопки справа */
 }
-.bg-contact{
+
+.bg-contact {
     margin-top: -30px;
 }
+
 .search-button {
     position: absolute;
     top: 50%;
@@ -372,7 +376,6 @@ ul, ol {
     margin-bottom: 5px;
     margin-top: 10px;
 }
-
 
 
 /* Стилізація повзунка та виводу значення */
@@ -548,7 +551,7 @@ input[type="date"], input[type="url"], input[type="tel"], .regions, textarea {
     border-radius: 4px;
     background: transparent;
     padding-left: 15px;
-	padding-right: 15px;
+    padding-right: 15px;
 }
 
 textarea {
@@ -679,7 +682,7 @@ input[type="tel"]:focus, input[type="regions"]:focus, input[type="tel"]:focus, t
 }
 
 .contact-form .input {
-	margin-bottom:20px;
+    margin-bottom: 20px;
     background: #ffff;
 }
 
@@ -695,14 +698,14 @@ input[type="tel"]:focus, input[type="regions"]:focus, input[type="tel"]:focus, t
 }
 
 .contact-details li i {
-	color: #d85c98;
-	margin-right: 15px;
-	border: 1px solid #d65b97;
-	border-radius: 50%;
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
+    color: #d85c98;
+    margin-right: 15px;
+    border: 1px solid #d65b97;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
 
 }
 
@@ -756,7 +759,6 @@ input[type="checkbox"] {
 }
 
 
-
 .log_input {
     margin-top: 20px;
 }
@@ -768,45 +770,49 @@ input[type="checkbox"] {
 .bg-white {
     height: 600px;
 }
+
 /*-- Search --*/
 .widget.search-widget {
-    position:relative
+    position: relative
 
 }
 
 .widget.search-widget .input {
-    padding-right:60px;
+    padding-right: 60px;
 }
+
 .widget.search-widget button {
 
-    position:absolute;
-    right:0;
-    top:0;
-    height:40px;
-    width:40px;
-    background-color:transparent;
-    border:none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border: none;
 
 }
 
 .widget.search-widget .input:focus + button {
-    color:#FF6700;
+    color: #FF6700;
 
 }
-.search-icon{
-   color: white;
+
+.search-icon {
+    color: white;
 }
 
-.row-bottom{
+.row-bottom {
     height: 22px;
 }
 
-.white-line{
+.white-line {
     margin-top: 28px;
     padding-top: 2px;
     border-top: 1px solid #5b3e3e;
     border-top-color: #c2b3b3
 }
+
 /* Sidebar */
 
 .sidebar {
@@ -815,12 +821,14 @@ input[type="checkbox"] {
     width: 370px;
     background: rgba(216, 92, 152, 0.66);
 }
+
 .slidecontainer,
 .checkboxes,
 .checkbox-column {
     margin: 48px 0 0 40px;
     padding-bottom: 30px;
 }
+
 .name-colum {
     font-style: normal;
     line-height: 27px;
@@ -828,16 +836,19 @@ input[type="checkbox"] {
     margin-bottom: 8px;
     font: 700 2rem 'Montserrat', sans-serif;
 }
-.filter{
+
+.filter {
     padding-top: 95px;
-    font: 200 0.4rem 'Montserrat', sans-serif ;
+    font: 200 0.4rem 'Montserrat', sans-serif;
 }
-.header-filter{
+
+.header-filter {
     padding-top: 30px;
     margin-left: 80px;
     font: 500 3rem 'Montserrat', sans-serif;
 }
-.filter-title{
+
+.filter-title {
     text-align: center;
     margin-left: 10px;
     color: #ede5ee;
