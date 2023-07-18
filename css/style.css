@@ -66,8 +66,8 @@ ul, ol {
 Нижче ви можете побачити оформлення цього блоку даних та елементів, що наявні в ньому --- */
 
 .section {
-    position: relative;
-    padding-top: 30px;
+    position: absolute;
+    padding: 100px 100px 100px 100px;
 }
 
 .section-hr {
@@ -301,12 +301,13 @@ ul, ol {
 /* Таблиця вакансій*/
 .table-vacancies {
     margin-top: 30px;
-    margin-left: 600px;
+    margin-left: 500px;
+
 }
 
 .table-name {
-    margin-top: -50px;
-    margin-left: 1000px;
+    margin-top: 50px;
+    margin-left: 850px;
 }
 
 /* Пошукове поле */
@@ -319,7 +320,9 @@ ul, ol {
 .searchbar input[type="text"] {
     padding-right: 35px; /* Задаємо простір для кнопки справа */
 }
-
+.bg-contact{
+    margin-top: -30px;
+}
 .search-button {
     position: absolute;
     top: 50%;
@@ -365,17 +368,11 @@ ul, ol {
     margin-top: 10px;
 }
 
-.name-colum {
 
-    display: block;
-    width: 50%;
-    margin-left: 30px;
-
-}
 
 /* Стилізація повзунка та виводу значення */
 .slidecontainer {
-    width: 10%;
+    width: 70%;
     margin-left: 15px;
     position: relative;
 }
@@ -383,13 +380,12 @@ ul, ol {
 .slider {
     -webkit-appearance: none;
     appearance: none;
-    width: 40%;
+    width: 100%;
     height: 25px;
-    background: #dcd6d6;
+    background: linear-gradient(to right, #dcd6d6, #dcd6d6) no-repeat center/100% 5px, #dcd6d6;
     outline: none;
     opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+    transition: opacity 0.2s;
 }
 
 .slider:hover {
@@ -403,6 +399,7 @@ ul, ol {
     height: 20px;
     background: #000000;
     cursor: pointer;
+    border-radius: 50%;
 }
 
 .slider::-moz-range-thumb {
@@ -410,6 +407,7 @@ ul, ol {
     height: 20px;
     background: #1abff3;
     cursor: pointer;
+    border-radius: 50%;
 }
 
 #sliderValue {
@@ -803,4 +801,39 @@ input[type="checkbox"] {
     padding-top: 2px;
     border-top: 1px solid #5b3e3e;
     border-top-color: #c2b3b3
+}
+/* Sidebar */
+
+.sidebar {
+    border-radius: 20px;
+    margin-top: -150px;
+    width: 370px;
+    background: rgba(216, 92, 152, 0.66);
+}
+.slidecontainer,
+.checkboxes,
+.checkbox-column {
+    margin: 48px 0 0 40px;
+    padding-bottom: 30px;
+}
+.name-colum {
+    font-style: normal;
+    line-height: 27px;
+    color: #ede5ee;
+    margin-bottom: 8px;
+    font: 700 2rem 'Montserrat', sans-serif;
+}
+.filter{
+    padding-top: 95px;
+    font: 200 0.4rem 'Montserrat', sans-serif ;
+}
+.header-filter{
+    padding-top: 30px;
+    margin-left: 80px;
+    font: 500 3rem 'Montserrat', sans-serif;
+}
+.filter-title{
+    text-align: center;
+    margin-left: 10px;
+    color: #ede5ee;
 }
