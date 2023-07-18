@@ -1365,13 +1365,13 @@ button, input, select, textarea {
 }
 
 a {
-    color: #337ab7;
+    color: black;
     text-decoration: none
 }
 
 a:focus, a:hover {
     color: #23527c;
-    text-decoration: underline
+    text-decoration: none;
 }
 
 a:focus {

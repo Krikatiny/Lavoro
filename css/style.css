@@ -83,6 +83,10 @@ ul, ol {
 /* --- /Офомлення секцій--- */
 
 /* --- Налаштування  фонових зоображень, а також додання певних візуальних ефектів до них --- */
+.main-area section
+{
+    margin-top: 20px;
+}
 .bg-image {
     position: absolute;
     left: 0;
@@ -95,6 +99,7 @@ ul, ol {
 
 .bg-image.bg-parallax {
     background-attachment: fixed;
+    margin-top: -30px;
 }
 
 .bg-image.overlay:after {
