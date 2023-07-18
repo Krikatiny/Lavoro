@@ -359,74 +359,6 @@ ul, ol {
     scale: 1.8;
 }
 
-/*Стилізація чекбоксів*/
-.checkboxes {
-    margin-top: 50px;
-}
-
-.checkbox-column {
-    display: block;
-    width: 50%;
-    margin-left: 20px;
-    margin-top: 20px;
-}
-
-.checkbox-column label {
-    display: block;
-    margin-bottom: 5px;
-    margin-top: 10px;
-}
-
-
-/* Стилізація повзунка та виводу значення */
-.slidecontainer {
-    width: 70%;
-    margin-left: 15px;
-    position: relative;
-}
-
-.slider {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 100%;
-    height: 25px;
-    background: linear-gradient(to right, #dcd6d6, #dcd6d6) no-repeat center/100% 5px, #dcd6d6;
-    outline: none;
-    opacity: 0.7;
-    transition: opacity 0.2s;
-}
-
-.slider:hover {
-    opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #000000;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-.slider::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: #1abff3;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-#sliderValue {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    color: black;
-    margin-left: 15px;
-}
 
 
 /* Задаємо відступ зображення в межах кнопки */
@@ -815,21 +747,30 @@ input[type="checkbox"] {
 
 /* Sidebar */
 
+/* Sidebar та стилізація чекбоксів */
+
 .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
     border-radius: 20px;
-    margin-top: -150px;
-    width: 370px;
+    margin-bottom: 100px;
+    width: 1500px;
+    height: 470px;
     background: rgba(216, 92, 152, 0.66);
 }
 
-.slidecontainer,
+.slidercontainer,
 .checkboxes,
 .checkbox-column {
-    margin: 48px 0 0 40px;
-    padding-bottom: 30px;
+    margin: 12px 0 0 0;
+    padding-bottom: 50px;
 }
 
-.name-colum {
+.filtername {
+    text-align: center;
     font-style: normal;
     line-height: 27px;
     color: #ede5ee;
@@ -843,13 +784,89 @@ input[type="checkbox"] {
 }
 
 .header-filter {
-    padding-top: 30px;
-    margin-left: 80px;
+    margin-top: -50px;
+    text-align: center;
     font: 500 3rem 'Montserrat', sans-serif;
 }
 
-.filter-title {
+.checkbox-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.checkbox-column {
+    display: flex;
+    flex-direction: column;
+    margin: 0 40px;
+}
+
+.filternamebox {
+    width: 100%;
     text-align: center;
-    margin-left: 10px;
+    font-style: normal;
+    line-height: 27px;
     color: #ede5ee;
+    margin-bottom: 8px;
+    font: 700 2rem 'Montserrat', sans-serif;
+}
+
+.checkbox-group:nth-child(1) .checkbox-column:nth-child(5) {
+    margin-bottom: 50px;
+}
+
+.checkbox-group:nth-child(2) .checkbox-column:nth-child(4) {
+    margin-bottom: 50px;
+}
+
+
+
+/* Стилізація повзунка та виводу значення */
+.slidercontainer {
+    width: 90%;
+    margin-left: 18px;
+    position: relative;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(to right, #dcd6d6, #dcd6d6) no-repeat center/100% 5px, #dcd6d6;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #000000;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #1abff3;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#sliderValue {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: black;
+    margin-left: 15px;
 }
