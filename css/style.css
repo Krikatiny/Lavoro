@@ -816,8 +816,10 @@ input[type="checkbox"] {
 /* Sidebar */
 
 .sidebar {
+    margin-left: 70px;
     border-radius: 20px;
-    margin-top: -150px;
+    margin-top: -240px;
+    margin-bottom: 200px;
     width: 370px;
     background: rgba(216, 92, 152, 0.66);
 }
