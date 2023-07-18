@@ -163,8 +163,7 @@ ul, ol {
     margin: 10px;
     display: inline-block;
 }
-
-.home_buttom {
+.home_buttom{
     margin: -25%;
 }
 
@@ -487,9 +486,9 @@ input[type="date"], input[type="url"], input[type="tel"], input[type="regions"],
     border-radius: 4px;
     background: transparent;
     padding-left: 15px;
-    padding-right: 15px;
-    -webkit-transition: 0.2s #cd5d21;
-    transition: 0.2s #cd5d21;
+	padding-right: 15px;
+	-webkit-transition:0.2s #cd5d21;
+	transition:0.2s #cd5d21;
 }
 
 textarea {
@@ -620,9 +619,8 @@ input[type="tel"]:focus, input[type="regions"] focus, input[type="tel"] focus, t
 }
 
 .contact-form .input {
-    margin-bottom: 20px;
+	margin-bottom:20px;
     background: #ffff;
-    border-color: #d65b97;
 }
 
 .contact-form textarea.input {
@@ -637,14 +635,14 @@ input[type="tel"]:focus, input[type="regions"] focus, input[type="tel"] focus, t
 }
 
 .contact-details li i {
-    color: #d85c98;
-    margin-right: 15px;
-    border: 1px solid #d65b97;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
+	color: #d85c98;
+	margin-right: 15px;
+	border: 1px solid #EBEBEB;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
 
 }
 
@@ -719,4 +717,11 @@ input[type="checkbox"] {
     border-color: #d65b97;
 }
 
+.row_contacts{
+    background-color: #c0afbb;
+    margin-right: -15px;
+    margin-left: -15px;
+    height: 500px;
+    border-radius: 20px;
+}
 
