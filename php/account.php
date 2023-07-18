@@ -24,9 +24,13 @@ require __DIR__ . "/connectionCheck.php";
                              class="shadow">
                     </div>
                     <?php if (isset($user)): ?>
-                    <p class="text-center">З поверненням, <?= htmlspecialchars($user["name"]) ?></p>
+                    <p class="text-center">Привіт, <?= htmlspecialchars($user["name"]) ?></p>
                 </div>
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" href="../index.html">
+                        <i class="fa fa-home text-center mr-1"></i>
+                        Головна сторінка
+                    </a>
                     <a class="nav-link active" id="account-tab" data-toggle="pill" href="#account" role="tab"
                        aria-controls="account" aria-selected="true">
                         <i class="fa fa-user-circle-o text-center mr-1"></i>
@@ -41,10 +45,6 @@ require __DIR__ . "/connectionCheck.php";
                        aria-controls="account" aria-selected="true">
                         <i class="fa fa-bookmark-o text-center mr-1"></i>
                         Усі вакансії
-                    </a>
-                    <a class="nav-link active" href="../index.html">
-                        <i class="fa fa-home text-center mr-1"></i>
-                        Головна сторінка
                     </a>
                     <a class="nav-link active" href="../html/vacant_create.html">
                         <i class="fa fa-pencil-square-o text-center mr-1"></i>
@@ -79,13 +79,6 @@ require __DIR__ . "/connectionCheck.php";
                             <p><?= htmlspecialchars($user["phone_number"]) ?></p>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label>Пароль:</label>
-                            <p><?= htmlspecialchars($user["password_hash"]) ?></p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
@@ -93,8 +86,7 @@ require __DIR__ . "/connectionCheck.php";
 </section>
 <?php else: ?>
 
-    <p><a href="../php/login.php">Log in</a> or <a href="../html/signup.html">sign up</a></p>
-
+    <?php header("Location: ../index.html"); ?>
 <?php endif; ?>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

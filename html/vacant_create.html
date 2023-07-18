@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Створи вакансію</title>
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script defer src="../js/validation.js"></script>
@@ -16,118 +16,93 @@
     <!-- Підключення бібліотеки, яка містить в собі гарні векторні значки, які ми використаєм в нашій роботі  -->
     <link href="../css/font-awesome.min.css" rel="stylesheet">
 </head>
-<header class="transparent-nav" id="header">
-    <div class="container">
-        <div class="navbar-header">
-            <!-- Кнопка будиночка -->
-            <div class="navbar-home">
-                <a class="home_button" href="../index.html">
-                    <img alt="home_buttom" src="../img/home.png">
-                </a>
-            </div>
-            <!-- /Кнопка будиночка -->
-        </div>
-        <!-- Меню навігації сайту-->
-        <nav id="nav">
-            <ul class="main-menu nav navbar-nav navbar-right">
-                <li><a href="../index.html">Головна</a></li>
-                <li><a href="../html/vacancies.html">Вакансії</a></li>
-                <li><a href="../html/contact.html">Контакти</a></li>
-                <a class="profile_buttom" href="../php/signup.php">
-                    <img alt="profile_buttom" src="../img/profile (1).png">
-                </a>
-            </ul>
-        </nav>
 
-
-        <!-- /Меню навігації сайту -->
-    </div>
-</header>
 <body class="signup">
-    <div class="box"> 
-         <!-- Кнопка будиночка -->
-         <div class="navbar-home">
-            <a class="home_button" href="../index.html">
-                <img src="../img/free-icon-home-88282.png" alt="home_buttom">
-            </a>
-        </div>   
-    <form action="../php/vac-creating.php" method="post" id="vac-create" novalidate>
+<div class="box">
+    <!-- Кнопка будиночка -->
+    <div class="navbar-home">
+        <a class="home_button" href="../index.html">
+            <img alt="home_buttom" src="../img/free-icon-home-88282.png">
+        </a>
+    </div>
+    <form action="../php/vac-creating.php" id="vac-create" method="post" novalidate>
 
-    <div class="vac_name-label">
-        <h1 class="vac_form_title">Створити свою вакансію</h1>
-    </div>
-    <div class="vac_name">
-        <input type="text" name="vac_name" id="vac_name"autofocus placeholder="Назва вакансії">
-    </div>
-    <div class="tags">
         <div class="vac_name-label">
-            <h1 class="vac_form_text">Обери хештеги, що описують вакансію</h1>
+            <h1 class="vac_form_title">Створити свою вакансію</h1>
         </div>
-        <div class="roow">
-            <label><input type="checkbox" name="tags[]" value="Робота з дітьми"> Робота з дітьми</label><br>
-            <label><input type="checkbox" name="tags[]" value="Гнучкий графік"> Гнучкий графік</label><br>
-            <label><input type="checkbox" name="tags[]" value="Робота для студента"> Робота для студента</label><br>
-            <label><input type="checkbox" name="tags[]" value="Зелена компанія"> Зелена компанія</label><br>
-            <label><input type="checkbox" name="tags[]" value="Премії та надбавки"> Премії та надбавки</label><br>  </div>
-        <div class="roow">
-            <label><input type="checkbox" name="tags[]" value="Премії та надбавки"> Державна робота </label><br>
-            <label><input type="checkbox" name="tags[]" value="Премії та надбавки"> Волонтерство </label><br>
-            <label><input type="checkbox" name="tags[]" value="Премії та надбавки"> Навчання з нуля </label><br>
-            <label><input type="checkbox" name="tags[]" value="Премії та надбавки"> Дистанційна робота </label><br>
-            <label><input type="checkbox" name="tags[]" value="Премії та надбавки"> Гаряча пропозиція </label><br>
+        <div class="vac_name">
+            <input autofocus id="vac_name" name="vac_name" placeholder="Назва вакансії" type="text">
+        </div>
+        <div class="tags">
+            <div class="vac_name-label">
+                <h1 class="vac_form_text">Обери хештеги, що описують вакансію</h1>
+            </div>
+            <div class="roow">
+                <label><input name="tags[]" type="checkbox" value="Робота з дітьми"> Робота з дітьми</label><br>
+                <label><input name="tags[]" type="checkbox" value="Гнучкий графік"> Гнучкий графік</label><br>
+                <label><input name="tags[]" type="checkbox" value="Робота для студента"> Робота для студента</label><br>
+                <label><input name="tags[]" type="checkbox" value="Зелена компанія"> Зелена компанія</label><br>
+                <label><input name="tags[]" type="checkbox" value="Премії та надбавки"> Премії та надбавки</label><br>
+            </div>
+            <div class="roow">
+                <label><input name="tags[]" type="checkbox" value="Премії та надбавки"> Державна робота </label><br>
+                <label><input name="tags[]" type="checkbox" value="Премії та надбавки"> Волонтерство </label><br>
+                <label><input name="tags[]" type="checkbox" value="Премії та надбавки"> Навчання з нуля </label><br>
+                <label><input name="tags[]" type="checkbox" value="Премії та надбавки"> Дистанційна робота </label><br>
+                <label><input name="tags[]" type="checkbox" value="Премії та надбавки"> Гаряча пропозиція </label><br>
+            </div>
+
         </div>
 
-    </div>
+        <div class="reg_form_input">
+            <input autofocus class="regions" id="region" list="regions" name="region" placeholder="Оберіть регіон">
+            <datalist id="regions">
+                <option value="АР Крим">АР Крим</option>
+                <option value="Березань>">Березань</option>
+                <option value="Вінниця">Вінниця</option>
+                <option value="Волинь">Волинь</option>
+                <option value="Дніпро">Дніпро</option>
+                <option value="Донецьк">Донецьк</option>
+                <option value="Житомир">Житомир</option>
+                <option value="Закарпаття">Закарпаття</option>
+                <option value="Запоріжжя">Запоріжжя</option>
+                <option value="Івано-Франківськ">Івано-Франківськ</option>
+                <option value="Київ">Київ</option>
+                <option value="Кіровоград">Кіровоград</option>
+                <option value="Луганськ">Луганськ</option>
+                <option value="Львів">Львів</option>
+                <option value="Миколаїв">Миколаїв</option>
+                <option value="Одеса">Одеса</option>
+                <option value="Полтава">Полтава</option>
+                <option value="Рівне">Рівне</option>
+                <option value="Суми">Суми</option>
+                <option value="Тернопіль">Тернопіль</option>
+                <option value="Харків">Харків</option>
+                <option value="Херсон">Херсон</option>
+                <option value="Хмельницький">Хмельницький</option>
+                <option value="Черкаси">Черкаси</option>
+                <option value="Чернівці">Чернівці</option>
+                <option value="Чернігів">Чернігів</option>
+            </datalist>
+        </div>
 
-    <div class="reg_form_input">
-        <input class="regions" list="regions" name="region" id="region" autofocus placeholder="Оберіть регіон">
-        <datalist id="regions">
-            <option value="АР Крим">АР Крим</option>
-            <option value="Березань>">Березань</option>
-            <option value="Вінниця">Вінниця</option>
-            <option value="Волинь">Волинь</option>
-            <option value="Дніпро">Дніпро</option>
-            <option value="Донецьк">Донецьк</option>
-            <option value="Житомир">Житомир</option>
-            <option value="Закарпаття">Закарпаття</option>
-            <option value="Запоріжжя">Запоріжжя</option>
-            <option value="Івано-Франківськ">Івано-Франківськ</option>
-            <option value="Київ">Київ</option>
-            <option value="Кіровоград">Кіровоград</option>
-            <option value="Луганськ">Луганськ</option>
-            <option value="Львів">Львів</option>
-            <option value="Миколаїв">Миколаїв</option>
-            <option value="Одеса">Одеса</option>
-            <option value="Полтава">Полтава</option>
-            <option value="Рівне">Рівне</option>
-            <option value="Суми">Суми</option>
-            <option value="Тернопіль">Тернопіль</option>
-            <option value="Харків">Харків</option>
-            <option value="Херсон">Херсон</option>
-            <option value="Хмельницький">Хмельницький</option>
-            <option value="Черкаси">Черкаси</option>
-            <option value="Чернівці">Чернівці</option>
-            <option value="Чернігів">Чернігів</option>
-        </datalist>
-    </div>
-
-    <div class="reg_form_input">
-        <input type="number" name="salary" id="salary"autofocus placeholder="Зарплата">
-    </div>
-    <div class="reg_form_input">
-        <input type="email" name="vac_email" id="vac_email" autofocus placeholder="Пошта">
-    </div>
-    <div class="reg_form_input">
-        <input type="tel" name="phone_number" id="phone_number" autofocus placeholder="Номер телефону">
-    </div>
-    <div class="reg_form_input">
-        <textarea name="vac_description" id="vac_description" cols="30" rows="10" autofocus placeholder="Опис вакансії"></textarea>
-    </div>
-    <div class="text-center vacantion_button">
-    <button type="submit" name="vac-create" class="main-button icon-button vacantion_button">Поділитися</button>
+        <div class="reg_form_input">
+            <input autofocus id="salary" name="salary" placeholder="Зарплата" type="number">
+        </div>
+        <div class="reg_form_input">
+            <input autofocus id="vac_email" name="vac_email" placeholder="Пошта" type="email">
+        </div>
+        <div class="reg_form_input">
+            <input autofocus id="phone_number" name="phone_number" placeholder="Номер телефону" type="tel">
+        </div>
+        <div class="reg_form_input">
+            <textarea autofocus cols="30" id="vac_description" name="vac_description" placeholder="Опис вакансії"
+                      rows="10"></textarea>
+        </div>
+        <div class="text-center vacantion_button">
+            <button class="main-button icon-button vacantion_button" name="vac-create" type="submit">Поділитися</button>
+        </div>
+    </form>
 </div>
-</div>
-
-</form>
 </body>
 </html>

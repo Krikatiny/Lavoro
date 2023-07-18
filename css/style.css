@@ -67,8 +67,7 @@ ul, ol {
 
 .section {
     position: relative;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 30px;
 }
 
 .section-hr {
@@ -379,7 +378,6 @@ ul, ol {
 .slidecontainer {
     width: 10%;
     margin-left: 15px;
-    margin-top: -200px;
     position: relative;
 }
 
@@ -484,11 +482,8 @@ ul, ol {
 
 /* -- Стиль нижньої менюшки -- */
 .bottom-footer {
-    margin-top: 10px;
-    padding-top: 20px;
-    border-top: 1px solid #5b3e3e;
-    border-top-width: 1px;
-    border-top-style: solid;
+    margin-top: 30px;
+    margin-bottom: 30px;
     border-top-color: #c2b3b3
 }
 
@@ -496,7 +491,6 @@ ul, ol {
 .footer-logo .logo {
     transform: scale(2);
     margin-left: 50px;
-    margin-top: 30px;
     display: inline-block;
 }
 
@@ -507,9 +501,7 @@ ul, ol {
 /* -- Footer Nav -- */
 .footer-nav {
     text-align: right;
-    padding: 2px 0px;
-
-
+    margin-bottom: 0px
 }
 
 .footer-nav li {
@@ -551,16 +543,14 @@ ul, ol {
 
 /* --  Оформлення форм  -- */
 input[type="text"], input[type="email"], input[type="password"], input[type="number"],
-input[type="date"], input[type="url"], input[type="tel"], input[type="regions"], textarea {
+input[type="date"], input[type="url"], input[type="tel"], .regions, textarea {
     height: 40px;
     width: 100%;
-    border: 1px solid #d65b97;
+    border: 1px solid #e9e9e9;
     border-radius: 4px;
     background: transparent;
     padding-left: 15px;
 	padding-right: 15px;
-	-webkit-transition:0.2s #cd5d21;
-	transition:0.2s #cd5d21;
 }
 
 textarea {
@@ -815,3 +805,13 @@ input[type="checkbox"] {
    color: white;
 }
 
+.row-bottom{
+    height: 22px;
+}
+
+.white-line{
+    margin-top: 28px;
+    padding-top: 2px;
+    border-top: 1px solid #5b3e3e;
+    border-top-color: #c2b3b3
+}
