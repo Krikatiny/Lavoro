@@ -508,6 +508,7 @@ input[type="tel"]:focus, input[type="regions"]:focus, input[type="tel"]:focus, t
     position: relative;
 
 }
+
 .signup-test {
     margin: 0;
     height: 100vh;
@@ -515,10 +516,11 @@ input[type="tel"]:focus, input[type="regions"]:focus, input[type="tel"]:focus, t
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    background-color: rgba(255,208,241,0.64);
+    background-color: rgba(255, 208, 241, 0.64);
     background-size: cover;
     position: relative;
 }
+
 .signup::before {
     content: "";
     position: absolute;
@@ -553,7 +555,8 @@ input[type="tel"]:focus, input[type="regions"]:focus, input[type="tel"]:focus, t
     background: #ffffff;
     font: 500 1.2rem 'Montserrat', sans-serif;
 }
-.box-all-vac{
+
+.box-all-vac {
     width: 1000px;
     max-width: 1000px;
     margin: 1rem;
@@ -565,6 +568,7 @@ input[type="tel"]:focus, input[type="regions"]:focus, input[type="tel"]:focus, t
     overflow: hidden;
     margin-top: 250px;
 }
+
 .reg__button {
     position: relative;
     display: inline-block;
@@ -623,7 +627,8 @@ input[type="tel"]:focus, input[type="regions"]:focus, input[type="tel"]:focus, t
     clear: both;
 
 }
-.contact-form-container{
+
+.contact-form-container {
     background: #fdfdfd;
 }
 
@@ -773,9 +778,9 @@ input[type="checkbox"] {
     justify-content: center;
     margin: 0 auto;
     border-radius: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
     width: 1500px;
-    height: 470px;
+    height: 500px;
     background: rgba(216, 92, 152, 0.66);
 }
 
@@ -798,7 +803,7 @@ input[type="checkbox"] {
 .star-btn {
     display: inline-block;
     font-size: 50px;
-    color: #d65b97;
+    color: #d6c65b;
     cursor: pointer;
     user-select: none;
 }
@@ -827,7 +832,8 @@ input[type="checkbox"] {
 }
 
 .header-filter {
-    margin-top: 0px;
+    margin-top: -30px;
+    margin-bottom: 20px;
     text-align: center;
     font: 500 3rem 'Montserrat', sans-serif;
 }
@@ -871,12 +877,13 @@ input[type="checkbox"] {
 }
 
 .slider {
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
     height: 25px;
     background: linear-gradient(to right, #dcd6d6, #dcd6d6) no-repeat center/100% 5px, #dcd6d6;
-    outline: none;
     opacity: 0.7;
     transition: opacity 0.2s;
 }
@@ -923,12 +930,11 @@ input[type="checkbox"] {
     font-size: 1.56em;
     min-height: 100px;
     width: 1500px;
-    border-radius: 5px 5px 0 0;
-    overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     height: 400px;
-    overflow-y: scroll;
     table-layout: fixed;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
 }
 
 .table-vacancies thead tr {
@@ -942,9 +948,11 @@ input[type="checkbox"] {
     width: 80px; /* Задайте бажану фіксовану ширину для кожного стовпця */
     text-align: left;
 }
+
 .table-vacancies tbody tr {
     height: 70px; /* Задайте бажану фіксовану висоту для кожного рядка */
 }
+
 .table-vacancies th,
 .table-vacancies td {
     padding: 12px 15px;
@@ -971,4 +979,51 @@ input[type="checkbox"] {
 .table-name {
     text-align: center;
     margin-top: -150px;
+}
+
+aside {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+
+.your-fav-table {
+
+}
+
+.your-fav-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.your-fav-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.your-fav-table th,
+.your-fav-table td {
+    padding: 12px 15px;
+}
+
+.your-fav-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.your-fav-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.your-fav-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.your-fav-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
 }
