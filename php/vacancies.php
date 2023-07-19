@@ -27,6 +27,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
     <script defer src="../js/addToFav.js"></script>
     <script defer src="../js/searchText.js"></script>
     <script defer src="../js/checkboxesFilter.js"></script>
+    <script defer src="../js/toggleFav.js"></script>
     <!-- Скрипти для фільтрації даних по чекбоксах та слайдеру
     <script defer src="../js/rangeSlider.js"></script>
     <script defer src="../js/sliderFilter.js"></script>-->
@@ -318,7 +319,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
         <th>Місто</th>
         <th>Зарплатня</th>
         <th>Деталі</th>
-        <th>Обрані</th>
+        <th class="tableheadfavourite">Обрані</th>
     </tr>
     </thead>
     <tbody>
@@ -343,9 +344,15 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
             <td class="price"><?php echo $row['salary']; ?></td>
             <td><?php echo $row['description']; ?></td>
             <td>
-                <button type="button" class="add-to-favorite" data-id="<?= htmlspecialchars($row['id']) ?>">Add to
-                    favourite
-                </button>
+                <?php if (isset($vacIdFav) && $vacIdFav === $row['id']): ?>
+                    <div class="star-btn" onclick="toggleStar(this)" starred="true"
+                         data-id="<?= htmlspecialchars($row['id']) ?>">★
+                    </div>
+                <?php else: ?>
+                    <div class="star-btn" onclick="toggleStar(this)" starred="false"
+                         data-id="<?= htmlspecialchars($row['id']) ?>">☆
+                    </div>
+                <?php endif; ?>
             </td>
         </tr>
         <?php
@@ -356,30 +363,40 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
 
 
 <!-- Нижня менюшка -->
-<footer class="bottom-footer" id="footer">
-    <div class="container">
-        <div class="row">
-            <!-- Логотип нижньої менюшки-->
+<footer class="section footer-section" id="footer">
+
+    <!-- Контейнер з всіма даними меню -->
+    <div class="container ">
+
+        <!-- Рядок для запису всіх даних -->
+        <div class="row-bottom row">
+
+            <!-- Логотип нашого сервісу -->
             <div class="col-md-6">
                 <div class="footer-logo">
-                    <a class="logo" href="../index.html">
+                    <a class="logo" href="index.html">
                         <img alt="logo" src="../img/Lovaro (1).png">
                     </a>
                 </div>
             </div>
-            <!-- /Логотип нижньої менюшки-->
+            <!-- Логотип нашого сервісу -->
 
-            <!-- Навігація нижньої менюшки -->
+            <!-- Навігація, що знаходиться на нижній менюшці-->
             <div class="col-md-6">
-                <ul class="main-menu nav navbar-nav navbar-right">
-                    <li><a href="../index.html">Головна</a></li>
-                    <li><a href="../php/vacancies.php">Вакансії</a></li>
-                    <li><a href="../html/contact.html">Контакти</a></li>
+                <ul class="footer-nav-main footer-nav">
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="html/vacancies.html">Вакансії</a></li>
+                    <li><a href="html/contact.html">Контакти</a></li>
                 </ul>
             </div>
-            <!-- /Навігація нижньої менюшки -->
+            <!-- /Навігація, що знаходиться на нижній менюшці-->
+
         </div>
+        <!-- /Рядок для запису всіх даних -->
+
     </div>
+    <!-- /Контейнер з всіма даними меню -->
+
 </footer>
 <!-- /Нижня менюшка -->
 
