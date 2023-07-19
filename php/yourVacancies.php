@@ -42,7 +42,7 @@ $userId = $_SESSION['user_id'];
     <!-- /Кнопка профілю -->
     <div class="profile-tab-nav border-right">
         <div class="p-4">
-            <p class="text-center">Ось ваші улюблені вакансії</p>
+            <p class="fav-vac-text-head">Ось ваші улюблені вакансії</p>
             <br>
 
             <?php
@@ -79,15 +79,15 @@ $userId = $_SESSION['user_id'];
             <table class="your-fav-table">
                 <thead>
                 <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Tags</th>
-                    <th>Region</th>
-                    <th>Salary</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Description</th>
-                    <th>Fav</th>
+                    <th>№</th>
+                    <th>Назва</th>
+                    <th>Теги</th>
+                    <th>Місто</th>
+                    <th>Зарплатня</th>
+                    <th>e-mail</th>
+                    <th>Мобільний</th>
+                    <th>Деталі</th>
+                    <th>Обрані</th>
                 </tr>
                 </thead>
                 <tbody><?php
