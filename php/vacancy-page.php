@@ -39,10 +39,23 @@ $userId = $_SESSION['user_id'];
         </a>
     </div>
     <!-- /Кнопка профілю -->
+    <!-- /Таблиця вакансій -->
 <table>
     <p class="vac_form_title">Таблиця вакансій</p>
     <a href="delFromFav.php">Акаунт</a>
+    <thead class="vacancies-head">
+    <tr>
+        <th>№</th>
+        <th>Ім'я</th>
+        <th>Теги</th>
+        <th>Місто</th>
+        <th>Зарплатня</th>
+        <th>Деталі</th>
+        <th class="tableheadfavourite">Обрані</th>
+    </tr>
+    </thead>
 
+    <tbody>
     <?php
 
     while ($row = mysqli_fetch_assoc($resultVac)) {
@@ -51,8 +64,8 @@ $userId = $_SESSION['user_id'];
         ?>
         <tr>
             <td><?php echo $row['id']; ?></td>
-            <td><?php echo $row['name']; ?></td>
-            <td>
+            <td class="vacancyname"><?php echo $row['name']; ?></td>
+            <td class="vacancytags">
                 <?php
                 $arr = explode(",", $tags_implode);
                 foreach ($arr as $item) {
@@ -61,8 +74,8 @@ $userId = $_SESSION['user_id'];
                 }
                 ?>
             </td>
-            <td><?php echo $row['region']; ?></td>
-            <td><?php echo $row['salary']; ?></td>
+            <td class="vacancyregion"><?php echo $row['region']; ?></td>
+            <td class="price"><?php echo $row['salary']; ?></td>
             <td><?php echo $row['description']; ?></td>
             <td>
                 <?php
@@ -95,8 +108,9 @@ $userId = $_SESSION['user_id'];
     }
 
     ?>
-
+    </tbody>
 </table>
+    <!-- /Таблиця вакансій -->
 </div>
 </body>
 </html>
