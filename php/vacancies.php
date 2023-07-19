@@ -311,6 +311,9 @@ $userId = $_SESSION['user_id'];
 </div>
 <!-- Таблиця Вакансій -->
 <h1 class="table-name">Таблиця вакансій</h1>
+<?php if (!isset($_SESSION['user_id'])) { ?>
+    <h4 class="table-vac-error">Увійдіть, аби мати змогу додавати до обраних</h4>
+<?php } ?>
 <table class="table-vacancies">
     <thead class="vacancies-head">
     <tr>
@@ -320,12 +323,14 @@ $userId = $_SESSION['user_id'];
         <th>Місто</th>
         <th>Зарплатня</th>
         <th>Деталі</th>
-        <th class="tableheadfavourite">Обрані</th>
+        <?php if (isset($_SESSION['user_id'])) { ?>
+            <th class="tableheadfavourite">Обрані</th>
+        <?php } ?>
     </tr>
     </thead>
     <tbody>
     <?php
-    
+
     while ($row = mysqli_fetch_assoc($resultVac)) {
         $tags = mysqli_fetch_assoc($resultTag);
         $tags_implode = implode("", $tags);
@@ -355,17 +360,20 @@ $userId = $_SESSION['user_id'];
             <td class="vacancyregion"><?php echo $row['region']; ?></td>
             <td class="price"><?php echo $row['salary']; ?></td>
             <td><?php echo $row['description']; ?></td>
-            <td>
-                <?php if (isset($vacIdFav) && $vacIdFav === $row['id']): ?>
-                    <div class="star-btn" onclick="toggleStar(this)" starred="true"
-                         data-id="<?= htmlspecialchars($row['id']) ?>">★
-                    </div>
-                <?php else: ?>
-                    <div class="star-btn" onclick="toggleStar(this)" starred="false"
-                         data-id="<?= htmlspecialchars($row['id']) ?>">☆
-                    </div>
-                <?php endif; ?>
-            </td>
+            <?php if (isset($_SESSION['user_id'])) { ?>
+                <td>
+                    <?php if (isset($vacIdFav) && $vacIdFav === $row['id']): ?>
+                        <div class="star-btn" onclick="toggleStar(this)" starred="true"
+                             data-id="<?= htmlspecialchars($row['id']) ?>">★
+                        </div>
+                    <?php else: ?>
+                        <div class="star-btn" onclick="toggleStar(this)" starred="false"
+                             data-id="<?= htmlspecialchars($row['id']) ?>">☆
+                        </div>
+                    <?php endif; ?>
+                </td>
+            <?php } ?>
+
         </tr>
         <?php
     }

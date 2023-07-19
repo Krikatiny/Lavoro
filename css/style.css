@@ -1034,3 +1034,7 @@ aside {
     font-weight: bold;
     color: #009879;
 }
+
+.table-vac-error {
+    text-align: center;
+}
