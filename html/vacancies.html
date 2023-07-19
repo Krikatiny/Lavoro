@@ -13,7 +13,7 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <!-- Підключення бібліотеки, яка містить в собі гарні векторні значки, які ми використаєм в нашій роботі  -->
     <link href="../css/font-awesome.min.css" rel="stylesheet">
-    <script src="../js/enterButton.js"></script>
+    <script src="../js/searchText.js"></script>
 </head>
 <body>
 
@@ -23,7 +23,7 @@
         <div class="navbar-header">
             <!-- Кнопка будиночка -->
             <div class="navbar-home">
-                <a class="home_buttom" href="../index.html">
+                <a class="home_button" href="../index.html">
                     <img alt="home_buttom" src="../img/home.png">
                 </a>
             </div>
@@ -33,15 +33,15 @@
         <nav id="nav">
             <ul class="main-menu nav navbar-nav navbar-right searchbar">
                 <div class="searchbar">
-                    <form action="search.php" method="GET">
-                        <input  type="text" name="query" placeholder="Знайдіть свою вакансію" />
-                        <button type="button" class="search-button"></button>
+                    <form class="searchbar">
+                        <input type="text" id="searchText" placeholder="Знайдіть свою вакансію" />
+                        <button id="searchButton" class="search-button"></button>
                     </form>
                 </div>
                 <li><a href="../index.html">Головна</a></li>
                 <li><a href="../php/vacancies.php">Вакансії</a></li>
                 <li><a href="../html/contact.html">Контакти</a></li>
-                <a class="profile_buttom" href="../php/signup.php">
+                <a class="profile_button" href="../php/signup.php">
                     <img alt="profile_buttom" src="../img/profile (1).png">
                 </a>
             </ul>
@@ -242,41 +242,42 @@
 
 
     <!-- Нижня менюшка -->
-<footer class="section bottom-footer" id="footer">
+    <!-- Нижня менюшка -->
+    <footer class="section footer-section" id="footer">
 
-    <div class="container">
+        <!-- Контейнер з всіма даними меню -->
+        <div class="container ">
 
-        <div class="row">
+            <!-- Рядок для запису всіх даних -->
+            <div class="row-bottom row">
 
-            <!-- Логотип нижньої менюшки-->
-            <div class="col-md-6">
-                <div class="footer-logo">
-                    <a class="logo" href="../index.html">
-                        <img alt="logo" src="../img/Lovaro (1).png">
-                    </a>
+                <!-- Логотип нашого сервісу -->
+                <div class="col-md-6">
+                    <div class="footer-logo">
+                        <a class="logo" href="index.html">
+                            <img alt="logo" src="./img/Lovaro (1).png">
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <!-- /Логотип нижньої менюшки-->
+                <!-- Логотип нашого сервісу -->
 
-            <!-- Навігація нижньої менюшки -->
-            <div class="col-md-6">
-                <ul class="main-menu nav navbar-nav navbar-right">
-                    <li><a href="../index.html">Головна</a></li>
-                    <li><a href="../php/vacancies.php">Вакансії</a></li>
-                    <li><a href="../html/contact.html">Контакти</a></li>
-                </ul>
+                <!-- Навігація, що знаходиться на нижній менюшці-->
+                <div class="col-md-6">
+                    <ul class="footer-nav-main footer-nav">
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="html/vacancies.html">Вакансії</a></li>
+                        <li><a href="html/contact.html">Контакти</a></li>
+                    </ul>
+                </div>
+                <!-- /Навігація, що знаходиться на нижній менюшці-->
+
             </div>
-            <!-- /Навігація нижньої менюшки -->
+            <!-- /Рядок для запису всіх даних -->
+
         </div>
-    </div>
-</footer>
-<!-- /Нижня менюшка -->
+        <!-- /Контейнер з всіма даними меню -->
 
-<!-- Попередній завантажувач -->
-<div id='preloader'>
-    <div class='preloader'></div>
-</div>
-<!-- /Попередній завантажувач -->
-
+    </footer>
+    <!-- /Нижня менюшка -->
 
 </html>

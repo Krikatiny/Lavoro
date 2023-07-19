@@ -32,6 +32,7 @@ h4 {
     font-size: 18px;
 }
 
+
 /* --- /Налаштування заголовків--- */
 
 /* --- Налаштування тексту посилань--- */
@@ -59,7 +60,15 @@ ul, ol {
 .white-text {
     color: #FFF;
 }
-
+.main-text-2{
+    font: 1000 6rem 'Montserrat', sans-serif;
+}
+.main-text{
+    font: 700 10rem 'Montserrat', sans-serif;
+}
+.home-mini-title{
+    font: 700 3rem 'Montserrat', sans-serif;
+}
 /* --- /Налаштування шрифтів та тексту --- */
 
 /* --- Для зручного розміщення даних, та чіткого відокремлення їх між собою по секціям ми розмістили дані всередину певних блоків.
@@ -74,18 +83,29 @@ ul, ol {
 .section-hr {
     margin-top: 80px;
     margin-bottom: 80px;
-    border-color: #EBEBEB;
+    border-color: #d2c9c9;
 }
 
 .section-header {
     margin-bottom: 40px;
 }
 
+.box-details{
+    margin-top: 100px;
+}
+.box-details-2{
+    margin-bottom: 100px;
+}
 /* --- /Офомлення секцій--- */
 
 /* --- Налаштування  фонових зоображень, а також додання певних візуальних ефектів до них --- */
+.main-area section {
+    margin-top: 20px;
+}
+
 .bg-image {
     position: absolute;
+    scale: 112%;
     left: 0;
     right: 0;
     top: 0;
@@ -96,6 +116,7 @@ ul, ol {
 
 .bg-image.bg-parallax {
     background-attachment: fixed;
+    margin-top: -30px;
 }
 
 .bg-image.overlay:after {
@@ -137,7 +158,7 @@ ul, ol {
 
 .main-button.icon-button:after {
     content: "\f178";
-    font-family: FontAwesome;
+    font-family: FontAwesome, serif;
     position: absolute;
     width: 30px;
     right: 15px;
@@ -159,15 +180,16 @@ ul, ol {
     padding: 0;
 }
 
-.navbar-home{
+.navbar-home {
     margin: 10px;
     display: inline-block;
 }
-.home_buttom{
-    margin: -25%;
+
+.home_button {
+    padding: 15px;
 }
 
-.navbar-home .home_buttom > img {
+.navbar-home .home_button > img {
     max-height: 30px;
 }
 
@@ -185,14 +207,13 @@ ul, ol {
     padding: 0;
 }
 
-.profile_buttom {
+.profile_button {
     display: inline-block;
-    margin-top: 10px;
-    margin-left: 7px;
+    padding: 13px;
     transform: scale(1.2);
 }
 
-.profile-home .profile_buttom > img {
+.profile-home .profile_button > img {
     max-height: 10px;
 }
 
@@ -203,6 +224,50 @@ ul, ol {
 }
 
 /*---/Кнопочка профілю--- */
+
+/*--- Стилі інформаційної сторіночки нашого сайту --- */
+/* -- Стилі 3-х ознак на головній сторіночці -- */
+.feature {
+    position: relative;
+}
+
+.feature + .feature {
+    margin-top: 40px;
+}
+
+.feature .feature-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 30px;
+    border: 1px solid #EBEBEB;
+    color: #d85c98;
+}
+
+.feature-content {
+    padding-left: 100px;
+}
+
+/* -- About Img -- */
+.about-img {
+    margin-top: 1px;
+}
+
+.about-img > img {
+    width: 100%;
+}
+
+.section-header-about {
+    margin-bottom: 40px;
+    text-align: center;;
+}
+
+/*--- /Стилі інформаційної сторіночки нашого сайту --- */
 
 /*---Оформлення навігації--- */
 #header {
@@ -216,6 +281,7 @@ ul, ol {
     -webkit-transition: 0.2s all;
     transition: 0.2s all;
 }
+
 #header.transparent-nav {
     position: absolute;
     background-color: transparent;
@@ -232,16 +298,15 @@ ul, ol {
 }
 
 .main-menu li a:hover, .main-menu li a:focus {
-    background-color: transparent;
+    background-color: rgba(238,196,200,0.43);
 }
 
 .main-menu li a:after {
     content: "";
     display: block;
     height: 2px;
-    background-color: #d85c98;
+    background-color: rgba(216, 92, 152, 0);
     width: 100%;
-    -webkit-transform: translateY(5px);
     -ms-transform: translateY(5px);
     transform: translateY(5px);
     opacity: 0;
@@ -250,20 +315,12 @@ ul, ol {
 }
 
 .main-menu li a:hover:after, .main-menu li a:focus:after {
-    -webkit-transform: translateY(0px);
     -ms-transform: translateY(0px);
     transform: translateY(0px);
     opacity: 1;
 }
-/* Таблиця вакансій*/
-.table-vacancies{
-    margin-top: 30px;
-    margin-left: 300px;
-}
-.table-name{
-    margin-top: -50px;
-    margin-left: 800px;
-}
+
+
 /* Пошукове поле */
 .searchbar {
     position: relative;
@@ -273,6 +330,10 @@ ul, ol {
 
 .searchbar input[type="text"] {
     padding-right: 35px; /* Задаємо простір для кнопки справа */
+}
+
+.bg-contact {
+    margin-top: -30px;
 }
 
 .search-button {
@@ -293,62 +354,17 @@ ul, ol {
     display: block;
     width: 12px;
     height: 12px;
-    background-image: url(../img/loupe.png);
+    background-image: url(../img/search.png);
+    margin-top: 32px;
+    margin-right: 30px;
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 6px;
     background-position: center;
     scale: 1.8;
 }
 
-/*Стилізація чекбоксів*/
-.checkboxes{
-    margin-top: -70px;
-}
-.checkbox-column {
-    display: block;
-    width: 50%;
-    margin-left: 20px;
-    margin-top: 20px;
-}
 
-.checkbox-column label {
-    display: block;
-    margin-bottom: 5px;
-    margin-top: 10px;
-}
-.name-colum{
-
-    display: block;
-    width: 50%;
-    margin-left: 30px;
-
-}
-
-/* Стилізація повзунка та виводу значення */
-.slider {
-    display: flex;
-    align-items: center;
-    width: 150px;
-    margin-left: 18px;
-}
-
-input[type="range"] {
-    flex-grow: 1;
-    width: 100%;
-    margin-left: 5px;
-    margin-right: 5px;
-    background-color: black;
-}
-
-output {
-
-    margin-left: auto;
-    font-weight: bold;
-    color: deepskyblue;
-}
-
-    /* Задаємо відступ зображення в межах кнопки */
+/* Задаємо відступ зображення в межах кнопки */
 
 
 /*---/Оформлення навігації--- */
@@ -370,7 +386,6 @@ output {
 .home-wrapper {
     position: absolute;
     top: 50%;
-    -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     left: 0;
@@ -406,19 +421,15 @@ output {
 
 /* -- Стиль нижньої менюшки -- */
 .bottom-footer {
-    margin-top: 10px;
-    padding-top: 20px;
-    border-top: 1px solid #5b3e3e;
-    border-top-width: 1px;
-    border-top-style: solid;
+    margin-top: 30px;
+    margin-bottom: 30px;
     border-top-color: #c2b3b3
 }
 
 /* -- Логотип нашого сайту -- */
 .footer-logo .logo {
     transform: scale(2);
-    margin-left: 50px;
-    margin-top: 30px;
+    margin: 30px;
     display: inline-block;
 }
 
@@ -428,10 +439,9 @@ output {
 
 /* -- Footer Nav -- */
 .footer-nav {
+    margin-top: 34px;
     text-align: right;
-    padding: 2px 0px;
-    
-   
+    padding: 2px 0;
 }
 
 .footer-nav li {
@@ -456,7 +466,6 @@ output {
     height: 2px;
     background-color: #ffffff;
     width: 100%;
-    -webkit-transform: translateY(5px);
     -ms-transform: translateY(5px);
     transform: translateY(5px);
     opacity: 0;
@@ -465,7 +474,6 @@ output {
 }
 
 .footer-nav li a:hover:after, .footer-nav li a:focus:after {
-    -webkit-transform: translateY(0px);
     -ms-transform: translateY(0px);
     transform: translateY(0px);
     opacity: 1;
@@ -473,16 +481,14 @@ output {
 
 /* --  Оформлення форм  -- */
 input[type="text"], input[type="email"], input[type="password"], input[type="number"],
-input[type="date"], input[type="url"], input[type="tel"], input[type="regions"], textarea {
+input[type="date"], input[type="url"], input[type="tel"], .regions, textarea {
     height: 40px;
     width: 100%;
-    border: 1px solid #EBEBEB;
-	border-radius:4px;
-	background: transparent;
+    border: 1px solid #d65b97;
+    border-radius: 4px;
+    background: transparent;
     padding-left: 15px;
-	padding-right: 15px;
-	-webkit-transition:0.2s #cd5d21;
-	transition:0.2s #cd5d21;
+    padding-right: 15px;
 }
 
 textarea {
@@ -491,30 +497,45 @@ textarea {
 
 input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus,
 input[type="number"]:focus, input[type="date"]:focus, input[type="url"]:focus,
-input[type="tel"]:focus, input[type="regions"]focus, input[type="tel"]focus, textarea:focus {
-	border-color:#d85c98;
+input[type="tel"]:focus, input[type="regions"]:focus, input[type="tel"]:focus, textarea:focus {
+    border-color: #d85c98;
 }
+
 /* --  /Оформлення форм  -- */
 /* --  Кнопка на сторінці реєстрації  -- */
-.reg_button{
-    margin: 20px 20px 20px 20px;
+.reg_button {
+    margin: 1rem;
     display: inline-block;
 }
+
 /* --  /Кнопка на сторінці реєстрації  -- */
 
 /* --  Сторінка реєстрації -- */
-.signup{
-        margin: 0;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 18px;
-        background: url(../img/page-background.jpg);
-        background-size: cover;
-        position: relative;
+.signup {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background: url(../img/page-background.jpg);
+    background-size: cover;
+    position: relative;
 
 }
+
+.signup-test {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background-color: rgba(255, 208, 241, 0.64);
+    background-size: cover;
+    position: relative;
+}
+
 .signup::before {
     content: "";
     position: absolute;
@@ -527,15 +548,18 @@ input[type="tel"]:focus, input[type="regions"]focus, input[type="tel"]focus, tex
     filter: blur(3px) brightness(0.7);
     z-index: -1;
 }
-.reg_form_title{
+
+.reg_form_title {
     text-align: center;
     font: 500 2.7rem 'Montserrat', sans-serif;
 }
-.reg_form_text{
+
+.reg_form_text {
     margin-bottom: 5px;
     text-align: center;
     font: 500 1rem 'Montserrat', sans-serif;
 }
+
 .box {
     width: 400px;
     max-width: 400px;
@@ -546,6 +570,20 @@ input[type="tel"]:focus, input[type="regions"]focus, input[type="tel"]focus, tex
     background: #ffffff;
     font: 500 1.2rem 'Montserrat', sans-serif;
 }
+
+.box-all-vac {
+    width: 1000px;
+    max-width: 1000px;
+    margin: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;;
+    background: #ffffff;
+    font: 500 1.2rem 'Montserrat', sans-serif;
+    overflow: hidden;
+    margin-top: 250px;
+}
+
 .reg__button {
     position: relative;
     display: inline-block;
@@ -556,9 +594,10 @@ input[type="tel"]:focus, input[type="regions"]focus, input[type="tel"]focus, tex
     color: #FFF;
     -webkit-transition: 0.2s all;
     transition: 0.2s all;
-    
+
 }
-.log__button{
+
+.log__button {
     position: relative;
     display: inline-block;
     padding: 10px 30px;
@@ -567,9 +606,10 @@ input[type="tel"]:focus, input[type="regions"]focus, input[type="tel"]focus, tex
     border-radius: 40px;
     color: #FFF;
     -webkit-transition: 0.2s all;
-    transition: 0.2s all;  
+    transition: 0.2s all;
     margin: 20px 20px 20px 20px;
 }
+
 .reg2_button {
     position: static;
     /*top: 60%;*/
@@ -583,104 +623,434 @@ input[type="tel"]:focus, input[type="regions"]focus, input[type="tel"]focus, tex
     color: #FFF;
     transition: 0.1s all;
 }
-.reg_form_input{
-  font: 500 1.2rem 'Montserrat', sans-serif;
-  margin-top: 10px;
+
+.reg_form_input {
+    font: 500 1.2rem 'Montserrat', sans-serif;
+    margin-top: 10px;
 }
-.reg_accept_box{
+
+.reg_accept_box {
     position: absolute;
     top: 70%;
-    left: 50%;   
+    left: 50%;
 }
+
 /* --  Форма коментарів  -- */
 .contact-form:after {
-	content:"";
-	display:block;
-	clear:both;
+    content: "";
+    display: block;
+    clear: both;
 
 }
-.contact-form-container{
+
+.contact-form-container {
     background: #fdfdfd;
-}
-.contact-form .input {
-	margin-bottom:20px;
-    background: #ffff;
 }
 
 .contact-form textarea.input {
-	height:94px;
+    height: 94px;
 }
+
 /* --  /Форма коментарів  -- */
 
 /* -- Контактна інфа команди -- */
-.contact-details li  {
-	margin-bottom:20px;
+.contact-details li {
+    margin-bottom: 20px;
 }
 
 .contact-details li i {
-	color: #d85c98;
-	margin-right: 15px;
-	border: 1px solid #EBEBEB;
-	border-radius: 50%;
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-    
+    color: #d85c98;
+    margin-right: 15px;
+    border: 1px solid #d65b97;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+
 }
+
 /* --/Контактна інфа команди -- */
 
 .empty_place {
     opacity: 0;
 }
-.vac_form_title{
+
+.vac_form_title {
     text-align: center;
     font: 500 1.7rem 'Montserrat', sans-serif;
 }
-.regions{
+
+.regions {
     height: 40px;
     width: 100%;
     border: 1px solid #EBEBEB;
-	border-radius:4px;
-	background: transparent;
+    border-radius: 4px;
+    background: transparent;
     padding-left: 15px;
-	padding-right: 15px;
-	-webkit-transition:0.2s border-color;
-	transition:0.2s border-color;
+    padding-right: 15px;
+    -webkit-transition: 0.2s border-color;
+    transition: 0.2s border-color;
 }
+
 .tags {
     display: flex;
     flex-wrap: wrap;
-    position: сenter;
 }
+
 .roow {
     flex-basis: 50%;
     box-sizing: border-box;
-} 
+}
+
 input[type="checkbox"] {
     margin: 5px;
 }
-.tags{
+
+.tags {
     display: flex;
-    position: center;  
     margin-left: 25px;
-    margin-bottom: 25px;  
+    margin-bottom: 25px;
 }
-.vac_form_text{
+
+.vac_form_text {
     text-align: center;
     font: 500 1.3rem 'Montserrat', sans-serif;
     margin-left: 25px;
 }
-.log_input{
+
+
+.log_input {
     margin-top: 20px;
 }
-.vacantion_button{
+
+.vacantion_button {
     margin: 20px 20px 20px 20px;
 }
-.bg-white{
-    height: 550px; 
+
+.bg-white {
+    height: 600px;
 }
 
-.li_home{
+/*-- Search --*/
+.widget.search-widget {
+    position: relative
+
+}
+
+.widget.search-widget .input {
+    padding-right: 60px;
+}
+
+.widget.search-widget button {
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border: none;
+
+}
+
+.widget.search-widget .input:focus + button {
+    color: #FF6700;
+
+}
+
+.search-icon {
+    color: white;
+}
+
+.top-marge {
+    margin-top: 10px;
+}
+
+.row-bottom {
+    height: 22px;
+}
+
+.contact-icons-border-color {
+    border-color: #d65b97;
+}
+
+.white-line {
+    margin-top: 28px;
+    padding-top: 2px;
+    border-top: 1px solid #5b3e3e;
+    border-top-color: #c2b3b3
+}
+
+/* Sidebar */
+
+/* Sidebar та стилізація чекбоксів */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-bottom: 150px;
+    width: 1500px;
+    height: 450px;
+    background: rgba(216, 92, 152, 0.66);
+}
+
+.slidercontainer,
+.checkboxes,
+.checkbox-column {
+    margin: 12px 0 0 0;
+    padding-bottom: 50px;
+}
+
+.filtername {
+    text-align: center;
+    font-style: normal;
+    line-height: 27px;
+    color: #ede5ee;
+    margin-bottom: 8px;
+    font: 700 2rem 'Montserrat', sans-serif;
+    margin-top: -40px;
+}
+
+.star-btn {
+    display: flex;
+    font-size: 50px;
+    color: #d6c65b;
+    cursor: pointer;
+    user-select: none;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-colum {
+    font-style: normal;
+    line-height: 27px;
+    color: #ede5ee;
+    margin-bottom: 8px;
+    font: 700 2rem 'Montserrat', sans-serif;
+
+}
+
+
+.login {
+    color: red;
+}
+
+.logIn-button {
+    padding: 3px;
+    color: #d65b97;
+}
+
+.filter {
+    padding-top: 95px;
+    font: 200 0.4rem 'Montserrat', sans-serif;
+}
+
+.header-filter {
+    margin-top: -30px;
+    margin-bottom: 20px;
+    text-align: center;
+    font: 500 3rem 'Montserrat', sans-serif;
+}
+
+.checkbox-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: -40px;
+}
+
+.checkbox-column {
+    display: flex;
+    flex-direction: column;
+    margin: 0 40px;
+}
+
+.filternamebox {
+    width: 100%;
+    text-align: center;
+    font-style: normal;
+    line-height: 27px;
+    color: #ede5ee;
+    margin-bottom: 8px;
+    font: 700 2rem 'Montserrat', sans-serif;
+    margin-top: 40px;
+}
+
+.checkbox-group:nth-child(1) .checkbox-column:nth-child(5) {
+    margin-bottom: 50px;
+}
+
+.checkbox-group:nth-child(2) .checkbox-column:nth-child(4) {
+    margin-bottom: 50px;
+}
+
+
+/* Стилізація повзунка та виводу значення */
+.slidercontainer {
+    width: 90%;
+    margin-left: 18px;
+    position: relative;
+}
+
+.slider {
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(to right, #dcd6d6, #dcd6d6) no-repeat center/100% 5px, #dcd6d6;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #000000;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: hsl(194, 90%, 53%);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#sliderValue {
+    margin-top: -140px;
+    position: absolute;
+    top: calc(100% + 10px); /* Змінено значення top для зсуву вниз */
+    left: 50%; /* Змінено значення left для вирівнювання по центру */
+    transform: translateX(-50%); /* Змінено значення transform для центрування */
+    font-size: 20px;
     color: black;
+}
+
+/*Стилізація таблиці*/
+
+.table-vacancies {
+    margin: auto;
+    border-collapse: collapse;
+    font-size: 1.75em;
+    min-width: 1200px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    table-layout: fixed;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.table-vacancies thead tr {
+    background-color: #34D2EECC;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.table-vacancies thead th {
+    width: 80px; /* Задайте бажану фіксовану ширину для кожного стовпця */
+    text-align: left;
+}
+
+.table-vacancies tbody tr {
+    height: 70px; /* Задайте бажану фіксовану висоту для кожного рядка */
+    border-bottom: 1px solid #dddddd; /* Додайте лінію знизу для кожного рядка */
+}
+
+.table-vacancies th,
+.table-vacancies td {
+    padding: 12px 15px;
+}
+
+.table-vacancies tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.table-vacancies tbody tr {
+    border-bottom: 2px solid rgba(52, 210, 238, 0.8); /* Останній рядок має більш товсту лінію */
+}
+
+.table-vacancies tbody tr.active-row {
+    font-weight: bold;
+    color: #34D2EECC;
+}
+
+
+.table-name {
+    text-align: center;
+    margin-top: -150px;
+}
+
+aside {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+,
+
+
+.p-4{
+    position: absolute;
+}
+.your-fav-table {
+    margin: auto;
+    border-collapse: collapse;
+    font-size: 1.2em;
+    min-width: 500px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    table-layout: fixed;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.your-fav-table thead tr {
+    background-color: #25d9ce;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.your-fav-table th,
+.your-fav-table td {
+    padding: 12px 15px;
+}
+
+.your-fav-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.your-fav-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.your-fav-table tbody tr{
+    border-bottom: 2px solid #25d9ce;
+}
+
+.your-fav-table tbody tr.active-row {
+    font-weight: bold;
+    color: #25d9ce;
+}
+.fav-vac-text-head{
+    font-size: 220%;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+.table-vac-error {
+    text-align: center;
 }

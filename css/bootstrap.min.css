@@ -1365,13 +1365,13 @@ button, input, select, textarea {
 }
 
 a {
-    color: #000000;
+    color: black;
     text-decoration: none
 }
 
 a:focus, a:hover {
-    color: #000000;
-    text-decoration: underline
+    color: #23527c;
+    text-decoration: none;
 }
 
 a:focus {
@@ -1862,7 +1862,7 @@ pre code {
     position: relative;
     min-height: 4px;
     padding-right: 15px;
-    padding-left: 15px
+    padding-left: 45px
 }
 
 .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
@@ -2313,7 +2313,7 @@ pre code {
     }
 
     .col-md-6 {
-        width: 50%
+        width: 45%
     }
 
     .col-md-5 {
@@ -3709,7 +3709,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 
 .btn-link:focus, .btn-link:hover {
-    color: #000000;
+    color: #23527c;
     text-decoration: underline;
     background-color: transparent
 }
@@ -4294,7 +4294,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 
 .nav > li > a:focus, .nav > li > a:hover {
     text-decoration: none;
-    background-color: #eee
+    background-color: rgba(216,92,152,0.43) ;
 }
 
 .nav > li.disabled > a {
@@ -5129,7 +5129,7 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 
 .pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover {
     z-index: 2;
-    color: #000000;
+    color: #23527c;
     background-color: #eee;
     border-color: #ddd
 }
