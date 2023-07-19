@@ -14,7 +14,7 @@ var output = document.getElementById("sliderValue");
 output.innerHTML = slider.value;
 
 // Отримати всі рядки таблиці вакансій
-var rows = document.querySelectorAll('.table-vacancies tr');
+var rows = document.querySelectorAll('.table-vacancies tbody tr');
 
 // Додати обробник події для кожного чекбоксу категорій
 categoryCheckboxes.forEach(function (checkbox) {
