@@ -30,10 +30,17 @@ $userId = $_SESSION['user_id'];
     <script defer src="../js/toggleFav.js"></script>
     <title>Document</title>
 </head>
-<body>
+<body class="signup-test">
+<div class="box-all-vac">
+    <!-- Кнопка профілю -->
+    <div class="navbar-home">
+        <a class="home_button" href="../php/account.php">
+            <img alt="home_buttom" src="../img/profile.png">
+        </a>
+    </div>
+    <!-- /Кнопка профілю -->
 <table>
-    <p>Таблиця вакансій</p>
-    <a href="account.php">Акаунт</a>
+    <p class="vac_form_title">Таблиця вакансій</p>
     <a href="delFromFav.php">Акаунт</a>
 
     <?php
@@ -89,6 +96,6 @@ $userId = $_SESSION['user_id'];
 
     ?>
 </table>
-
+</div>
 </body>
 </html>

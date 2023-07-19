@@ -17,14 +17,14 @@
     <link href="../css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body class="signup-test">
-<div class="box-test">
-    <!-- Кнопка будиночка -->
+<div class="box-all-vac">
+    <!-- Кнопка профілю -->
     <div class="navbar-home">
         <a class="home_button" href="../php/account.php">
             <img alt="home_buttom" src="../img/profile.png">
         </a>
     </div>
-    <!-- /Кнопка будиночка -->
+    <!-- /Кнопка профілю -->
     <div class="profile-tab-nav border-right">
         <div class="p-4">
             <p class="text-center">Ось ваші улюблені вакансії</p>
