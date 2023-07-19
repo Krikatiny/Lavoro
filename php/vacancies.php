@@ -320,7 +320,7 @@ $userId = $_SESSION['user_id'];
         <th>Місто</th>
         <th>Зарплатня</th>
         <th>Деталі</th>
-        <th>Обрані</th>
+        <th class="tableheadfavourite">Обрані</th>
     </tr>
     </thead>
     <tbody>
@@ -375,30 +375,40 @@ $userId = $_SESSION['user_id'];
 
 
 <!-- Нижня менюшка -->
-<footer class="bottom-footer" id="footer">
-    <div class="container">
-        <div class="row">
-            <!-- Логотип нижньої менюшки-->
+<footer class="section footer-section" id="footer">
+
+    <!-- Контейнер з всіма даними меню -->
+    <div class="container ">
+
+        <!-- Рядок для запису всіх даних -->
+        <div class="row-bottom row">
+
+            <!-- Логотип нашого сервісу -->
             <div class="col-md-6">
                 <div class="footer-logo">
-                    <a class="logo" href="../index.html">
+                    <a class="logo" href="index.html">
                         <img alt="logo" src="../img/Lovaro (1).png">
                     </a>
                 </div>
             </div>
-            <!-- /Логотип нижньої менюшки-->
+            <!-- Логотип нашого сервісу -->
 
-            <!-- Навігація нижньої менюшки -->
+            <!-- Навігація, що знаходиться на нижній менюшці-->
             <div class="col-md-6">
-                <ul class="main-menu nav navbar-nav navbar-right">
-                    <li><a href="../index.html">Головна</a></li>
-                    <li><a href="../php/vacancies.php">Вакансії</a></li>
-                    <li><a href="../html/contact.html">Контакти</a></li>
+                <ul class="footer-nav-main footer-nav">
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="html/vacancies.html">Вакансії</a></li>
+                    <li><a href="html/contact.html">Контакти</a></li>
                 </ul>
             </div>
-            <!-- /Навігація нижньої менюшки -->
+            <!-- /Навігація, що знаходиться на нижній менюшці-->
+
         </div>
+        <!-- /Рядок для запису всіх даних -->
+
     </div>
+    <!-- /Контейнер з всіма даними меню -->
+
 </footer>
 <!-- /Нижня менюшка -->
 

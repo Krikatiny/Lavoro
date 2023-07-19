@@ -780,7 +780,7 @@ input[type="checkbox"] {
     border-radius: 20px;
     margin-bottom: 150px;
     width: 1500px;
-    height: 500px;
+    height: 450px;
     background: rgba(216, 92, 152, 0.66);
 }
 
@@ -798,14 +798,18 @@ input[type="checkbox"] {
     color: #ede5ee;
     margin-bottom: 8px;
     font: 700 2rem 'Montserrat', sans-serif;
+    margin-top: -40px;
 }
 
 .star-btn {
-    display: inline-block;
+    display: flex;
     font-size: 50px;
     color: #d6c65b;
     cursor: pointer;
     user-select: none;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .name-colum {
@@ -814,6 +818,7 @@ input[type="checkbox"] {
     color: #ede5ee;
     margin-bottom: 8px;
     font: 700 2rem 'Montserrat', sans-serif;
+
 }
 
 
@@ -842,6 +847,7 @@ input[type="checkbox"] {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin: -40px;
 }
 
 .checkbox-column {
@@ -858,6 +864,7 @@ input[type="checkbox"] {
     color: #ede5ee;
     margin-bottom: 8px;
     font: 700 2rem 'Montserrat', sans-serif;
+    margin-top: 40px;
 }
 
 .checkbox-group:nth-child(1) .checkbox-column:nth-child(5) {
@@ -922,7 +929,6 @@ input[type="checkbox"] {
 
 /*Стилізація таблиці*/
 
-
 .table-vacancies {
     margin-left: auto;
     margin-right: auto;
@@ -930,6 +936,7 @@ input[type="checkbox"] {
     font-size: 1.56em;
     min-height: 100px;
     width: 1500px;
+    text-align: center;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     height: 400px;
     table-layout: fixed;
@@ -940,13 +947,13 @@ input[type="checkbox"] {
 .table-vacancies thead tr {
     background-color: #1abff3;
     color: #ffffff;
-    text-align: left;
+    text-align: center;
     font-weight: bold;
 }
 
 .table-vacancies thead th {
     width: 80px; /* Задайте бажану фіксовану ширину для кожного стовпця */
-    text-align: left;
+    text-align: center;
 }
 
 .table-vacancies tbody tr {
