@@ -319,7 +319,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
         <th>Місто</th>
         <th>Зарплатня</th>
         <th>Деталі</th>
-        <th>Обрані</th>
+        <th class="tableheadfavourite">Обрані</th>
     </tr>
     </thead>
     <tbody>
