@@ -553,6 +553,7 @@ input[type="tel"]:focus, input[type="regions"]:focus, input[type="tel"]:focus, t
     background: #ffffff;
     font: 500 1.2rem 'Montserrat', sans-serif;
 }
+
 .box-all-vac{
     width: 1000px;
     max-width: 1000px;
@@ -562,6 +563,8 @@ input[type="tel"]:focus, input[type="regions"]:focus, input[type="tel"]:focus, t
     border-radius: 10px;;
     background: #ffffff;
     font: 500 1.2rem 'Montserrat', sans-serif;
+    overflow: hidden;
+    margin-top: 250px;
 }
 .reg__button {
     position: relative;
