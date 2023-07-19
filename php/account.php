@@ -84,7 +84,7 @@ require __DIR__ . "/connectionCheck.php";
         </div>
     </div>
 </section>
-<?php else: ?>
+<?php else:
 
     header("Location: ../index.html");
 
