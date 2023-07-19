@@ -1021,7 +1021,7 @@ aside {
     background-color: #f3f3f3;
 }
 
-.your-fav-table tbody tr:last-of-type {
+.your-fav-table tbody tr{
     border-bottom: 2px solid #25d9ce;
 }
 
