@@ -115,7 +115,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
             <div>
                 <h3 class="filtername">Фільтр за зарплатнею</h3>
             </div>
-            <input type="range" min="1000" max="100000" value="1000"step="500" class="slider" id="myRange">
+            <input type="range" min="1000" max="100000" value="1000" step="500" class="slider" id="myRange">
             <span class="filter" id="sliderValue">1000</span>
         </div>
 
@@ -152,7 +152,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
                     Державна робота
                 </label>
             </div>
-                <div class="checkbox-column">
+            <div class="checkbox-column">
                 <label>
                     <input type="checkbox" name="tags" id="checkbox7" value="Волонтерство">
                     Волонтерство
@@ -161,8 +161,8 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
                     <input type="checkbox" name="tags" id="checkbox8" value="Навчання з нуля">
                     Навчання з нуля
                 </label>
-                </div>
-                <div class="checkbox-column">
+            </div>
+            <div class="checkbox-column">
                 <label>
                     <input type="checkbox" name="tags" id="checkbox9" value="Дистанційна робота">
                     Дистанційна робота
@@ -212,7 +212,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
                     Закарпаття
                 </label>
             </div>
-                <div class="checkbox-column">
+            <div class="checkbox-column">
                 <label>
                     <input type="checkbox" name="region" id="rcheckbox9" value="Запоріжжя">
                     Запоріжжя
@@ -229,7 +229,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
                     <input type="checkbox" name="region" id="rcheckbox12" value="Кіровоград">
                     Кіровоград
                 </label>
-                </div>
+            </div>
             <div class="checkbox-column">
                 <label>
                     <input type="checkbox" name="region" id="rcheckbox13" value="Луганськ">
@@ -305,73 +305,73 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
         </div>
     </aside>
 </div>
-    <!-- Таблиця Вакансій -->
-    <table class="table-vacancies">
-        <?php
-        while ($row = mysqli_fetch_assoc($result)) {
-            $tags = mysqli_fetch_assoc($resultTag);
-            $tags_implode = implode("", $tags);
-            ?>
-            <tr>
-                <td><?php echo $row['id']; ?></td>
-                <td class="vacancyname"><?php echo $row['name']; ?></td>
-                <td class="vacancytags">
-                    <?php
-                    $arr = explode(",", $tags_implode);
-                    foreach ($arr as $item) {
-                        echo $item;
-                        echo "";
-                    }
-                    ?>
-                </td>
-                <td class="vacancyregion"><?php echo $row['region']; ?></td>
-                <td class="price"><?php echo $row['salary']; ?></td>
-                <td><?php echo $row['description']; ?></td>
-                <td>
-                    <button type="button" class="add-to-favorite" data-id="<?= htmlspecialchars($row['id']) ?>">Add to
-                        favourite
-                    </button>
-                </td>
-            </tr>
-            <?php
-        }
+<!-- Таблиця Вакансій -->
+<table class="table-vacancies">
+    <?php
+    while ($row = mysqli_fetch_assoc($result)) {
+        $tags = mysqli_fetch_assoc($resultTag);
+        $tags_implode = implode("", $tags);
         ?>
-    </table>
+        <tr>
+            <td><?php echo $row['id']; ?></td>
+            <td class="vacancyname"><?php echo $row['name']; ?></td>
+            <td class="vacancytags">
+                <?php
+                $arr = explode(",", $tags_implode);
+                foreach ($arr as $item) {
+                    echo $item;
+                    echo "";
+                }
+                ?>
+            </td>
+            <td class="vacancyregion"><?php echo $row['region']; ?></td>
+            <td class="price"><?php echo $row['salary']; ?></td>
+            <td><?php echo $row['description']; ?></td>
+            <td>
+                <button type="button" class="add-to-favorite" data-id="<?= htmlspecialchars($row['id']) ?>">Add to
+                    favourite
+                </button>
+            </td>
+        </tr>
+        <?php
+    }
+    ?>
+</table>
 </div>
 
-    <!-- Нижня менюшка -->
-    <footer class="bottom-footer" id="footer">
-        <div class="container">
-            <div class="row">
-                <!-- Логотип нижньої менюшки-->
-                <div class="col-md-6">
-                    <div class="footer-logo">
-                        <a class="logo" href="../index.html">
-                            <img alt="logo" src="../img/Lovaro (1).png">
-                        </a>
-                    </div>
+<!-- Нижня менюшка -->
+<footer class="bottom-footer" id="footer">
+    <div class="container">
+        <div class="row">
+            <!-- Логотип нижньої менюшки-->
+            <div class="col-md-6">
+                <div class="footer-logo">
+                    <a class="logo" href="../index.html">
+                        <img alt="logo" src="../img/Lovaro (1).png">
+                    </a>
                 </div>
-                <!-- /Логотип нижньої менюшки-->
-
-                <!-- Навігація нижньої менюшки -->
-                <div class="col-md-6">
-                    <ul class="main-menu nav navbar-nav navbar-right">
-                        <li><a href="../index.html">Головна</a></li>
-                        <li><a href="vacancies.html">Вакансії</a></li>
-                        <li><a href="../html/contact.html">Контакти</a></li>
-                    </ul>
-                </div>
-                <!-- /Навігація нижньої менюшки -->
             </div>
-        </div>
-    </footer>
-    <!-- /Нижня менюшка -->
+            <!-- /Логотип нижньої менюшки-->
 
-    <!-- Попередній завантажувач -->
-    <div id='preloader'>
-        <div class='preloader'></div>
+            <!-- Навігація нижньої менюшки -->
+            <div class="col-md-6">
+                <ul class="main-menu nav navbar-nav navbar-right">
+                    <li><a href="../index.html">Головна</a></li>
+                    <li><a href="vacancies.html">Вакансії</a></li>
+                    <li><a href="../html/contact.html">Контакти</a></li>
+                </ul>
+            </div>
+            <!-- /Навігація нижньої менюшки -->
+        </div>
     </div>
-    <!-- /Попередній завантажувач -->
+</footer>
+<!-- /Нижня менюшка -->
+
+<!-- Попередній завантажувач -->
+<div id='preloader'>
+    <div class='preloader'></div>
+</div>
+<!-- /Попередній завантажувач -->
 
 </body>
 </html>

@@ -112,7 +112,7 @@ ul, ol {
     top: 0;
     bottom: 0;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#374050), to(#798696));
-    background-image: linear-gradient(to bottom, #374050 0%, #798696 250%);
+    background-image: linear-gradient(to bottom, #374050 0%, #798696 100%);
     opacity: 0.7;
 }
 
@@ -307,7 +307,7 @@ ul, ol {
 
 /* Таблиця вакансій*/
 .table-vacancies {
-    margin-top: 30px;
+    margin-top: 60px;
     margin-left: 500px;
 
 }
@@ -357,75 +357,6 @@ ul, ol {
     background-size: cover;
     background-position: center;
     scale: 1.8;
-}
-
-/*Стилізація чекбоксів*/
-.checkboxes {
-    margin-top: 50px;
-}
-
-.checkbox-column {
-    display: block;
-    width: 50%;
-    margin-left: 20px;
-    margin-top: 20px;
-}
-
-.checkbox-column label {
-    display: block;
-    margin-bottom: 5px;
-    margin-top: 10px;
-}
-
-
-/* Стилізація повзунка та виводу значення */
-.slidecontainer {
-    width: 70%;
-    margin-left: 15px;
-    position: relative;
-}
-
-.slider {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 100%;
-    height: 25px;
-    background: linear-gradient(to right, #dcd6d6, #dcd6d6) no-repeat center/100% 5px, #dcd6d6;
-    outline: none;
-    opacity: 0.7;
-    transition: opacity 0.2s;
-}
-
-.slider:hover {
-    opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #000000;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-.slider::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: #1abff3;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-#sliderValue {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    color: black;
-    margin-left: 15px;
 }
 
 
@@ -803,6 +734,7 @@ input[type="checkbox"] {
 .search-icon {
     color: white;
 }
+
 .top-marge {
     margin-top: 10px;
 }
@@ -824,27 +756,35 @@ input[type="checkbox"] {
 
 /* Sidebar */
 
+/* Sidebar та стилізація чекбоксів */
+
 .sidebar {
-    margin-left: 70px;
-    margin-top: -240px;
-    margin-bottom: 200px;
-    width: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-bottom: 100px;
+    width: 1500px;
+    height: 470px;
     background: rgba(216, 92, 152, 0.66);
 }
-.row_contacts {
-    display: inline-block;
-    background-color: #c0afbb;
-    margin-right: -15px;
-    margin-left: -15px;
-    height: 500px;
-    border-radius: 20px;
-}
 
-.slidecontainer,
+.slidercontainer,
 .checkboxes,
 .checkbox-column {
-    margin: 48px 0 0 40px;
-    padding-bottom: 30px;
+    margin: 12px 0 0 0;
+    padding-bottom: 50px;
+}
+
+.filtername {
+    text-align: center;
+    font-style: normal;
+    line-height: 27px;
+    color: #ede5ee;
+    margin-bottom: 8px;
+    font: 700 2rem 'Montserrat', sans-serif;
 }
 
 .star-btn {
@@ -868,38 +808,99 @@ input[type="checkbox"] {
     color: red;
 }
 
-.logIn-button{
+.logIn-button {
     padding: 3px;
     color: #d65b97;
 }
+
 .filter {
     padding-top: 95px;
     font: 200 0.4rem 'Montserrat', sans-serif;
 }
 
 .header-filter {
-    padding-top: 30px;
-    margin-left: 80px;
+    margin-top: 0px;
+    text-align: center;
     font: 500 3rem 'Montserrat', sans-serif;
 }
 
-.filter-title {
+.checkbox-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.checkbox-column {
+    display: flex;
+    flex-direction: column;
+    margin: 0 40px;
+}
+
+.filternamebox {
+    width: 100%;
     text-align: center;
-    margin-left: 10px;
+    font-style: normal;
+    line-height: 27px;
     color: #ede5ee;
-}
-.more-vacancies-section{
-    position: relative;
-    padding-top: 80px;
-    padding-bottom: 45px;
+    margin-bottom: 8px;
+    font: 700 2rem 'Montserrat', sans-serif;
 }
 
-.top-marge-more-vac-button {
-    margin-top: 20px;
+.checkbox-group:nth-child(1) .checkbox-column:nth-child(5) {
+    margin-bottom: 50px;
 }
 
-.footer-section {
+.checkbox-group:nth-child(2) .checkbox-column:nth-child(4) {
+    margin-bottom: 50px;
+}
+
+
+/* Стилізація повзунка та виводу значення */
+.slidercontainer {
+    width: 90%;
+    margin-left: 18px;
     position: relative;
-    padding-top: 50px;
-    padding-bottom: 50px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(to right, #dcd6d6, #dcd6d6) no-repeat center/100% 5px, #dcd6d6;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #000000;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #1abff3;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#sliderValue {
+    margin-top: -140px;
+    position: absolute;
+    top: calc(100% + 10px); /* Змінено значення top для зсуву вниз */
+    left: 50%; /* Змінено значення left для вирівнювання по центру */
+    transform: translateX(-50%); /* Змінено значення transform для центрування */
+    font-size: 20px;
+    color: black;
 }
