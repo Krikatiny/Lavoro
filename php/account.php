@@ -86,8 +86,9 @@ require __DIR__ . "/connectionCheck.php";
 </section>
 <?php else: ?>
 
-    <?php header("Location: ../index.html"); ?>
-<?php endif; ?>
+    header("Location: ../index.html");
+
+endif; ?>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>

@@ -16,16 +16,42 @@
     <!-- Підключення бібліотеки, яка містить в собі гарні векторні значки, які ми використаєм в нашій роботі  -->
     <link href="../css/font-awesome.min.css" rel="stylesheet">
 </head>
+<header class="transparent-nav" id="header">
+    <div class="container">
+        <div class="navbar-header">
+            <!-- Кнопка будиночка -->
+            <div class="navbar-home">
+                <a class="home_button" href="../index.html">
+                    <img alt="home_buttom" src="../img/home.png">
+                </a>
+            </div>
+            <!-- /Кнопка будиночка -->
+        </div>
+        <!-- Меню навігації сайту-->
+        <nav id="nav">
+            <ul class="main-menu nav navbar-nav navbar-right">
+                <li><a href="../index.html">Головна</a></li>
+                <li><a href="../html/vacancies.html">Вакансії</a></li>
+                <li><a href="../html/contact.html">Контакти</a></li>
+                <a class="profile_button" href="../php/signup.php">
+                    <img alt="profile_buttom" src="../img/profile (1).png">
+                </a>
+            </ul>
+        </nav>
 
-<body class="signup">
-<div class="box">
-    <!-- Кнопка будиночка -->
-    <div class="navbar-home">
-        <a class="home_button" href="../index.html">
-            <img alt="home_buttom" src="../img/free-icon-home-88282.png">
-        </a>
+
+        <!-- /Меню навігації сайту -->
     </div>
-    <form action="../php/vac-creating.php" id="vac-create" method="post" novalidate>
+</header>
+<body class="signup">
+    <div class="box"> 
+         <!-- Кнопка будиночка -->
+         <div class="navbar-home">
+            <a class="home_button" href="../index.html">
+                <img src="../img/free-icon-home-88282.png" alt="home_buttom">
+            </a>
+        </div>   
+    <form action="../php/vac-creating.php" method="post" id="vac-create" novalidate>
 
         <div class="vac_name-label">
             <h1 class="vac_form_title">Створити свою вакансію</h1>

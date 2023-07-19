@@ -1,11 +1,11 @@
 <?php
 require __DIR__ . "/connectionCheck.php";
 
-    if (isset($_SESSION["user_id"])) {
-        // Якщо користувач залогінений, перенаправити його до особистого кабінету
-        header("Location: account.php");
-        exit;
-    }
+if (isset($_SESSION["user_id"])) {
+    // Якщо користувач залогінений, перенаправити його до особистого кабінету
+    header("Location: account.php");
+    exit;
+}
 
 ?>
 
@@ -54,13 +54,16 @@ require __DIR__ . "/connectionCheck.php";
         </div>
 
         <div class="reg_form_input">
-            <input type="password" name="password_commit" id="password_commit" autofocus placeholder="Повторення пароля">
+            <input type="password" name="password_commit" id="password_commit" autofocus
+                   placeholder="Повторення пароля">
         </div>
-        <div class="reg_button">
+        <div class="top-marge text-center">
             <button class="reg__button">Відправити</button>
         </div>
+        <div class="logIn-button top-marge text-center">
+            <a href="../php/login.php" class="logIn-button">Зайти</a>
+        </div>
     </form>
-    <a href="../php/login.php" class="col-lg-offset-2" >Зайти</a>
 </div>
 </div>
 
