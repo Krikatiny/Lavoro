@@ -309,6 +309,7 @@ $userId = $_SESSION['user_id'];
         </aside>
     </div>
 </div>
+
 <!-- Таблиця Вакансій -->
 <h1 class="table-name">Таблиця вакансій</h1>
 <?php if (!isset($_SESSION['user_id'])) { ?>
@@ -423,12 +424,6 @@ $userId = $_SESSION['user_id'];
 
 </footer>
 <!-- /Нижня менюшка -->
-
-<!-- Попередній завантажувач -->
-<div id='preloader'>
-    <div class='preloader'></div>
-</div>
-<!-- /Попередній завантажувач -->
 
 </body>
 </html>
