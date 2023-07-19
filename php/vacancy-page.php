@@ -39,64 +39,63 @@ $userId = $_SESSION['user_id'];
         </a>
     </div>
     <!-- /Кнопка профілю -->
-<table>
-    <p class="vac_form_title">Таблиця вакансій</p>
-    <a href="delFromFav.php">Акаунт</a>
+    <table>
+        <p class="vac_form_title">Таблиця вакансій</p>
+        <a href="delFromFav.php">Акаунт</a>
 
-    <?php
-
-    while ($row = mysqli_fetch_assoc($resultVac)) {
-        $tags = mysqli_fetch_assoc($resultTag);
-        $tags_implode = implode("", $tags);
-        ?>
-        <tr>
-            <td><?php echo $row['id']; ?></td>
-            <td><?php echo $row['name']; ?></td>
-            <td>
-                <?php
-                $arr = explode(",", $tags_implode);
-                foreach ($arr as $item) {
-                    echo $item;
-                    echo " ";
-                }
-                ?>
-            </td>
-            <td><?php echo $row['region']; ?></td>
-            <td><?php echo $row['salary']; ?></td>
-            <td><?php echo $row['description']; ?></td>
-            <td>
-                <?php
-                $mysqli = require __DIR__ . "/database.php";
-                $query = "SELECT vac_id user_id FROM user_favourite WHERE vac_id = ? AND user_id = ? ";
-                $stmt = $mysqli->prepare($query);
-                $stmt->bind_param("ii", $row['id'], $_SESSION['user_id'],);
-                $stmt->execute();
-                $result = $stmt->get_result();
-                $vacIdFav = mysqli_fetch_assoc($result);
-
-
-                if (isset($vacIdFav)) {
-                    $vacIdFav = implode("", $vacIdFav);
-                }
-                if (isset($vacIdFav) && $vacIdFav === $row['id']): ?>
-                    <div class="star-btn" onclick="toggleStar(this)" starred="true"
-                         data-id="<?= htmlspecialchars($row['id']) ?>">★
-                    </div>
-                <?php else: ?>
-                    <div class="star-btn" onclick="toggleStar(this)" starred="false"
-                         data-id="<?= htmlspecialchars($row['id']) ?>">☆
-                    </div>
-                <?php endif; ?>
-            </td>
-            <td>
-            </td>
-        </tr>
         <?php
-    }
+        while ($row = mysqli_fetch_assoc($resultVac)) {
+            $tags = mysqli_fetch_assoc($resultTag);
+            $tags_implode = implode("", $tags);
+            ?>
+            <tr>
+                <td><?php echo $row['id']; ?></td>
+                <td><?php echo $row['name']; ?></td>
+                <td>
+                    <?php
+                    $arr = explode(",", $tags_implode);
+                    foreach ($arr as $item) {
+                        echo $item;
+                        echo " ";
+                    }
+                    ?>
+                </td>
+                <td><?php echo $row['region']; ?></td>
+                <td><?php echo $row['salary']; ?></td>
+                <td><?php echo $row['description']; ?></td>
+                <td>
+                    <?php
+                    $mysqli = require __DIR__ . "/database.php";
+                    $query = "SELECT vac_id user_id FROM user_favourite WHERE vac_id = ? AND user_id = ? ";
+                    $stmt = $mysqli->prepare($query);
+                    $stmt->bind_param("ii", $row['id'], $_SESSION['user_id'],);
+                    $stmt->execute();
+                    $result = $stmt->get_result();
+                    $vacIdFav = mysqli_fetch_assoc($result);
 
-    ?>
 
-</table>
+                    if (isset($vacIdFav)) {
+                        $vacIdFav = implode("", $vacIdFav);
+                    }
+                    if (isset($vacIdFav) && $vacIdFav === $row['id']): ?>
+                        <div class="star-btn" onclick="toggleStar(this)" starred="true"
+                             data-id="<?= htmlspecialchars($row['id']) ?>">★
+                        </div>
+                    <?php else: ?>
+                        <div class="star-btn" onclick="toggleStar(this)" starred="false"
+                             data-id="<?= htmlspecialchars($row['id']) ?>">☆
+                        </div>
+                    <?php endif; ?>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <?php
+        }
+
+        ?>
+
+    </table>
 </div>
 </body>
 </html>

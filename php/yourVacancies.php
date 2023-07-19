@@ -1,3 +1,16 @@
+<?php
+require __DIR__ . "/connectionCheck.php";
+
+$mysqliVac = require __DIR__ . "/database_vacanties.php";
+$queryVac = "SELECT * FROM vacanties";
+$resultVac = mysqli_query($mysqliVac, $queryVac);
+
+$queryForTags = "SELECT tag_name FROM vacanties";
+$resultTag = mysqli_query($mysqliVac, $queryForTags);
+
+$userId = $_SESSION['user_id'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +29,7 @@
     <!-- Підключення бібліотеки, яка містить в собі гарні векторні значки, які ми використаєм в нашій роботі  -->
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <script defer src="../js/toggleFav.js"></script>
+    <script defer src="../js/reload.js"></script>
 </head>
 <body class="signup-test">
 <div class="box-all-vac">
@@ -32,7 +46,7 @@
             <br>
 
             <?php
-            require __DIR__ . "/connectionCheck.php";
+
             $mysqli = require __DIR__ . "/database.php";
 
             // Перевірка, чи користувач увійшов у систему
@@ -92,6 +106,7 @@
                 $stmtQueryForVac->execute();
                 $resultVac = $stmtQueryForVac->get_result();
                 while ($row = $resultVac->fetch_assoc()) {
+
                 ?>
                 <tbody>
                 <tr>
@@ -104,12 +119,13 @@
                     <td><?php echo $row['phone']; ?></td>
                     <td><?php echo $row['description']; ?></td>
                     <td><?php if (isset($vacIdFav) && $vacIdFav === $row['id']): ?>
-                            <div class="star-btn" onclick="toggleStar(this)" starred="true"
-                                 data-id="<?= htmlspecialchars($row['id']) ?>">★
-                            </div>
-                        <?php else: ?>
-                            <div class="star-btn" onclick="toggleStar(this)" starred="false"
+                            <div class="star-btn" onclick="toggleStar(this); reload()" starred="false"
                                  data-id="<?= htmlspecialchars($row['id']) ?>">☆
+                            </div>
+
+                        <?php else: ?>
+                            <div class="star-btn" onclick="toggleStar(this); reload()" starred="true"
+                                 data-id="<?= htmlspecialchars($row['id']) ?>">★
                             </div>
                         <?php endif; ?>
                     </td>
