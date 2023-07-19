@@ -439,6 +439,7 @@ ul, ol {
     text-transform: uppercase;
     -webkit-transition: 0.2s color;
     transition: 0.2s color;
+
 }
 
 .footer-nav li a:hover, .footer-nav li a:focus {
@@ -449,6 +450,7 @@ ul, ol {
     content: "";
     display: block;
     height: 2px;
+    color: #d85c98;
     background-color: #d85c98;
     width: 100%;
     -ms-transform: translateY(5px);
