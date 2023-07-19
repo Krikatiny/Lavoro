@@ -449,7 +449,7 @@ ul, ol {
     content: "";
     display: block;
     height: 2px;
-    background-color: #d85c98;
+    background-color: #ffffff;
     width: 100%;
     -ms-transform: translateY(5px);
     transform: translateY(5px);
@@ -624,11 +624,10 @@ input[type="tel"]:focus, input[type="regions"]:focus, input[type="tel"]:focus, t
     clear: both;
 
 }
-
-.contact-form .input {
-    margin-bottom: 20px;
-    background: #ffff;
+.contact-form-container{
+    background: #fdfdfd;
 }
+
 
 .contact-form textarea.input {
     height: 94px;
