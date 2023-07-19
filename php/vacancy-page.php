@@ -95,6 +95,7 @@ $userId = $_SESSION['user_id'];
     }
 
     ?>
+
 </table>
 </div>
 </body>

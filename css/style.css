@@ -439,7 +439,6 @@ ul, ol {
     text-transform: uppercase;
     -webkit-transition: 0.2s color;
     transition: 0.2s color;
-
 }
 
 .footer-nav li a:hover, .footer-nav li a:focus {
@@ -450,8 +449,7 @@ ul, ol {
     content: "";
     display: block;
     height: 2px;
-    color: #d85c98;
-    background-color: #d85c98;
+    background-color: #ffffff;
     width: 100%;
     -ms-transform: translateY(5px);
     transform: translateY(5px);
@@ -564,6 +562,8 @@ input[type="tel"]:focus, input[type="regions"]:focus, input[type="tel"]:focus, t
     border-radius: 10px;;
     background: #ffffff;
     font: 500 1.2rem 'Montserrat', sans-serif;
+    overflow: hidden;
+    margin-top: 250px;
 }
 .reg__button {
     position: relative;
@@ -623,10 +623,8 @@ input[type="tel"]:focus, input[type="regions"]:focus, input[type="tel"]:focus, t
     clear: both;
 
 }
-
-.contact-form .input {
-    margin-bottom: 20px;
-    background: #ffff;
+.contact-form-container{
+    background: #fdfdfd;
 }
 
 .contact-form textarea.input {
