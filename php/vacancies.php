@@ -309,6 +309,7 @@ $userId = $_SESSION['user_id'];
         </aside>
     </div>
 </div>
+
 <!-- Таблиця Вакансій -->
 <h1 class="table-name">Таблиця вакансій</h1>
 <?php if (!isset($_SESSION['user_id'])) { ?>
@@ -322,6 +323,8 @@ $userId = $_SESSION['user_id'];
         <th>Теги</th>
         <th>Місто</th>
         <th>Зарплатня</th>
+        <th>e-mail</th>
+        <th>Телефон</th>
         <th>Деталі</th>
         <?php if (isset($_SESSION['user_id'])) { ?>
             <th class="tableheadfavourite">Обрані</th>
@@ -359,6 +362,8 @@ $userId = $_SESSION['user_id'];
             </td>
             <td class="vacancyregion"><?php echo $row['region']; ?></td>
             <td class="price"><?php echo $row['salary']; ?></td>
+            <td><?php echo $row['email']; ?></td>
+            <td><?php echo $row['phone']; ?></td>
             <td><?php echo $row['description']; ?></td>
             <?php if (isset($_SESSION['user_id'])) { ?>
                 <td>
@@ -419,12 +424,6 @@ $userId = $_SESSION['user_id'];
 
 </footer>
 <!-- /Нижня менюшка -->
-
-<!-- Попередній завантажувач -->
-<div id='preloader'>
-    <div class='preloader'></div>
-</div>
-<!-- /Попередній завантажувач -->
 
 </body>
 </html>

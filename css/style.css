@@ -32,6 +32,7 @@ h4 {
     font-size: 18px;
 }
 
+
 /* --- /Налаштування заголовків--- */
 
 /* --- Налаштування тексту посилань--- */
@@ -59,7 +60,15 @@ ul, ol {
 .white-text {
     color: #FFF;
 }
-
+.main-text-2{
+    font: 1000 6rem 'Montserrat', sans-serif;
+}
+.main-text{
+    font: 700 10rem 'Montserrat', sans-serif;
+}
+.home-mini-title{
+    font: 700 3rem 'Montserrat', sans-serif;
+}
 /* --- /Налаштування шрифтів та тексту --- */
 
 /* --- Для зручного розміщення даних, та чіткого відокремлення їх між собою по секціям ми розмістили дані всередину певних блоків.
@@ -74,13 +83,19 @@ ul, ol {
 .section-hr {
     margin-top: 80px;
     margin-bottom: 80px;
-    border-color: #EBEBEB;
+    border-color: #d2c9c9;
 }
 
 .section-header {
     margin-bottom: 40px;
 }
 
+.box-details{
+    margin-top: 100px;
+}
+.box-details-2{
+    margin-bottom: 100px;
+}
 /* --- /Офомлення секцій--- */
 
 /* --- Налаштування  фонових зоображень, а також додання певних візуальних ефектів до них --- */
@@ -283,14 +298,14 @@ ul, ol {
 }
 
 .main-menu li a:hover, .main-menu li a:focus {
-    background-color: transparent;
+    background-color: rgba(238,196,200,0.43);
 }
 
 .main-menu li a:after {
     content: "";
     display: block;
     height: 2px;
-    background-color: #d85c98;
+    background-color: rgba(216, 92, 152, 0);
     width: 100%;
     -ms-transform: translateY(5px);
     transform: translateY(5px);
@@ -930,34 +945,31 @@ input[type="checkbox"] {
 /*Стилізація таблиці*/
 
 .table-vacancies {
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     border-collapse: collapse;
-    font-size: 1.56em;
-    min-height: 100px;
-    width: 1500px;
-    text-align: center;
+    font-size: 1.75em;
+    min-width: 1200px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    height: 400px;
     table-layout: fixed;
-    border-radius: 15px 15px 0 0;
+    border-radius: 10px 10px 0 0;
     overflow: hidden;
 }
 
 .table-vacancies thead tr {
-    background-color: #1abff3;
+    background-color: #25d9ce;
     color: #ffffff;
-    text-align: center;
+    text-align: left;
     font-weight: bold;
 }
 
 .table-vacancies thead th {
     width: 80px; /* Задайте бажану фіксовану ширину для кожного стовпця */
-    text-align: center;
+    text-align: left;
 }
 
 .table-vacancies tbody tr {
     height: 70px; /* Задайте бажану фіксовану висоту для кожного рядка */
+    border-bottom: 1px solid #dddddd; /* Додайте лінію знизу для кожного рядка */
 }
 
 .table-vacancies th,
@@ -965,21 +977,17 @@ input[type="checkbox"] {
     padding: 12px 15px;
 }
 
-.table-vacancies tbody tr {
-    border-bottom: 1px solid #dddddd;
-}
-
 .table-vacancies tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;
 }
 
-.table-vacancies tbody tr:last-of-type {
-    border-bottom: 2px solid #1abff3;
+.table-vacancies tbody tr {
+    border-bottom: 2px solid #25d9ce; /* Останній рядок має більш товсту лінію */
 }
 
 .table-vacancies tbody tr.active-row {
     font-weight: bold;
-    color: #1abff3;
+    color: #25d9ce;
 }
 
 
@@ -1009,7 +1017,7 @@ aside {
 }
 
 .your-fav-table thead tr {
-    background-color: #009879;
+    background-color: #25d9ce;
     color: #ffffff;
     text-align: left;
     font-weight: bold;
@@ -1029,12 +1037,18 @@ aside {
 }
 
 .your-fav-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid #25d9ce;
 }
 
 .your-fav-table tbody tr.active-row {
     font-weight: bold;
-    color: #009879;
+    color: #25d9ce;
+}
+.fav-vac-text-head{
+    font-size: 220%;
+    text-align: center;
+    display: block;
+    margin: auto;
 }
 
 .table-vac-error {
