@@ -306,7 +306,20 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
     </aside>
 </div>
 <!-- Таблиця Вакансій -->
+<h1 class="table-name">Таблиця вакансій</h1>
 <table class="table-vacancies">
+    <thead>
+    <tr>
+        <th>№</th>
+        <th>Ім'я</th>
+        <th>Теги</th>
+        <th>Місто</th>
+        <th>Зарплатня</th>
+        <th>Деталі</th>
+        <th>Обрані</th>
+    </tr>
+    </thead>
+    <tbody>
     <?php
     while ($row = mysqli_fetch_assoc($result)) {
         $tags = mysqli_fetch_assoc($resultTag);
@@ -336,8 +349,9 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
         <?php
     }
     ?>
+    </tbody>
 </table>
-</div>
+
 
 <!-- Нижня менюшка -->
 <footer class="bottom-footer" id="footer">
@@ -357,7 +371,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
             <div class="col-md-6">
                 <ul class="main-menu nav navbar-nav navbar-right">
                     <li><a href="../index.html">Головна</a></li>
-                    <li><a href="vacancies.html">Вакансії</a></li>
+                    <li><a href="vacancies.php">Вакансії</a></li>
                     <li><a href="../html/contact.html">Контакти</a></li>
                 </ul>
             </div>

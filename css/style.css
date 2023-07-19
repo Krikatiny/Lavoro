@@ -305,17 +305,6 @@ ul, ol {
     opacity: 1;
 }
 
-/* Таблиця вакансій*/
-.table-vacancies {
-    margin-top: 60px;
-    margin-left: 500px;
-
-}
-
-.table-name {
-    margin-top: 50px;
-    margin-left: 850px;
-}
 
 /* Пошукове поле */
 .searchbar {
@@ -890,7 +879,7 @@ input[type="checkbox"] {
 .slider::-moz-range-thumb {
     width: 20px;
     height: 20px;
-    background: #1abff3;
+    background: hsl(194, 90%, 53%);
     cursor: pointer;
     border-radius: 50%;
 }
@@ -903,4 +892,53 @@ input[type="checkbox"] {
     transform: translateX(-50%); /* Змінено значення transform для центрування */
     font-size: 20px;
     color: black;
+}
+
+/*Стилізація таблиці*/
+
+
+.table-vacancies {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    font-size: 1.56em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table-vacancies thead tr {
+    background-color: #1abff3;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.table-vacancies th,
+.table-vacancies td {
+    padding: 12px 15px;
+}
+
+.table-vacancies tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.table-vacancies tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.table-vacancies tbody tr:last-of-type {
+    border-bottom: 2px solid #1abff3;
+}
+
+.table-vacancies tbody tr.active-row {
+    font-weight: bold;
+    color: #1abff3;
+}
+
+
+.table-name {
+    text-align: center;
+    margin-top: -150px;
 }
