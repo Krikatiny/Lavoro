@@ -104,10 +104,209 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
 <!-- Наповнення основної частини сторінки -->
 <div class="section" id="contact">
 
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div>
+            <h2 class="header-filter">Фільтри</h2>
+        </div>
+
+        <!-- Слайдер -->
+        <div class="slidercontainer">
+            <div>
+                <h3 class="filtername">Фільтр за зарплатнею</h3>
+            </div>
+            <input type="range" min="1000" max="100000" value="1000"step="500" class="slider" id="myRange">
+            <span class="filter" id="sliderValue">1000</span>
+        </div>
+
+        <!-- Чекбокси -->
+        <div class="checkbox-group">
+            <h3 class="filternamebox">Категорії</h3>
+            <div class="checkbox-column">
+                <label>
+                    <input type="checkbox" name="tags" id="checkbox1" value="Робота з дітьми">
+                    Робота з дітьми
+                </label>
+                <label>
+                    <input type="checkbox" name="tags" id="checkbox2" value="Гнучкий графік">
+                    Гнучкий графік
+                </label>
+            </div>
+            <div class="checkbox-column">
+                <label>
+                    <input type="checkbox" name="tags" id="checkbox3" value="Робота для студента">
+                    Робота для студента
+                </label>
+                <label>
+                    <input type="checkbox" name="tags" id="checkbox4" value="Зелена компанія">
+                    Зелена компанія
+                </label>
+            </div>
+            <div class="checkbox-column">
+                <label>
+                    <input type="checkbox" name="tags" id="checkbox5" value="Премії та надбавки">
+                    Премії та надбавки
+                </label>
+                <label>
+                    <input type="checkbox" name="tags" id="checkbox6" value="Державна робота">
+                    Державна робота
+                </label>
+            </div>
+                <div class="checkbox-column">
+                <label>
+                    <input type="checkbox" name="tags" id="checkbox7" value="Волонтерство">
+                    Волонтерство
+                </label>
+                <label>
+                    <input type="checkbox" name="tags" id="checkbox8" value="Навчання з нуля">
+                    Навчання з нуля
+                </label>
+                </div>
+                <div class="checkbox-column">
+                <label>
+                    <input type="checkbox" name="tags" id="checkbox9" value="Дистанційна робота">
+                    Дистанційна робота
+                </label>
+                <label>
+                    <input type="checkbox" name="tags" id="checkbox10" value="Гаряча пропозиція">
+                    Гаряча пропозиція
+                </label>
+            </div>
+        </div>
+
+        <div class="checkbox-group">
+            <h3 class="filternamebox">Регіони</h3>
+            <div class="checkbox-column">
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox1" value="АР Крим">
+                    АР Крим
+                </label>
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox2" value="Березань">
+                    Березань
+                </label>
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox3" value="Вінниця">
+                    Вінниця
+                </label>
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox4" value="Волинь">
+                    Волинь
+                </label>
+            </div>
+            <div class="checkbox-column">
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox5" value="Дніпро">
+                    Дніпро
+                </label>
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox6" value="Донецьк">
+                    Донецьк
+                </label>
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox7" value="Житомир">
+                    Житомир
+                </label>
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox8" value="Закарпаття">
+                    Закарпаття
+                </label>
+            </div>
+                <div class="checkbox-column">
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox9" value="Запоріжжя">
+                    Запоріжжя
+                </label>
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox10" value="Івано-Франківськ">
+                    Івано-Франківськ
+                </label>
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox11" value="Київ">
+                    Київ
+                </label>
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox12" value="Кіровоград">
+                    Кіровоград
+                </label>
+                </div>
+            <div class="checkbox-column">
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox13" value="Луганськ">
+                    Луганськ
+                </label>
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox14" value="Львів">
+                    Львів
+                </label>
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox15" value="Миколаїв">
+                    Миколаїв
+                </label>
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox16" value="Одеса">
+                    Одеса
+                </label>
+            </div>
+            <div class="checkbox-column">
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox17" value="Полтава">
+                    Полтава
+                </label>
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox18" value="Рівне">
+                    Рівне
+                </label>
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox19" value="Суми">
+                    Суми
+                </label>
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox20" value="Тернопіль">
+                    Тернопіль
+                </label>
+            </div>
+            <div class="checkbox-column">
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox21" value="Харків">
+                    Харків
+                </label>
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox22" value="Херсон">
+                    Херсон
+                </label>
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox23" value="Хмельницький">
+                    Хмельницький
+                </label>
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox24" value="Черкаси">
+                    Черкаси
+                </label>
+            </div>
+            <div class="checkbox-column">
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox25" value="Чернівці">
+                    Чернівці
+                </label>
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox26" value="Чернігів">
+                    Чернігів
+                </label>
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox27" value="Солоне">
+                    Солоне
+                </label>
+                <label>
+                    <input type="checkbox" name="region" id="rcheckbox28" value="НУБІП">
+                    НУБІП
+                </label>
+            </div>
+        </div>
+    </aside>
+</div>
     <!-- Таблиця Вакансій -->
     <table class="table-vacancies">
-        <h1 class="table-name">Таблиця вакансій</h1>
-
         <?php
         while ($row = mysqli_fetch_assoc($result)) {
             $tags = mysqli_fetch_assoc($resultTag);
@@ -138,172 +337,8 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
         }
         ?>
     </table>
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <!-- Слайдер -->
-        <div class="slidecontainer">
-            <h2 class="header-filter">Фільтр</h2>
-            <h3 class="name-colum filter-title">Фільтр за зарплатнею</h3>
-            <input type="range" min="1000" max="100000" value="1000" class="slider" id="myRange">
-            <span class="filter" id="sliderValue">1000</span>
-        </div>
-<!-- Чекбокси -->
-<div class="checkboxes">
-    <div class="checkbox-column">
-        <h3 class="name-colum filter-title">Категорії</h3>
-        <label>
-            <input type="checkbox" name="tags" id="checkbox1" value="Робота з дітьми">
-            Робота з дітьми
-        </label>
-        <label>
-            <input type="checkbox" name="tags" id="checkbox2" value="Гнучкий графік">
-            Гнучкий графік
-        </label>
-        <label>
-            <input type="checkbox" name="tags" id="checkbox3" value="Робота для студента">
-            Робота для студента
-        </label>
-        <label>
-            <input type="checkbox" name="tags" id="checkbox4" value="Зелена компанія">
-            Зелена компанія
-        </label>
-        <label>
-            <input type="checkbox" name="tags" id="checkbox5" value="Премії та надбавки">
-            Премії та надбавки
-        </label>
-        <label>
-            <input type="checkbox" name="tags" id="checkbox6" value="Державна робота">
-            Державна робота
-        </label>
-        <label>
-            <input type="checkbox" name="tags" id="checkbox7" value="Волонтерство">
-            Волонтерство
-        </label>
-        <label>
-            <input type="checkbox" name="tags" id="checkbox8" value="Навчання з нуля">
-            Навчання з нуля
-        </label>
-        <label>
-            <input type="checkbox" name="tags" id="checkbox9" value="Дистанційна робота">
-            Дистанційна робота
-        </label>
-        <label>
-            <input type="checkbox" name="tags" id="checkbox10" value="Гаряча пропозиція">
-            Гаряча пропозиція
-        </label>
-    </div>
-<div class="checkbox-column">
-    <h3 class="name-colum filter-title">Регіони</h3>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox1" value="АР Крим">
-        АР Крим
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox2" value="Березань">
-        Березань
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox3" value="Вінниця">
-        Вінниця
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox4" value="Волинь">
-        Волинь
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox5" value="Дніпро">
-        Дніпро
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox6" value="Донецьк">
-        Донецьк
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox7" value="Житомир">
-        Житомир
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox8" value="Закарпаття">
-        Закарпаття
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox9" value="Запоріжжя">
-        Запоріжжя
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox10" value="Івано-Франківськ">
-        Івано-Франківськ
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox11" value="Київ">
-        Київ
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox12" value="Кіровоград">
-        Кіровоград
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox13" value="Луганськ">
-        Луганськ
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox14" value="Львів">
-        Львів
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox15" value="Миколаїв">
-        Миколаїв
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox16" value="Одеса">
-        Одеса
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox17" value="Полтава">
-        Полтава
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox18" value="Рівне">
-        Рівне
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox19" value="Суми">
-        Суми
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox20" value="Тернопіль">
-        Тернопіль
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox21" value="Харків">
-        Харків
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox22" value="Херсон">
-        Херсон
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox23" value="Хмельницький">
-        Хмельницький
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox24" value="Черкаси">
-        Черкаси
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox25" value="Чернівці">
-        Чернівці
-    </label>
-    <label>
-        <input type="checkbox" name="region" id="rcheckbox26" value="Чернігів">
-        Чернігів
-    </label>
-</div>
 </div>
 
-
-
-</aside>
     <!-- Нижня менюшка -->
     <footer class="bottom-footer" id="footer">
         <div class="container">
