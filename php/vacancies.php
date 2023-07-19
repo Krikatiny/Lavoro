@@ -124,7 +124,7 @@ $userId = $_SESSION['user_id'];
 
             <!-- Чекбокси -->
             <div class="checkbox-group">
-                <h3 class="filternamebox">Категорії</h3>
+                <h3 class="filternamebox">Особливості</h3>
                 <div class="checkbox-column">
                     <label>
                         <input type="checkbox" name="tags" id="checkbox1" value="Робота з дітьми">
@@ -178,7 +178,7 @@ $userId = $_SESSION['user_id'];
             </div>
 
             <div class="checkbox-group">
-                <h3 class="filternamebox">Регіони</h3>
+                <h3 class="filternamebox">Міста</h3>
                 <div class="checkbox-column">
                     <label>
                         <input type="checkbox" name="region" id="rcheckbox1" value="АР Крим">
@@ -301,8 +301,8 @@ $userId = $_SESSION['user_id'];
                         Солоне
                     </label>
                     <label>
-                        <input type="checkbox" name="region" id="rcheckbox28" value="НУБІП">
-                        НУБІП
+                        <input type="checkbox" name="region" id="rcheckbox28" value="Подільськ">
+                        Подільськ
                     </label>
                 </div>
             </div>

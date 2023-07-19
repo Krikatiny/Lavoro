@@ -956,7 +956,7 @@ input[type="checkbox"] {
 }
 
 .table-vacancies thead tr {
-    background-color: #25d9ce;
+    background-color: #34D2EECC;
     color: #ffffff;
     text-align: left;
     font-weight: bold;
@@ -982,12 +982,12 @@ input[type="checkbox"] {
 }
 
 .table-vacancies tbody tr {
-    border-bottom: 2px solid #25d9ce; /* Останній рядок має більш товсту лінію */
+    border-bottom: 2px solid rgba(52, 210, 238, 0.8); /* Останній рядок має більш товсту лінію */
 }
 
 .table-vacancies tbody tr.active-row {
     font-weight: bold;
-    color: #25d9ce;
+    color: #34D2EECC;
 }
 
 
