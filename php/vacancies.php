@@ -383,12 +383,6 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
 </footer>
 <!-- /Нижня менюшка -->
 
-<!-- Попередній завантажувач -->
-<div id='preloader'>
-    <div class='preloader'></div>
-</div>
-<!-- /Попередній завантажувач -->
-
 </body>
 </html>
 
