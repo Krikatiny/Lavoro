@@ -308,6 +308,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
         </aside>
     </div>
 </div>
+
 <!-- Таблиця Вакансій -->
 <h1 class="table-name">Таблиця вакансій</h1>
 <table class="table-vacancies">
