@@ -15,6 +15,7 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <!-- Підключення бібліотеки, яка містить в собі гарні векторні значки, які ми використаєм в нашій роботі  -->
     <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <script defer src="../js/toggleFav.js"></script>
 </head>
 <body class="signup-test">
 <div class="box-all-vac">
@@ -50,6 +51,7 @@
                     <th>Email</th>
                     <th>Phone</th>
                     <th>Description</th>
+                    <th>Fav</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -101,6 +103,16 @@
                     <td><?php echo $row['email']; ?></td>
                     <td><?php echo $row['phone']; ?></td>
                     <td><?php echo $row['description']; ?></td>
+                    <td><?php if (isset($vacIdFav) && $vacIdFav === $row['id']): ?>
+                            <div class="star-btn" onclick="toggleStar(this)" starred="true"
+                                 data-id="<?= htmlspecialchars($row['id']) ?>">★
+                            </div>
+                        <?php else: ?>
+                            <div class="star-btn" onclick="toggleStar(this)" starred="false"
+                                 data-id="<?= htmlspecialchars($row['id']) ?>">☆
+                            </div>
+                        <?php endif; ?>
+                    </td>
 
                     <?php
                     }

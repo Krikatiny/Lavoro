@@ -27,6 +27,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
     <script defer src="../js/addToFav.js"></script>
     <script defer src="../js/searchText.js"></script>
     <script defer src="../js/checkboxesFilter.js"></script>
+    <script defer src="../js/toggleFav.js"></script>
     <!-- Скрипти для фільтрації даних по чекбоксах та слайдеру
     <script defer src="../js/rangeSlider.js"></script>
     <script defer src="../js/sliderFilter.js"></script>-->
@@ -343,9 +344,15 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
             <td class="price"><?php echo $row['salary']; ?></td>
             <td><?php echo $row['description']; ?></td>
             <td>
-                <button type="button" class="add-to-favorite" data-id="<?= htmlspecialchars($row['id']) ?>">Add to
-                    favourite
-                </button>
+                <?php if (isset($vacIdFav) && $vacIdFav === $row['id']): ?>
+                    <div class="star-btn" onclick="toggleStar(this)" starred="true"
+                         data-id="<?= htmlspecialchars($row['id']) ?>">★
+                    </div>
+                <?php else: ?>
+                    <div class="star-btn" onclick="toggleStar(this)" starred="false"
+                         data-id="<?= htmlspecialchars($row['id']) ?>">☆
+                    </div>
+                <?php endif; ?>
             </td>
         </tr>
         <?php

@@ -508,6 +508,7 @@ input[type="tel"]:focus, input[type="regions"]:focus, input[type="tel"]:focus, t
     position: relative;
 
 }
+
 .signup-test {
     margin: 0;
     height: 100vh;
@@ -555,7 +556,7 @@ input[type="tel"]:focus, input[type="regions"]:focus, input[type="tel"]:focus, t
     font: 500 1.2rem 'Montserrat', sans-serif;
 }
 
-.box-all-vac{
+.box-all-vac {
     width: 1000px;
     max-width: 1000px;
     margin: 1rem;
@@ -802,7 +803,7 @@ input[type="checkbox"] {
 .star-btn {
     display: inline-block;
     font-size: 50px;
-    color: #d65b97;
+    color: #d6c65b;
     cursor: pointer;
     user-select: none;
 }
