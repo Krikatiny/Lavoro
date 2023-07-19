@@ -16,11 +16,18 @@
     <!-- Підключення бібліотеки, яка містить в собі гарні векторні значки, які ми використаєм в нашій роботі  -->
     <link href="../css/font-awesome.min.css" rel="stylesheet">
 </head>
-<body class="signup">
-<div class="box">
+<body class="signup-test">
+<div class="box-test">
+    <!-- Кнопка будиночка -->
+    <div class="navbar-home">
+        <a class="home_button" href="../php/account.php">
+            <img alt="home_buttom" src="../img/profile.png">
+        </a>
+    </div>
+    <!-- /Кнопка будиночка -->
     <div class="profile-tab-nav border-right">
         <div class="p-4">
-            <p class="text-center">Ось ваші улюблені вакансії:</p>
+            <p class="text-center">Ось ваші улюблені вакансії</p>
             <br>
 
             <?php
