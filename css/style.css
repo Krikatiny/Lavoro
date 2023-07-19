@@ -902,10 +902,14 @@ input[type="checkbox"] {
     margin-right: auto;
     border-collapse: collapse;
     font-size: 1.56em;
-    min-width: 400px;
+    min-height: 100px;
+    width: 1500px;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    height: 400px;
+    overflow-y: scroll;
+    table-layout: fixed;
 }
 
 .table-vacancies thead tr {
@@ -915,6 +919,13 @@ input[type="checkbox"] {
     font-weight: bold;
 }
 
+.table-vacancies thead th {
+    width: 80px; /* Задайте бажану фіксовану ширину для кожного стовпця */
+    text-align: left;
+}
+.table-vacancies tbody tr {
+    height: 70px; /* Задайте бажану фіксовану висоту для кожного рядка */
+}
 .table-vacancies th,
 .table-vacancies td {
     padding: 12px 15px;
