@@ -41,7 +41,7 @@ require __DIR__ . "/connectionCheck.php";
                         <i class="fa fa-bookmark-o text-center mr-1"></i>
                         Обрані вакансії
                     </a>
-                    <a class="nav-link active" href="../php/vacancy-page.php" role="tab"
+                    <a class="nav-link active" href="../php/vacancies.php" role="tab"
                        aria-controls="account" aria-selected="true">
                         <i class="fa fa-book text-center mr-1"></i>
                         Усі вакансії

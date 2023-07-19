@@ -1,3 +1,16 @@
+<?php
+require __DIR__ . "/connectionCheck.php";
+
+$mysqliVac = require __DIR__ . "/database_vacanties.php";
+$queryVac = "SELECT * FROM vacanties";
+$resultVac = mysqli_query($mysqliVac, $queryVac);
+
+$queryForTags = "SELECT tag_name FROM vacanties";
+$resultTag = mysqli_query($mysqliVac, $queryForTags);
+
+$userId = $_SESSION['user_id'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +29,7 @@
     <!-- Підключення бібліотеки, яка містить в собі гарні векторні значки, які ми використаєм в нашій роботі  -->
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <script defer src="../js/toggleFav.js"></script>
+    <script defer src="../js/reload.js"></script>
 </head>
 <body class="signup-test">
 <div class="box-all-vac">
@@ -32,13 +46,35 @@
             <br>
 
             <?php
-            require __DIR__ . "/connectionCheck.php";
+
             $mysqli = require __DIR__ . "/database.php";
 
             // Перевірка, чи користувач увійшов у систему
             if (!isset($_SESSION["user_id"])) {
                 die("Користувач не увійшов у систему");
             }
+            ?>
+
+            <?php
+            $userID = $_SESSION["user_id"];
+
+            // Запит до бази даних для отримання улюблених вакансій залогіненого користувача
+            $queryForTags = "SELECT vac_id FROM user_favourite WHERE user_id = ?";
+            $stmt = $mysqli->prepare($queryForTags);
+
+            if (!$stmt) {
+                die("Помилка SQL: " . $mysqli->error);
+            }
+
+            $stmt->bind_param("i", $userID);
+            $stmt->execute();
+            $resultTag = $stmt->get_result();
+
+            // Перевірка, чи є у користувача улюблені вакансії
+            if ($resultTag->num_rows === 0) {
+                echo "У вас немає улюблених вакансій";
+                header("Location: vacancies.php");
+            } else {
             ?>
             <table class="your-fav-table">
                 <thead>
@@ -54,26 +90,7 @@
                     <th>Fav</th>
                 </tr>
                 </thead>
-                <tbody>
-                <?php
-                $userID = $_SESSION["user_id"];
-
-                // Запит до бази даних для отримання улюблених вакансій залогіненого користувача
-                $queryForTags = "SELECT vac_id FROM user_favourite WHERE user_id = ?";
-                $stmt = $mysqli->prepare($queryForTags);
-
-                if (!$stmt) {
-                    die("Помилка SQL: " . $mysqli->error);
-                }
-
-                $stmt->bind_param("i", $userID);
-                $stmt->execute();
-                $resultTag = $stmt->get_result();
-
-                // Перевірка, чи є у користувача улюблені вакансії
-                if ($resultTag->num_rows === 0) {
-                    echo "У вас немає улюблених вакансій";
-                } else {
+                <tbody><?php
                 // Підключення до бази даних з вакансіями
                 $mysqliVac = require __DIR__ . "/database_vacanties.php";
 
@@ -92,6 +109,7 @@
                 $stmtQueryForVac->execute();
                 $resultVac = $stmtQueryForVac->get_result();
                 while ($row = $resultVac->fetch_assoc()) {
+
                 ?>
                 <tbody>
                 <tr>
@@ -104,12 +122,13 @@
                     <td><?php echo $row['phone']; ?></td>
                     <td><?php echo $row['description']; ?></td>
                     <td><?php if (isset($vacIdFav) && $vacIdFav === $row['id']): ?>
-                            <div class="star-btn" onclick="toggleStar(this)" starred="true"
-                                 data-id="<?= htmlspecialchars($row['id']) ?>">★
-                            </div>
-                        <?php else: ?>
-                            <div class="star-btn" onclick="toggleStar(this)" starred="false"
+                            <div class="star-btn" onclick="toggleStar(this); reload()" starred="false"
                                  data-id="<?= htmlspecialchars($row['id']) ?>">☆
+                            </div>
+
+                        <?php else: ?>
+                            <div class="star-btn" onclick="toggleStar(this); reload()" starred="true"
+                                 data-id="<?= htmlspecialchars($row['id']) ?>">★
                             </div>
                         <?php endif; ?>
                     </td>

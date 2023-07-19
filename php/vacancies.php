@@ -1,13 +1,14 @@
 <?php
+session_start();
 
-
-$mysqli = require __DIR__ . "/database_vacanties.php";
-$query = "SELECT * FROM vacanties";
-$result = mysqli_query($mysqli, $query);
+$mysqliVac = require __DIR__ . "/database_vacanties.php";
+$queryVac = "SELECT * FROM vacanties";
+$resultVac = mysqli_query($mysqliVac, $queryVac);
 
 $queryForTags = "SELECT tag_name FROM vacanties";
-$resultTag = mysqli_query($mysqli, $queryForTags);
+$resultTag = mysqli_query($mysqliVac, $queryForTags);
 
+$userId = $_SESSION['user_id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -324,7 +325,8 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
     </thead>
     <tbody>
     <?php
-    while ($row = mysqli_fetch_assoc($result)) {
+    
+    while ($row = mysqli_fetch_assoc($resultVac)) {
         $tags = mysqli_fetch_assoc($resultTag);
         $tags_implode = implode("", $tags);
         ?>
@@ -337,6 +339,16 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
                 foreach ($arr as $item) {
                     echo $item;
                     echo "";
+                }
+                $mysqli = require __DIR__ . "/database.php";
+                $query = "SELECT vac_id user_id FROM user_favourite WHERE vac_id = ? AND user_id = ? ";
+                $stmt = $mysqli->prepare($query);
+                $stmt->bind_param("ii", $row['id'], $_SESSION['user_id'],);
+                $stmt->execute();
+                $result = $stmt->get_result();
+                $vacIdFav = mysqli_fetch_assoc($result);
+                if (isset($vacIdFav)) {
+                    $vacIdFav = implode("", $vacIdFav);
                 }
                 ?>
             </td>
