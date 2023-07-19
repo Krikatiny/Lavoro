@@ -945,34 +945,31 @@ input[type="checkbox"] {
 /*Стилізація таблиці*/
 
 .table-vacancies {
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     border-collapse: collapse;
-    font-size: 1.56em;
-    min-height: 100px;
-    width: 1500px;
-    text-align: center;
+    font-size: 1.75em;
+    min-width: 1200px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    height: 400px;
     table-layout: fixed;
-    border-radius: 15px 15px 0 0;
+    border-radius: 10px 10px 0 0;
     overflow: hidden;
 }
 
 .table-vacancies thead tr {
-    background-color: #1abff3;
+    background-color: #25d9ce;
     color: #ffffff;
-    text-align: center;
+    text-align: left;
     font-weight: bold;
 }
 
 .table-vacancies thead th {
     width: 80px; /* Задайте бажану фіксовану ширину для кожного стовпця */
-    text-align: center;
+    text-align: left;
 }
 
 .table-vacancies tbody tr {
     height: 70px; /* Задайте бажану фіксовану висоту для кожного рядка */
+    border-bottom: 1px solid #dddddd; /* Додайте лінію знизу для кожного рядка */
 }
 
 .table-vacancies th,
@@ -980,21 +977,17 @@ input[type="checkbox"] {
     padding: 12px 15px;
 }
 
-.table-vacancies tbody tr {
-    border-bottom: 1px solid #dddddd;
-}
-
 .table-vacancies tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;
 }
 
-.table-vacancies tbody tr:last-of-type {
-    border-bottom: 2px solid #1abff3;
+.table-vacancies tbody tr {
+    border-bottom: 2px solid #25d9ce; /* Останній рядок має більш товсту лінію */
 }
 
 .table-vacancies tbody tr.active-row {
     font-weight: bold;
-    color: #1abff3;
+    color: #25d9ce;
 }
 
 
@@ -1006,23 +999,25 @@ input[type="checkbox"] {
 aside {
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
 }
+,
 
-.your-fav-table {
 
+.p-4{
+    position: absolute;
 }
-
 .your-fav-table {
+    margin: auto;
     border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    min-width: 400px;
-    border-radius: 5px 5px 0 0;
-    overflow: hidden;
+    font-size: 1.2em;
+    min-width: 500px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    table-layout: fixed;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
 }
 
 .your-fav-table thead tr {
-    background-color: #009879;
+    background-color: #25d9ce;
     color: #ffffff;
     text-align: left;
     font-weight: bold;
@@ -1042,10 +1037,20 @@ aside {
 }
 
 .your-fav-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid #25d9ce;
 }
 
 .your-fav-table tbody tr.active-row {
     font-weight: bold;
-    color: #009879;
+    color: #25d9ce;
+}
+.fav-vac-text-head{
+    font-size: 220%;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+.table-vac-error {
+    text-align: center;
 }

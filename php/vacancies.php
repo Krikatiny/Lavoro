@@ -1,13 +1,14 @@
 <?php
+session_start();
 
-
-$mysqli = require __DIR__ . "/database_vacanties.php";
-$query = "SELECT * FROM vacanties";
-$result = mysqli_query($mysqli, $query);
+$mysqliVac = require __DIR__ . "/database_vacanties.php";
+$queryVac = "SELECT * FROM vacanties";
+$resultVac = mysqli_query($mysqliVac, $queryVac);
 
 $queryForTags = "SELECT tag_name FROM vacanties";
-$resultTag = mysqli_query($mysqli, $queryForTags);
+$resultTag = mysqli_query($mysqliVac, $queryForTags);
 
+$userId = $_SESSION['user_id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -311,6 +312,9 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
 
 <!-- Таблиця Вакансій -->
 <h1 class="table-name">Таблиця вакансій</h1>
+<?php if (!isset($_SESSION['user_id'])) { ?>
+    <h4 class="table-vac-error">Увійдіть, аби мати змогу додавати до обраних</h4>
+<?php } ?>
 <table class="table-vacancies">
     <thead class="vacancies-head">
     <tr>
@@ -319,13 +323,18 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
         <th>Теги</th>
         <th>Місто</th>
         <th>Зарплатня</th>
+        <th>e-mail</th>
+        <th>Телефон</th>
         <th>Деталі</th>
-        <th class="tableheadfavourite">Обрані</th>
+        <?php if (isset($_SESSION['user_id'])) { ?>
+            <th class="tableheadfavourite">Обрані</th>
+        <?php } ?>
     </tr>
     </thead>
     <tbody>
     <?php
-    while ($row = mysqli_fetch_assoc($result)) {
+
+    while ($row = mysqli_fetch_assoc($resultVac)) {
         $tags = mysqli_fetch_assoc($resultTag);
         $tags_implode = implode("", $tags);
         ?>
@@ -339,22 +348,37 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
                     echo $item;
                     echo "";
                 }
+                $mysqli = require __DIR__ . "/database.php";
+                $query = "SELECT vac_id user_id FROM user_favourite WHERE vac_id = ? AND user_id = ? ";
+                $stmt = $mysqli->prepare($query);
+                $stmt->bind_param("ii", $row['id'], $_SESSION['user_id'],);
+                $stmt->execute();
+                $result = $stmt->get_result();
+                $vacIdFav = mysqli_fetch_assoc($result);
+                if (isset($vacIdFav)) {
+                    $vacIdFav = implode("", $vacIdFav);
+                }
                 ?>
             </td>
             <td class="vacancyregion"><?php echo $row['region']; ?></td>
             <td class="price"><?php echo $row['salary']; ?></td>
+            <td><?php echo $row['email']; ?></td>
+            <td><?php echo $row['phone']; ?></td>
             <td><?php echo $row['description']; ?></td>
-            <td>
-                <?php if (isset($vacIdFav) && $vacIdFav === $row['id']): ?>
-                    <div class="star-btn" onclick="toggleStar(this)" starred="true"
-                         data-id="<?= htmlspecialchars($row['id']) ?>">★
-                    </div>
-                <?php else: ?>
-                    <div class="star-btn" onclick="toggleStar(this)" starred="false"
-                         data-id="<?= htmlspecialchars($row['id']) ?>">☆
-                    </div>
-                <?php endif; ?>
-            </td>
+            <?php if (isset($_SESSION['user_id'])) { ?>
+                <td>
+                    <?php if (isset($vacIdFav) && $vacIdFav === $row['id']): ?>
+                        <div class="star-btn" onclick="toggleStar(this)" starred="true"
+                             data-id="<?= htmlspecialchars($row['id']) ?>">★
+                        </div>
+                    <?php else: ?>
+                        <div class="star-btn" onclick="toggleStar(this)" starred="false"
+                             data-id="<?= htmlspecialchars($row['id']) ?>">☆
+                        </div>
+                    <?php endif; ?>
+                </td>
+            <?php } ?>
+
         </tr>
         <?php
     }
@@ -385,9 +409,9 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
             <!-- Навігація, що знаходиться на нижній менюшці-->
             <div class="col-md-6">
                 <ul class="footer-nav-main footer-nav">
-                    <li><a href="index.html">Головна</a></li>
-                    <li><a href="html/vacancies.html">Вакансії</a></li>
-                    <li><a href="html/contact.html">Контакти</a></li>
+                    <li><a href="../index.html">Головна</a></li>
+                    <li><a href="../php/vacancies.php">Вакансії</a></li>
+                    <li><a href="../html/contact.html">Контакти</a></li>
                 </ul>
             </div>
             <!-- /Навігація, що знаходиться на нижній менюшці-->
