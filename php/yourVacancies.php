@@ -54,6 +54,28 @@ $userId = $_SESSION['user_id'];
                 die("Користувач не увійшов у систему");
             }
             ?>
+
+            <?php
+            $userID = $_SESSION["user_id"];
+
+            // Запит до бази даних для отримання улюблених вакансій залогіненого користувача
+            $queryForTags = "SELECT vac_id FROM user_favourite WHERE user_id = ?";
+            $stmt = $mysqli->prepare($queryForTags);
+
+            if (!$stmt) {
+                die("Помилка SQL: " . $mysqli->error);
+            }
+
+            $stmt->bind_param("i", $userID);
+            $stmt->execute();
+            $resultTag = $stmt->get_result();
+
+            // Перевірка, чи є у користувача улюблені вакансії
+            if ($resultTag->num_rows === 0) {
+                echo "У вас немає улюблених вакансій";
+                header("Location: vacancies.php");
+            } else {
+            ?>
             <table class="your-fav-table">
                 <thead>
                 <tr>
@@ -68,26 +90,7 @@ $userId = $_SESSION['user_id'];
                     <th>Fav</th>
                 </tr>
                 </thead>
-                <tbody>
-                <?php
-                $userID = $_SESSION["user_id"];
-
-                // Запит до бази даних для отримання улюблених вакансій залогіненого користувача
-                $queryForTags = "SELECT vac_id FROM user_favourite WHERE user_id = ?";
-                $stmt = $mysqli->prepare($queryForTags);
-
-                if (!$stmt) {
-                    die("Помилка SQL: " . $mysqli->error);
-                }
-
-                $stmt->bind_param("i", $userID);
-                $stmt->execute();
-                $resultTag = $stmt->get_result();
-
-                // Перевірка, чи є у користувача улюблені вакансії
-                if ($resultTag->num_rows === 0) {
-                    echo "У вас немає улюблених вакансій";
-                } else {
+                <tbody><?php
                 // Підключення до бази даних з вакансіями
                 $mysqliVac = require __DIR__ . "/database_vacanties.php";
 
