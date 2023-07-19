@@ -29,7 +29,7 @@ $userId = $_SESSION['user_id'];
     <!-- Підключення бібліотеки, яка містить в собі гарні векторні значки, які ми використаєм в нашій роботі  -->
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <script defer src="../js/toggleFav.js"></script>
-    <script defer src="../js/reload.js"></script>
+    <script  defer src="../js/reload.js"></script>
 </head>
 <body class="signup-test">
 <div class="box-all-vac">
