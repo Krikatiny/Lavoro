@@ -991,19 +991,21 @@ input[type="checkbox"] {
 aside {
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
 }
+,
 
-.your-fav-table {
 
+.p-4{
+    position: absolute;
 }
-
 .your-fav-table {
+    margin: auto;
     border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    min-width: 400px;
-    border-radius: 5px 5px 0 0;
-    overflow: hidden;
+    font-size: 1.2em;
+    min-width: 500px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    table-layout: fixed;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
 }
 
 .your-fav-table thead tr {

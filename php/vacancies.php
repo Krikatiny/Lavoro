@@ -404,9 +404,9 @@ $userId = $_SESSION['user_id'];
             <!-- Навігація, що знаходиться на нижній менюшці-->
             <div class="col-md-6">
                 <ul class="footer-nav-main footer-nav">
-                    <li><a href="index.html">Головна</a></li>
-                    <li><a href="html/vacancies.html">Вакансії</a></li>
-                    <li><a href="html/contact.html">Контакти</a></li>
+                    <li><a href="../index.html">Головна</a></li>
+                    <li><a href="../php/vacancies.php">Вакансії</a></li>
+                    <li><a href="../html/contact.html">Контакти</a></li>
                 </ul>
             </div>
             <!-- /Навігація, що знаходиться на нижній менюшці-->
