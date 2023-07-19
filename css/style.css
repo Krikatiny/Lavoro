@@ -862,11 +862,11 @@ input[type="checkbox"] {
 }
 
 #sliderValue {
+    margin-top: -140px;
     position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%);
+    top: calc(100% + 10px); /* Змінено значення top для зсуву вниз */
+    left: 50%; /* Змінено значення left для вирівнювання по центру */
+    transform: translateX(-50%); /* Змінено значення transform для центрування */
     font-size: 20px;
     color: black;
-    margin-left: 15px;
 }
