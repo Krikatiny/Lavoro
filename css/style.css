@@ -508,7 +508,6 @@ input[type="tel"]:focus, input[type="regions"]:focus, input[type="tel"]:focus, t
     position: relative;
 
 }
-
 .signup-test {
     margin: 0;
     height: 100vh;
@@ -556,8 +555,7 @@ input[type="tel"]:focus, input[type="regions"]:focus, input[type="tel"]:focus, t
     font: 500 1.2rem 'Montserrat', sans-serif;
 }
 
-
-.box-all-vac {
+.box-all-vac{
     width: 1000px;
     max-width: 1000px;
     margin: 1rem;
@@ -632,7 +630,6 @@ input[type="tel"]:focus, input[type="regions"]:focus, input[type="tel"]:focus, t
 .contact-form-container {
     background: #fdfdfd;
 }
-
 
 .contact-form textarea.input {
     height: 94px;

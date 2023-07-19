@@ -373,7 +373,7 @@ $resultTag = mysqli_query($mysqli, $queryForTags);
             <div class="col-md-6">
                 <ul class="main-menu nav navbar-nav navbar-right">
                     <li><a href="../index.html">Головна</a></li>
-                    <li><a href="vacancies.php">Вакансії</a></li>
+                    <li><a href="../php/vacancies.php">Вакансії</a></li>
                     <li><a href="../html/contact.html">Контакти</a></li>
                 </ul>
             </div>
